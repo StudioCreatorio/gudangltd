@@ -1,0 +1,103 @@
+$buttons: (
+  action: (
+    background-clr: $btn-action-bg,
+    background-clr-hover: $btn-action-hover,
+    text-clr: $btn-action-text,
+    text-clr-hover: $btn-action-hover-text,
+    border-clr: $btn-action-border-color,
+    border-clr-hover: $btn-action-hover-border-color,
+    outline-background-clr-hover: $btn-action-hover,
+    outline-text-clr: $action-outline-btn-text,
+    outline-text-clr-hover: $action-outline-hover-text,
+  ),
+  primary: (
+    background-clr: $btn-primary-bg,
+    background-clr-hover: $btn-primary-hover,
+    text-clr: $btn-primary-text,
+    text-clr-hover: $btn-primary-hover-text,
+    border-clr: $btn-primary-border-color,
+    border-clr-hover: $btn-primary-hover-border-color,
+    outline-background-clr-hover: $btn-primary-hover,
+    outline-text-clr: $primary-outline-btn-text,
+    outline-text-clr-hover: $primary-outline-hover-text,
+  ),
+  secondary: (
+    background-clr: $btn-secondary-bg,
+    background-clr-hover: $btn-secondary-hover,
+    text-clr: $btn-secondary-text,
+    text-clr-hover: $btn-secondary-hover-text,
+    border-clr: $btn-secondary-border-color,
+    border-clr-hover: $btn-secondary-hover-border-color,
+    outline-background-clr-hover: $btn-secondary-hover,
+    outline-text-clr: $secondary-outline-btn-text,
+    outline-text-clr-hover: $secondary-outline-hover-text,
+  ),
+  accent: (
+    background-clr: $btn-accent-bg,
+    background-clr-hover: $btn-accent-hover,
+    text-clr: $btn-accent-text,
+    text-clr-hover: $btn-accent-hover-text,
+    border-clr: $btn-accent-border-color,
+    border-clr-hover: $btn-accent-hover-border-color,
+    outline-background-clr-hover: $btn-accent-hover,
+    outline-text-clr: $accent-outline-btn-text,
+    outline-text-clr-hover: $accent-outline-hover-text,
+  ),
+  base: (
+    background-clr: $btn-base-bg,
+    background-clr-hover: $btn-base-hover,
+    text-clr: $btn-base-text,
+    text-clr-hover: $btn-base-hover-text,
+    border-clr: $btn-base-border-color,
+    border-clr-hover: $btn-base-hover-border-color,
+    outline-background-clr-hover: $btn-base-hover,
+    outline-text-clr: $base-outline-btn-text,
+    outline-text-clr-hover: $base-outline-hover-text,
+  ),
+  black: (
+    background-clr: $btn-black-bg,
+    background-clr-hover: $btn-black-hover,
+    text-clr: $btn-black-text,
+    text-clr-hover: $btn-black-hover-text,
+    border-clr: $btn-black-border-color,
+    border-clr-hover: $btn-black-hover-border-color,
+    outline-background-clr-hover: $btn-black-hover,
+    outline-text-clr: $black-outline-btn-text,
+    outline-text-clr-hover: $black-outline-hover-text,
+  ),
+  white: (
+    background-clr: $btn-white-bg,
+    background-clr-hover: $btn-white-hover,
+    text-clr: $btn-white-text,
+    text-clr-hover: $btn-white-hover-text,
+    border-clr: $btn-white-border-color,
+    border-clr-hover: $btn-white-hover-border-color,
+    outline-background-clr-hover: $btn-white-hover,
+    outline-text-clr: $white-outline-btn-text,
+    outline-text-clr-hover: $white-outline-hover-text,
+  ),
+);
+
+// Turn on/off button classes
+
+@if $option-action-btn == off or $option-action-clr == off {
+  $buttons: map-remove($buttons, action);
+}
+@if $option-primary-btn == off or $option-primary-clr == off {
+  $buttons: map-remove($buttons, primary);
+}
+@if $option-secondary-btn == off or $option-secondary-clr == off {
+  $buttons: map-remove($buttons, secondary);
+}
+@if $option-accent-btn == off or $option-accent-clr == off {
+  $buttons: map-remove($buttons, accent);
+}
+@if $option-base-btn == off or $option-base-clr == off {
+  $buttons: map-remove($buttons, base);
+}
+@if $option-black-btn == off {
+  $buttons: map-remove($buttons, black);
+}
+@if $option-white-btn == off {
+  $buttons: map-remove($buttons, white);
+}

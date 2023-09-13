@@ -1,0 +1,7 @@
+@import "../dashboard/contextual-vars";
+
+$contextuals: (
+    content-gap: $contextual-content-gap,
+    container-gap: $contextual-container-gap,
+    grid-gap: $contextual-grid-gap,
+);

@@ -1,0 +1,139 @@
+@include site-defaults();
+
+@if $option-paragraph-fix == on {
+  body {
+		:is(p,h1,h2,h3,h4,h5,h6,ul,ol,li) {
+      margin: 0;
+    }
+    @if $option-bricks == on {
+			:where(.woocommerce-checkout) p {
+      	margin: 0 0 1.2em;
+    	}
+		}
+
+    // Bricks Compatibility
+    .brxe-text,
+    .brxe-post-content:not([data-source="bricks"]),
+    // Oxygen Compatibility
+    .oxy-rich-text,
+    .oxy-stock-content-styles,
+    // Woo
+    &:not(.woocommerce-checkout) [class*="woocommerce"] * + p,
+    // Smart Spacing Utility
+    .smart-spacing {
+      * + :is(h1, h2, h3, h4, h5, h6) {
+        margin-block-start: $default-heading-spacing;
+      }
+      * + p {
+        margin-block-start: $default-paragraph-spacing;
+      }
+      * + ul,
+      * + ol {
+        margin-block-start: $default-list-spacing;
+      }
+      * + li {
+        margin-block-start: $default-list-item-spacing;
+      }
+    }
+    p:last-of-type + h1,
+    p:last-of-type + h2,
+    p:last-of-type + h3,
+    p:last-of-type + h4,
+    p:last-of-type + h5,
+    p:last-of-type + h6 {
+      margin-block-start: $default-heading-spacing; // Override Bricks
+    }
+    p:only-of-type + h1,
+    p:only-of-type + h2,
+    p:only-of-type + h3,
+    p:only-of-type + h4,
+    p:only-of-type + h5,
+    p:only-of-type + h6 {
+      margin-block-start: unset; // Override Bricks
+    }
+  }
+}
+
+@if $option-offset-page-content == on {
+  @if $option-bricks == off {
+    main > *:first-child > *:first-child {
+      margin-block-start: var(--header-height);
+    }
+  }
+
+  @if $option-bricks == on {
+    // Position controls in builder properly
+    #bricks-blank-canvas > .actions,
+    main:not(.panel-content) > *:first-child > *:first-child:not(.bricks-shape-divider),
+    main > *:first-child > .bricks-shape-divider ~ .brxe-container {
+      margin-block-start: var(--header-height);
+    }
+  }
+}
+
+@include if-oxygen-off {
+  // Sections
+
+  section {
+    padding-block: var(--section-space-m);
+    padding-inline: var(--section-padding-x);
+  }
+
+  .section__inner,
+  .section__container,
+  .acss__container {
+    width: 100%;
+    max-inline-size: var(--width-vp-max);
+    margin-inline: auto;
+  }
+}
+
+// Selection color
+
+@if $selection-bg != null {
+  ::selection {
+    background: $selection-bg; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: $selection-bg; /* Gecko Browsers */
+  }
+}
+
+@if $selection-text != null {
+  ::selection {
+    color: $selection-text; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    color: $selection-text; /* Gecko Browsers */
+  }
+}
+
+.selection--alt {
+  @if $selection-bg-alt != null {
+    ::selection {
+      background: $selection-bg-alt; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+      background: $selection-bg-alt; /* Gecko Browsers */
+    }
+  }
+
+  @if $selection-text-alt != null {
+    ::selection {
+      color: $selection-text-alt; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+      color: $selection-text-alt; /* Gecko Browsers */
+    }
+  }
+}
+
+// Loom Fix
+
+// Loom injects code on the page, which includes a section element.
+// This section element gets ACSS padding by default.
+// Below is a fix for this.
+
+[id*="loom"] section {
+  padding: 0 !important;
+}

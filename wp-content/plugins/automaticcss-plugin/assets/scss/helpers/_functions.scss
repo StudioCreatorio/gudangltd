@@ -1,0 +1,204 @@
+// @import '../dashboard/text-vars';
+// ADD A COLOR TO COLORS MAP
+
+@function add-color(
+  $color-name,
+  $color-hex,
+  $color-h,
+  $color-s,
+  $color-l,
+  $color-hover-h,
+  $color-hover-s,
+  $color-hover-l,
+  $color-ultra-light-h,
+  $color-ultra-light-s,
+  $color-ultra-light-l,
+  $color-light-h,
+  $color-light-s,
+  $color-light-l,
+  $color-medium-h,
+  $color-medium-s,
+  $color-medium-l,
+  $color-dark-h,
+  $color-dark-s,
+  $color-dark-l,
+  $color-ultra-dark-h,
+  $color-ultra-dark-s,
+  $color-ultra-dark-l
+) {
+  // Create some additional partials from known values
+  $color-hsl: hsl($color-h, $color-s, $color-l);
+  $color-r: red($color-hex);
+  $color-g: green($color-hex);
+  $color-b: blue($color-hex);
+  $color-comp-h: $color-h + 180;
+
+  $new-color: (
+    $color-name: (
+      "#{$color-name}-main": (
+        "#{$color-name}": $color-hex,
+        "#{$color-name}-hover":
+          hsl($color-hover-h, $color-hover-s, $color-l * $color-hover-l),
+        "#{$color-name}-ultra-light":
+          hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l),
+        "#{$color-name}-light":
+          hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l),
+        "#{$color-name}-medium":
+          hsl($color-medium-h, $color-medium-s, $color-medium-l),
+        "#{$color-name}-dark": hsl($color-dark-h, $color-dark-s, $color-dark-l),
+        "#{$color-name}-comp": hsl($color-h + 180, $color-s, $color-l),
+      ),
+      "#{$color-name}-trans": (
+        "#{$color-name}-trans-10": rgba($color-hex, 0.1),
+        "#{$color-name}-trans-20": rgba($color-hex, 0.2),
+        "#{$color-name}-trans-30": rgba($color-hex, 0.3),
+        "#{$color-name}-trans-40": rgba($color-hex, 0.4),
+        "#{$color-name}-trans-50": rgba($color-hex, 0.5),
+        "#{$color-name}-trans-60": rgba($color-hex, 0.6),
+        "#{$color-name}-trans-70": rgba($color-hex, 0.7),
+        "#{$color-name}-trans-80": rgba($color-hex, 0.8),
+        "#{$color-name}-trans-90": rgba($color-hex, 0.9),
+      ),
+      "#{$color-name}-light-trans": (
+        #{$color-name}-light-trans-10: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.1),
+        #{$color-name}-light-trans-20: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.2),
+        #{$color-name}-light-trans-30: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.3),
+        #{$color-name}-light-trans-40: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.4),
+        #{$color-name}-light-trans-50: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.5),
+        #{$color-name}-light-trans-60: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.6),
+        #{$color-name}-light-trans-70: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.7),
+        #{$color-name}-light-trans-80: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.8),
+        #{$color-name}-light-trans-90: hsl($color-ultra-light-h, $color-ultra-light-s, $color-ultra-light-l, 0.9),
+      ),
+      "#{$color-name}-dark-trans": (
+        #{$color-name}-dark-trans-10: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.1),
+        #{$color-name}-dark-trans-20: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.2),
+        #{$color-name}-dark-trans-30: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.3),
+        #{$color-name}-dark-trans-40: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.4),
+        #{$color-name}-dark-trans-50: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.5),
+        #{$color-name}-dark-trans-60: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.6),
+        #{$color-name}-dark-trans-70: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.7),
+        #{$color-name}-dark-trans-80: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.8),
+        #{$color-name}-dark-trans-90: hsl($color-dark-h, $color-dark-s, $color-dark-l, 0.9),
+      ),
+      "#{$color-name}-partials": (
+        #{$color-name}-hex: $color-hex,
+        #{$color-name}-hsl: $color-hsl,
+        #{$color-name}-rgb: rgb($color-r, $color-g, $color-b),
+        #{$color-name}-r: $color-r,
+        #{$color-name}-g: $color-g,
+        #{$color-name}-b: $color-b,
+        #{$color-name}-h: $color-h,
+        #{$color-name}-s: $color-s,
+        #{$color-name}-l: $color-l,
+        #{$color-name}-hover-h: $color-hover-h,
+        #{$color-name}-hover-s: $color-hover-s,
+        #{$color-name}-hover-l: $color-hover-l,
+        #{$color-name}-ultra-light-h: $color-ultra-light-h,
+        #{$color-name}-ultra-light-s: $color-ultra-light-s,
+        #{$color-name}-ultra-light-l: $color-ultra-light-l,
+        #{$color-name}-light-h: $color-light-h,
+        #{$color-name}-light-s: $color-light-s,
+        #{$color-name}-light-l: $color-light-l,
+        #{$color-name}-medium-h: $color-medium-h,
+        #{$color-name}-medium-s: $color-medium-s,
+        #{$color-name}-medium-l: $color-medium-l,
+        #{$color-name}-dark-h: $color-dark-h,
+        #{$color-name}-dark-s: $color-dark-s,
+        #{$color-name}-dark-l: $color-dark-l,
+        #{$color-name}-ultra-dark-h: $color-ultra-dark-h,
+        #{$color-name}-ultra-dark-s: $color-ultra-dark-s,
+        #{$color-name}-ultra-dark-l: $color-ultra-dark-l,
+        #{$color-name}-comp-h: $color-comp-h,
+      ),
+    ),
+  );
+
+  @return map-merge($colors, $new-color);
+}
+
+// TURN RAW UNITS INTO REM UNITS
+
+@function append-rem($val) {
+  @return $val * 1rem;
+}
+
+// TURN RAW UNITS INTO % VALUES
+
+@function percent($val) {
+  @return $val * 1%;
+}
+
+// TURN RAW UNITS INTO VW
+
+@function vw($val) {
+  @return $val * 1vw;
+}
+
+// TURN RAW UNITS INTO VH
+
+@function vh($val) {
+  @return $val * 1vh;
+}
+
+// Exponent Math
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+// calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+@function fluidCalc($text-min, $text-max) {
+  $vp-delta: $vp-max - $vp-min;
+  $text-delta: $text-max - $text-min;
+  $vp-min-rem: $vp-min * 1rem;
+  $text-min-rem: $text-min * 1rem;
+  @return calc(
+    #{$text-min-rem} + (#{$text-delta} * ((100vw - #{$vp-min-rem}) / #{$vp-delta}))
+  );
+}
+
+@function fluidClamp($min, $max) {
+  $slope: ($max - $min) / ($vp-max - $vp-min);
+  $intercept: ($min - $slope * $vp-min) * 1rem;
+  $slope-vw: $slope * 100;
+  $min-rem: $min * 1rem;
+  $max-rem: $max * 1rem;
+  @return clamp(#{$min-rem}, calc(#{$slope-vw}vw + #{$intercept}), #{$max-rem});
+}
+
+// @function mapGetColor($colorSet, $colorName) {
+//   @return map-get(map-get($allColors, $colorSet), $colorName);
+// }
+
+// S and XS Stop Functions
+// Protects the bottom and top from going below stop value
+// Only use on S and XS sizes
+
+@function fluidClampStop($stop, $min, $max) {
+  $slope: ($max - $min) / ($vp-max - $vp-min);
+  $intercept: ($min - $slope * $vp-min) * 1rem;
+  $slope-vw: $slope * 100;
+  $min-rem: $min * 1rem;
+  $max-rem: $max * 1rem;
+  @return max(
+    $stop,
+    clamp(#{$min-rem}, calc(#{$slope-vw}vw + #{$intercept}), #{$max-rem})
+  );
+}
+
+// Pixel to Rem Auto Converter
+@function ctr($pixel-value) {
+  $raw-root: $root-font-size / 1%;
+  $root: $raw-root / 100 * 16;
+  @return $pixel-value / $root * 1rem;
+}

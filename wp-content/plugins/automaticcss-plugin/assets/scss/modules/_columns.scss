@@ -1,0 +1,82 @@
+@if $option-columns == on {
+  // Columns
+  @each $num, $value in $col-count {
+    .col-count--#{$num} {
+      -moz-column-count: #{$value};
+      column-count: #{$value};
+    }
+  }
+
+  // Columns at Breakpoints
+
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint($breakpoint) {
+      @each $num, $value in $col-count {
+        .col-count--#{$breakpoint}-#{$num} {
+          -moz-column-count: #{$value};
+          column-count: #{$value};
+        }
+      }
+    }
+  }
+
+  // Column Width
+  @each $width, $value in $col-width {
+    .col-width--#{$width} {
+      width: 100%;
+      -moz-column-width: #{$value};
+      column-width: #{$value};
+    }
+  }
+
+  // Column Gaps
+  @each $size, $extension in $sizeExtensions {
+    .col-gap--#{$extension} {
+      @if $size == xs {
+        @include map-get-col-gap(xs);
+      } @else if $size == s {
+        @include map-get-col-gap(s);
+      } @else if $size == m {
+        @include map-get-col-gap(m);
+      } @else if $size == l {
+        @include map-get-col-gap(l);
+      } @else if $size == xl {
+        @include map-get-col-gap(xl);
+      } @else if $size == xxl {
+        @include map-get-col-gap(xxl);
+      }
+    }
+  }
+
+  // Column Rule
+  @each $type, $value in $col-rule {
+    .col-rule--#{$type} {
+      -moz-column-rule: #{$value};
+      column-rule: #{$value};
+    }
+  }
+
+  // Column Rule Color
+  @each $color-name, $color-value in $core-colors {
+      .col-rule--#{$color-name} {
+        -moz-column-rule-color: var(--#{$color-name});
+        column-rule-color: var(--#{$color-name});
+      }
+    }
+
+  // Column Rule Size
+  @each $width, $value in $col-rule-width {
+    .col-rule--#{$width} {
+      -moz-column-rule-width: #{$value};
+      column-rule-width: #{$value};
+    }
+  }
+
+  // Column Span
+  @each $span, $value in $col-span {
+    .col-span--#{$span} {
+      -moz-column-span: #{$value};
+      column-span: #{$value};
+    }
+  }
+}

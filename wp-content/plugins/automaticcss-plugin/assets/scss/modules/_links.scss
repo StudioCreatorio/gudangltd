@@ -1,0 +1,84 @@
+@if $option-link-color == on {
+  @each $color-name, $color-value in $core-colors {
+      .link--#{$color-name} a,
+      a.link--#{$color-name} {
+        color: var(--#{$color-name});
+
+        @if str-index(#{$color-name}, "action") {
+          &:hover {
+            color: var(--action-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "primary") {
+          &:hover {
+            color: var(--primary-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "secondary") {
+          &:hover {
+            color: var(--secondary-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "accent") {
+          &:hover {
+            color: var(--accent-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "base") {
+          &:hover {
+            color: var(--base-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "shade") {
+          &:hover {
+            color: var(--shade-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "white") {
+          &:hover {
+            color: var(--action-hover);
+          }
+        }
+        @if str-index(#{$color-name}, "black") {
+          &:hover {
+            color: var(--action-hover);
+          }
+        }
+      }
+    }
+  }
+
+// Contextual Links
+
+@if $option-contextual-color-classes == on {
+  @each $colorName, $colorSet in $contextualColors {
+    @each $colorName, $colorValue in $colorSet {
+      .link--#{$colorName} a,
+      a.link--#{$colorName} {
+        color: $colorValue;
+
+        @if str-index(#{$colorName}, "success") {
+          &:hover {
+            color: var(--success-hover);
+          }
+        }
+        @if str-index(#{$colorName}, "danger") {
+          &:hover {
+            color: var(--danger-hover);
+          }
+        }
+        @if str-index(#{$colorName}, "warning") {
+          &:hover {
+            color: var(--warning-hover);
+          }
+        }
+        @if str-index(#{$colorName}, "info") {
+          &:hover {
+            color: var(--accent-hover);
+          }
+        }
+      }
+    }
+  }
+}
+

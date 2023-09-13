@@ -1,0 +1,1005 @@
+@if $option-forms == on {
+  @if $option-ws-form == on {
+    // WS FORM
+    .form--light .wsf-form {
+      input[type="date"].wsf-field,
+      input[type="datetime-local"].wsf-field,
+      input[type="file"].wsf-field,
+      input[type="month"].wsf-field,
+      input[type="password"].wsf-field,
+      input[type="search"].wsf-field,
+      input[type="time"].wsf-field,
+      input[type="week"].wsf-field,
+      input[type="email"].wsf-field,
+      input[type="number"].wsf-field,
+      input[type="tel"].wsf-field,
+      input[type="text"].wsf-field,
+      input[type="url"].wsf-field,
+      select.wsf-field:not([multiple]):not([size]) {
+        height: append-rem($f-input-height);
+      }
+
+      input[type="date"].wsf-field,
+      input[type="datetime-local"].wsf-field,
+      input[type="file"].wsf-field,
+      input[type="month"].wsf-field,
+      input[type="password"].wsf-field,
+      input[type="search"].wsf-field,
+      input[type="time"].wsf-field,
+      input[type="week"].wsf-field,
+      input[type="email"].wsf-field,
+      input[type="number"].wsf-field,
+      input[type="tel"].wsf-field,
+      input[type="text"].wsf-field,
+      input[type="url"].wsf-field,
+      select.wsf-field,
+      select.wsf-field:not([multiple]):not([size]),
+      textarea.wsf-field {
+        background-color: $f-light-input-background;
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: append-rem($f-input-border-left-size);
+        border-style: $f-input-border-style;
+        border-color: $f-light-input-border-color;
+        border-radius: $f-input-border-radius;
+        color: $f-light-input-text-color;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+        font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+        font-weight: $f-input-font-weight;
+        line-height: $f-input-line-height;
+        padding: $f-input-padding-y $f-input-padding-x;
+        -webkit-border-radius: $f-input-border-radius;
+        -moz-border-radius: $f-input-border-radius;
+        -ms-border-radius: $f-input-border-radius;
+        -o-border-radius: $f-input-border-radius;
+      }
+
+      [data-type="texteditor"] p {
+        color: $f-light-input-text-color;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+        font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+        font-weight: $f-input-font-weight;
+        line-height: $f-input-line-height;
+      }
+
+      [data-type="html"] {
+        color: $f-light-label-text-color;
+      }
+
+      select.wsf-field {
+        &:not([multiple]):not([size]) {
+          background-position: right
+            calc((#{$f-input-padding-x} + 10px) / 2)
+            center;
+          -webkit-padding-end: calc(20px + #{$f-input-padding-x});
+          padding-inline-end: calc(20px + #{$f-input-padding-x});
+        }
+        &:invalid {
+          color: hsl(
+            $f-light-input-placeholder-hsl / $f-light-input-placeholder-opacity
+          ) !important;
+        }
+      }
+
+      .iti--allow-dropdown input,
+      .iti--allow-dropdown input[type="tel"],
+      .iti--allow-dropdown input[type="text"],
+      .iti--separate-dial-code input,
+      .iti--separate-dial-code input[type="tel"],
+      .iti--separate-dial-code input[type="text"] {
+        @if $f-input-padding-x == 0 {
+          padding-left: calc(4.8rem + 0px);
+        } @else {
+          padding-left: calc(4.8rem + #{$f-input-padding-x});
+        }
+      }
+      //Input Placeholder
+
+      input.wsf-field::placeholder,
+      textarea.wsf-field::placeholder {
+        color: $f-light-input-placeholder-color;
+        opacity: $f-light-input-placeholder-opacity;
+      }
+
+      // Labels
+
+      label.wsf-label,
+      label {
+        @include f-light-label-style;
+      }
+
+      // Inside Label Position Styling
+
+      .wsf-label-position-inside input.wsf-field[placeholder] + label {
+        @include f-light-label-style;
+        top: calc(#{$f-input-height}rem / 2);
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+
+        @if $f-input-padding-x == 0 {
+          left: calc(calc(#{$f-grid-gutter} / 2) + 0px);
+        } @else {
+          left: calc(calc(#{$f-grid-gutter} / 2) + #{$f-input-padding-x});
+        }
+      }
+
+      .wsf-label-position-inside textarea.wsf-field[placeholder] + label {
+        @include f-light-label-style;
+
+        @if $f-input-padding-x == 0 {
+          left: calc(calc(#{$f-grid-gutter} / 2) + 0px);
+        } @else {
+          left: calc(calc(#{$f-grid-gutter} / 2) + #{$f-input-padding-x});
+        }
+        top: calc(10px + #{$f-input-padding-y});
+      }
+
+      .wsf-label-position-inside input.wsf-field[placeholder]:focus + label,
+      .wsf-label-position-inside
+        input.wsf-field[placeholder]:not(:placeholder-shown)
+        + label {
+        top: 0;
+        @if $f-input-padding-x == 0 {
+          left: calc(calc(#{$f-grid-gutter} / 2) + 0px);
+        } @else {
+          left: calc(calc(#{$f-grid-gutter} / 2) + #{$f-input-padding-x});
+        }
+      }
+
+      .wsf-label-position-inside textarea.wsf-field[placeholder]:focus + label,
+      .wsf-label-position-inside
+        textarea.wsf-field[placeholder]:not(:placeholder-shown)
+        + label {
+        top: 10px;
+        @if $f-input-padding-x == 0 {
+          left: calc(calc(#{$f-grid-gutter} / 2) + 0px);
+        } @else {
+          left: calc(calc(#{$f-grid-gutter} / 2) + #{$f-input-padding-x});
+        }
+      }
+
+      .wsf-label-position-inside {
+        & .iti--allow-dropdown input + label,
+        .iti--allow-dropdown input[type="tel"] + label,
+        .iti--allow-dropdown input[type="text"] + label,
+        .iti--separate-dial-code input + label,
+        .iti--separate-dial-code input[type="tel"] + label,
+        .iti--separate-dial-code input[type="text"] + label {
+          @if $f-input-padding-x == 0 {
+            left: calc(4.8rem + 0px);
+          } @else {
+            left: calc(4.8rem + #{$f-input-padding-x});
+          }
+        }
+      }
+
+      // Button
+      button.wsf-button,
+      button.wsf-button.wsf-button-primary {
+        background-color: $f-light-btn-background;
+        color: $f-light-btn-text-color;
+        border-style: $f-btn-border-style;
+        border-width: $f-btn-border-size;
+        border-color: $f-light-btn-border-color;
+        border-radius: $f-btn-border-radius;
+        -webkit-border-radius: $f-btn-border-radius;
+        -moz-border-radius: $f-btn-border-radius;
+        -ms-border-radius: $f-btn-border-radius;
+        -o-border-radius: $f-btn-border-radius;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($f-btn-text-size-min, $f-btn-text-size-max);
+        font-size: fluidClamp($f-btn-text-size-min, $f-btn-text-size-max);
+        font-weight: $f-btn-font-weight;
+        line-height: $f-btn-line-height;
+        padding: $f-btn-padding-y $f-btn-padding-x;
+        margin-top: $f-btn-margin-top;
+        text-align: center;
+        -webkit-text-decoration: $f-btn-text-decoration;
+        text-decoration: $f-btn-text-decoration;
+        text-transform: $f-btn-text-transform;
+        min-height: append-rem($f-input-height);
+
+        &:hover {
+          background-color: $f-light-btn-background-hover;
+          color: $f-light-btn-text-color-hover;
+          border-color: $f-light-btn-border-color-hover;
+        }
+      }
+
+      // Button > Secondary
+      button.wsf-button.wsf-button-secondary {
+        background-color: $f-light-secondary-btn-background-color;
+        color: $f-light-secondary-btn-text-color;
+        border-color: $f-light-secondary-btn-background-color;
+        &:hover {
+          background-color: $f-light-secondary-btn-background-color-hover;
+          color: $f-light-secondary-btn-text-color-hover;
+          border-color: $f-light-secondary-btn-background-color-hover;
+        }
+      }
+
+      // Button > Previous
+      button.wsf-button[data-action="wsf-tab_previous"] {
+        background-color: $f-light-prev-btn-background-color;
+        color: $f-light-prev-btn-text-color;
+        border-color: $f-light-prev-btn-background-color;
+        &:hover {
+          background-color: $f-light-prev-btn-background-color-hover;
+          color: $f-light-prev-btn-text-color-hover;
+          border-color: $f-light-prev-btn-background-color-hover;
+        }
+      }
+      // Button > Save
+      button.wsf-button[data-action="wsf-save"] {
+        background-color: $f-light-save-btn-background-color;
+        color: $f-light-save-btn-text-color;
+        border-color: $f-light-save-btn-background-color;
+        &:hover {
+          background-color: $f-light-save-btn-background-color-hover;
+          color: $f-light-save-btn-text-color-hover;
+          border-color: $f-light-save-btn-background-color-hover;
+        }
+      }
+      // Button > Reset
+      button.wsf-button[data-action="wsf-reset"] {
+        background-color: $f-light-reset-btn-background-color;
+        color: $f-light-reset-btn-text-color;
+        border-color: $f-light-reset-btn-background-color;
+        &:hover {
+          background-color: $f-light-reset-btn-background-color-hover;
+          color: $f-light-reset-btn-text-color-hover;
+          border-color: $f-light-reset-btn-background-color-hover;
+        }
+      }
+      // Button > Clear
+      button.wsf-button[data-action="wsf-clear"] {
+        background-color: $f-light-clear-btn-background-color;
+        color: $f-light-clear-btn-text-color;
+        border-color: $f-light-clear-btn-background-color;
+        &:hover {
+          background-color: $f-light-clear-btn-background-color-hover;
+          color: $f-light-clear-btn-text-color-hover;
+          border-color: $f-light-clear-btn-background-color-hover;
+        }
+      }
+
+      // Tabs
+
+      //// Tab Group
+      ul.wsf-group-tabs {
+        background-color: $f-light-tab-group-background-color;
+        padding: $f-tab-group-padding-y $f-tab-group-padding-x;
+        border-bottom-width: $f-tab-group-border-bottom-size;
+        border-bottom-style: $f-tab-group-border-bottom-style;
+        border-bottom-color: $f-light-tab-group-border-bottom-color;
+        margin-bottom: $f-tab-group-margin-bottom;
+      }
+
+      ul.wsf-group-tabs > li {
+        width: $f-tab-width;
+
+        &:not(:last-child) {
+          margin-right: $f-tab-margin-x;
+        }
+
+        > a {
+          border: $f-tab-border-size
+            $f-tab-border-style
+            $f-light-tab-border-color;
+          border-radius: $f-tab-border-radius;
+          background-color: $f-light-tab-background-color;
+          color: $f-light-tab-text-color;
+          font-size: append-rem($f-tab-text-size-pure);
+          font-size: fluidCalc($f-tab-text-size-min, $f-tab-text-size-max);
+          font-size: fluidClamp($f-tab-text-size-min, $f-tab-text-size-max);
+          font-weight: $f-tab-text-weight;
+          line-height: $f-tab-text-line-height;
+          padding: $f-tab-padding-y $f-tab-padding-x;
+          text-align: $f-tab-text-align;
+          text-decoration: $f-tab-text-decoration;
+          text-transform: $f-tab-text-transform;
+          &.wsf-tab-disabled {
+            color: $f-light-tab-inactive-text-color;
+          }
+        }
+      }
+
+      //// Active
+      ul.wsf-group-tabs > li.wsf-tab-active {
+        > a {
+          border: $f-tab-active-border-size
+            $f-tab-active-border-style
+            $f-light-tab-active-border-color;
+          border-bottom-width: $f-tab-active-border-bottom-size !important;
+          border-bottom-style: solid;
+          border-bottom-color: $f-light-tab-active-border-color !important;
+          background-color: $f-light-tab-active-background-color !important;
+          color: $f-light-tab-active-text-color;
+          font-weight: $f-tab-active-text-weight;
+
+          // ws steps only
+          &::before {
+            color: $f-light-tab-active-border-color !important;
+          }
+        }
+      }
+
+      ul.wsf-group-tabs.wsf-steps > li > a {
+        &::before {
+          background-color: $f-light-tab-active-border-color;
+          border: 1px solid $f-light-tab-active-border-color;
+        }
+        &::after {
+          background-color: $f-light-tab-active-border-color;
+        }
+        &:not(.wsf-tab-disabled):focus:before {
+          border-color: $f-light-tab-active-border-color;
+        }
+      }
+
+      // Legend
+      .wsf-section > legend,
+      .wsf-fieldset > legend {
+        border: $f-legend-border;
+        font-size: append-rem($f-legend-size-pure);
+        font-size: fluidCalc($f-legend-size-min, $f-legend-size-max);
+        font-size: fluidClamp($f-legend-size-min, $f-legend-size-max);
+        font-weight: $f-legend-text-weight;
+        line-height: $f-legend-line-height;
+        margin-bottom: $f-legend-margin-bottom;
+        color: $f-light-legend-text-color;
+        padding: 0;
+      }
+
+      // Help
+      .wsf-help {
+        font-size: append-rem($f-help-size-pure);
+        font-size: fluidCalc($f-help-size-min, $f-help-size-max);
+        font-size: fluidClamp($f-help-size-min, $f-help-size-max);
+        font-weight: $f-help-text-weight;
+        line-height: $f-help-line-height;
+        color: $f-light-help-text-color;
+      }
+
+      // Fieldset
+
+      .wsf-field-wrapper:not(.wsf-alert) {
+        margin-bottom: $f-field-margin-bottom;
+      }
+
+      fieldset {
+        &:not(:last-child) {
+          margin-bottom: $f-fieldset-margin-bottom;
+        }
+      }
+
+      .wsf-tile {
+        padding-inline: calc(#{$f-grid-gutter} / 2);
+      }
+
+      // Radio
+      // Radio > Label
+      input[type="radio"].wsf-field + label.wsf-label {
+        @include f-light-option-label-style;
+        background-color: unset;
+      }
+      // Radio > Button
+      input[type="radio"].wsf-field:checked + label.wsf-label:before {
+        background-color: $f-light-option-action-color;
+        border-color: $f-light-option-border-color;
+      }
+      input[type="radio"].wsf-field + label.wsf-label:before {
+        background-color: $f-light-option-background-color;
+        border-color: $f-light-option-border-color;
+      }
+
+      // Checkboxes
+      input[type="checkbox"].wsf-field + label.wsf-label {
+        &::before,
+        &::after {
+          width: 1.4em;
+          height: 1.4em;
+        }
+      }
+      input[type="checkbox"].wsf-field:checked + label.wsf-label::before {
+        background-color: $f-light-option-action-color;
+        border-color: $f-light-option-border-color;
+      }
+      input[type="checkbox"].wsf-field + label.wsf-label::before {
+        background-color: $f-light-option-background-color;
+        border-color: $f-light-option-border-color;
+      }
+      input[type="checkbox"].wsf-field + label.wsf-label {
+        @include f-light-option-label-style;
+        background-color: unset;
+      }
+
+      // Checkboxes and Radio with wsf-switch  or wsf-image class
+      input[type="checkbox"],
+      input[type="radio"] {
+        &.wsf-field.wsf-switch + label.wsf-label {
+          -webkit-padding-start: 2.85em;
+          padding-inline-start: 2.85em;
+          &:before {
+            width: 2.5em;
+            height: 1.4em;
+            border-radius: 1.2em;
+          }
+          &:after {
+            height: calc(1.4em - 4px);
+            width: calc(1.4em - 4px);
+          }
+        }
+        &.wsf-field.wsf-switch:checked + label.wsf-label:after {
+          left: calc(2.5em - calc(1.4em - 2px));
+        }
+        &.wsf-field.wsf-image + label.wsf-label {
+          -webkit-padding-start: 0;
+          padding-inline-start: 0;
+        }
+      }
+
+      // Progress Bar
+      progress[value]::-webkit-progress-bar {
+        background-color: $f-light-progress-background-color;
+        height: $f-progress-height;
+        display: block;
+      }
+      progress.wsf-progress {
+        height: $f-progress-height; // Fixes progress label position
+        border-radius: $f-progress-bar-radius;
+        overflow: hidden;
+      }
+      progress[value]::-webkit-progress-value {
+        background-color: $f-light-progress-bar-fill-color;
+        border-radius: $f-progress-bar-radius;
+      }
+
+      // Color Picker
+      .minicolors-theme-ws-form .minicolors-swatch {
+        height: calc(100% - 1px); // There's a 1px overflow if set to 100%
+      }
+
+      // Range Slider
+
+      input[type="range"] {
+        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+        appearance: none;
+        width: 100%; /* Specific width is required for Firefox. */
+        background: transparent; /* Otherwise white in Chrome */
+        --wsf-color-lower-track: #{$f-light-range-left-track-color};
+        --wsf-color-upper-track: #{$f-light-range-right-track-color};
+        background-color: $f-light-range-background-color;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: $f-light-range-thumb-color;
+      }
+
+      input[type="range"]:focus {
+        outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+      }
+
+      input[type="range"]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+
+        /* Hides the slider so custom styles can be added */
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+
+      // Required
+      .wsf-required-wrapper .wsf-text-danger {
+        color: $f-light-required-color;
+      }
+
+      // Dropzone
+
+      input[type="text"].wsf-field ~ .dropzone {
+        background-color: $f-light-input-background;
+        border-color: $f-light-input-border-color;
+      }
+
+      input[type="text"].wsf-field ~ .dropzone .dz-message {
+        color: $f-light-input-text-color;
+      }
+
+      // File Upload
+
+      input[type="file"].wsf-field {
+        padding-left: 1rem;
+        &::file-selector-button {
+          background-color: $f-light-input-border-color;
+          color: $f-light-input-text-color;
+          height: append-rem($f-input-height);
+        }
+      }
+
+      // Legal
+
+      [data-wsf-legal].wsf-field {
+        background-color: $f-light-input-background;
+        border-color: $f-light-input-border-color;
+        color: $f-light-input-text-color;
+      }
+
+      // Alert
+
+      .wsf-alert {
+        background-color: var(--base-ultra-light);
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: 0.4rem;
+        border-color: $f-light-input-border-color;
+        border-radius: $f-input-border-radius;
+        -webkit-border-radius: $f-input-border-radius;
+        -moz-border-radius: $f-input-border-radius;
+        -ms-border-radius: $f-input-border-radius;
+        -o-border-radius: $f-input-border-radius;
+        margin-bottom: 0;
+        &.wsf-alert-danger {
+          background-color: hsl(
+            $danger-light-h $danger-light-s $danger-light-l
+          );
+          border-color: $danger-hex;
+          color: hsl($danger-dark-h $danger-dark-s $danger-dark-l);
+        }
+        &.wsf-alert-warning {
+          background-color: hsl(
+            $warning-light-h $warning-light-s $warning-light-l
+          );
+          border-color: $warning-hex;
+          color: hsl($warning-dark-h $warning-dark-s $warning-dark-l);
+        }
+        &.wsf-alert-information {
+          background-color: hsl($info-light-h $info-light-s $info-light-l);
+          border-color: $info-hex;
+          color: hsl($info-dark-h $info-dark-s $info-dark-l);
+        }
+        &.wsf-alert-success {
+          background-color: hsl(
+            $success-light-h $success-light-s $success-light-l
+          );
+          border-color: $success-hex;
+          color: hsl($success-dark-h $success-dark-s $success-dark-l);
+        }
+      }
+
+      // Datetime (inline)
+      .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+      .xdsoft_datetimepicker
+        .xdsoft_timepicker
+        .xdsoft_time_box
+        > div
+        > div.xdsoft_current,
+      .xdsoft_datetimepicker
+        .xdsoft_label
+        > .xdsoft_select
+        > div
+        > .xdsoft_option.xdsoft_current,
+      .xdsoft_datetimepicker
+        .xdsoft_label
+        > .xdsoft_select
+        > div
+        > .xdsoft_option:hover,
+      .xdsoft_datetimepicker .xdsoft_calendar td:hover,
+      .xdsoft_datetimepicker
+        .xdsoft_timepicker
+        .xdsoft_time_box
+        > div
+        > div:hover {
+        background: var(--action) !important;
+      }
+
+      // Canvas (Signature)
+
+      input[type="text"].wsf-field ~ canvas {
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: append-rem($f-input-border-left-size);
+        border-radius: $f-input-border-radius;
+        -webkit-border-radius: $f-input-border-radius;
+        -moz-border-radius: $f-input-border-radius;
+        -ms-border-radius: $f-input-border-radius;
+        -o-border-radius: $f-input-border-radius;
+      }
+
+      // Focus Style
+
+      input[type="date"].wsf-field:focus,
+      input[type="datetime-local"].wsf-field:focus,
+      input[type="file"].wsf-field:focus,
+      input[type="month"].wsf-field:focus,
+      input[type="password"].wsf-field:focus,
+      input[type="search"].wsf-field:focus,
+      input[type="time"].wsf-field:focus,
+      input[type="week"].wsf-field:focus,
+      input[type="email"].wsf-field:focus,
+      input[type="number"].wsf-field:focus,
+      input[type="tel"].wsf-field:focus,
+      input[type="text"].wsf-field:focus,
+      input[type="url"].wsf-field:focus,
+      select.wsf-field:focus,
+      textarea.wsf-field:focus,
+      button.wsf-button:focus,
+      button.wsf-button.wsf-button-primary:focus {
+        border-color: $f-light-focus-color;
+        box-shadow: 0
+          0
+          0
+          4px
+          hsl($f-light-focus-color-hsl / $f-light-focus-color-opacity);
+        outline: 0;
+      }
+    }
+  }
+
+  ////////// Bricks
+
+  @if $option-bricks == on {
+    .form--light.brxe-form,
+    .form--light .bricks-search-form,
+    .form--light.brxe-post-comments {
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="month"],
+      input[type="password"],
+      input[type="search"],
+      input[type="time"],
+      input[type="week"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="url"],
+      select:not([multiple]):not([size]) {
+        height: append-rem($f-input-height);
+      }
+
+      .input,
+      input:not([type="submit"]),
+      select,
+      textarea {
+        background-color: $f-light-input-background;
+        border-style: $f-input-border-style;
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: append-rem($f-input-border-left-size);
+        border-color: $f-light-input-border-color;
+        border-radius: $f-input-border-radius;
+        color: $f-light-input-text-color;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+        font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+        line-height: $f-input-line-height;
+        font-weight: $f-input-font-weight;
+        padding: $f-input-padding-y $f-input-padding-x;
+        &::placeholder {
+          color: $f-light-input-placeholder-color;
+          opacity: $f-light-input-placeholder-opacity;
+        }
+      }
+
+      .bricks-button {
+        @include f-light-btn-style;
+        min-height: append-rem($f-input-height);
+
+        &.bricks-background-secondary {
+          background-color: $f-light-secondary-btn-background-color;
+          color: $f-light-secondary-btn-text-color;
+          border-color: $f-light-secondary-btn-background-color;
+          &:hover {
+            background-color: $f-light-secondary-btn-background-color-hover;
+            color: $f-light-secondary-btn-text-color-hover;
+            border-color: $f-light-secondary-btn-background-color-hover;
+          }
+        }
+      }
+
+      .form-group {
+        padding-inline: calc(#{$f-grid-gutter} / 2) !important;
+        &:not(.submit-button-wrapper) {
+          margin-bottom: $f-field-margin-bottom;
+        }
+      }
+
+      label {
+        @include f-light-label-style;
+      }
+
+      .required:after {
+        color: $f-light-required-color;
+      }
+
+      // File upload
+
+      input[type="file"] {
+        padding: 0;
+      }
+
+      .choose-files {
+        padding: $f-input-padding-y $f-input-padding-x;
+        color: $f-light-label-text-color;
+        font-size: $text-s-pure;
+        font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+        font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+        font-weight: $f-label-font-weight;
+        line-height: $f-label-line-height;
+      }
+
+      .file-result.show {
+        font-size: $text-s-pure;
+        font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+        font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+        font-weight: $f-label-font-weight;
+        line-height: $f-label-line-height;
+        & .remove {
+          &:hover {
+            background-color: $f-light-btn-background-hover;
+            color: $f-light-btn-text-color-hover;
+            border-color: $f-light-btn-border-color-hover;
+          }
+        }
+      }
+
+      // Radio
+      input[type="radio"] {
+        accent-color: $f-light-option-action-color;
+      }
+
+      // Checkboxes
+
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+
+      input[type="checkbox"] + label {
+        @include f-light-option-label-style;
+        background-color: unset;
+        display: block;
+        position: relative;
+        margin-bottom: 2rem;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:hover + label:hover {
+        color: $f-light-option-action-color;
+      }
+
+      input[type="checkbox"]:hover + label:before {
+        background: $f-light-option-action-color;
+        box-shadow: inset 0px 0px 0px 2px transparent;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "";
+        display: block;
+        width: 1.4em;
+        height: 1.4em;
+        border: 1px solid #343a3f;
+        border-color: $f-light-option-border-color;
+        border-radius: 0.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+        transition: all 0.2s, background 0.2s ease-in-out;
+        background: transparent;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        background: $f-light-option-action-color;
+        box-shadow: 0 0 0 1px $f-light-option-border-color;
+      }
+
+      input[type="checkbox"]:checked {
+        position: relative;
+        & + label:before {
+          background: $f-light-option-action-color;
+          box-shadow: 0 0 0 1px $f-light-option-border-color;
+        }
+        & + label:after {
+          content: "";
+          cursor: pointer;
+          display: inline-block;
+          height: 1.5em;
+          width: 1.5em;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23ffffff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e")
+            50%
+            no-repeat;
+          background-size: 50%;
+        }
+      }
+    }
+  } // END OPTION BRICKS
+  @if $option-fluent-form == on {
+    .form--light .frm-fluent-form {
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="month"],
+      input[type="password"],
+      input[type="search"],
+      input[type="time"],
+      input[type="week"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="url"],
+      select:not([multiple]):not([size]) {
+        height: append-rem($f-input-height);
+      }
+
+      .input,
+      input:not([type="submit"]),
+      select,
+      textarea {
+        background-color: $f-light-input-background;
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: append-rem($f-input-border-left-size);
+        border-style: $f-input-border-style;
+        border-color: $f-light-input-border-color;
+        border-radius: $f-input-border-radius;
+        color: $f-light-input-text-color;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+        font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+        line-height: $f-input-line-height;
+        font-weight: $f-input-font-weight;
+        padding: $f-input-padding-y $f-input-padding-x;
+        &::placeholder {
+          color: $f-light-input-placeholder-color;
+          opacity: $f-light-input-placeholder-opacity;
+        }
+      }
+
+      .ff-el-form-control:focus {
+        border-color: $f-light-input-border-color;
+        color: $f-light-input-text-color;
+      }
+
+      .ff-btn:not(.ff_upload_btn) {
+        @include f-light-btn-style;
+        min-height: append-rem($f-input-height);
+      }
+
+      .ff-el-group {
+        padding-inline: calc(#{$f-grid-gutter} / 2) !important;
+        &:not(.ff_submit_btn_wrapper) {
+          margin-bottom: $f-field-margin-bottom;
+        }
+      }
+
+      label {
+        @include f-light-label-style;
+
+        &::after {
+          color: $f-light-required-color !important;
+        }
+      }
+      // phone field with flag
+      .iti input,
+      .iti input[type="tel"],
+      .iti input[type="text"] {
+        @if $f-input-padding-x == 0 {
+          padding-left: calc(4.8rem + 0px);
+        } @else {
+          padding-left: calc(4.8rem + #{$f-input-padding-x});
+        }
+      }
+
+      // section break
+      .ff-el-section-break {
+        color: $f-light-label-text-color;
+      }
+
+      // File upload
+
+      input[type="file"] {
+        padding: 0;
+      }
+
+      .ff_upload_btn.ff-btn {
+        background: $f-light-input-background;
+        padding: $f-input-padding-y $f-input-padding-x;
+        color: $f-light-label-text-color;
+        font-size: $text-s-pure;
+        font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+        font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+        font-weight: $f-label-font-weight;
+        line-height: $f-label-line-height;
+      }
+
+      .ff-upload-preview {
+        font-size: $text-s-pure;
+        font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+        font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+        font-weight: $f-label-font-weight;
+        border-style: $f-input-border-style;
+        border-top-width: append-rem($f-input-border-top-size);
+        border-right-width: append-rem($f-input-border-right-size);
+        border-bottom-width: append-rem($f-input-border-bottom-size);
+        border-left-width: append-rem($f-input-border-left-size);
+        border-color: $f-light-input-border-color;
+        border-radius: $f-input-border-radius;
+      }
+
+      // Radio + Checkboxes
+
+      .ff-el-form-check.ff-el-form-check- {
+        display: flex;
+
+        label {
+          display: inherit;
+          gap: 0.4em;
+        }
+      }
+
+      // Radio
+      input[type="radio"],
+      input[type="checkbox"] {
+        accent-color: $f-light-option-action-color;
+        top: initial;
+      }
+    }
+  } //END OPTION FLUENT FORM
+} // END OPTION FORMS
+
+// OXYGEN STYLING
+
+@if $option-oxygen == on {
+  .form--light.oxy-search-form {
+    input[type="search"] {
+      @include f-light-input-style;
+    }
+    input[type="submit"] {
+      @include f-light-btn-style;
+    }
+  }
+}
+
+// WS Form - Datetime picker (dropdown - not available in firefox)
+
+main:has(.form--light) {
+  ~ .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+  ~ .xdsoft_datetimepicker
+    .xdsoft_timepicker
+    .xdsoft_time_box
+    > div
+    > div.xdsoft_current,
+  ~ .xdsoft_datetimepicker
+    .xdsoft_label
+    > .xdsoft_select
+    > div
+    > .xdsoft_option.xdsoft_current,
+  ~ .xdsoft_datetimepicker
+    .xdsoft_label
+    > .xdsoft_select
+    > div
+    > .xdsoft_option:hover,
+  ~ .xdsoft_datetimepicker .xdsoft_calendar td:hover,
+  ~ .xdsoft_datetimepicker
+    .xdsoft_timepicker
+    .xdsoft_time_box
+    > div
+    > div:hover {
+    background: var(--action) !important;
+  }
+}

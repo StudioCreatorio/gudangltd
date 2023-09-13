@@ -1,0 +1,203 @@
+// Light Forms
+
+@mixin f-light-input-style {
+  background-color: $f-light-input-background;
+  border-top-width: append-rem($f-input-border-top-size);
+  border-right-width: append-rem($f-input-border-right-size);
+  border-bottom-width: append-rem($f-input-border-bottom-size);
+  border-left-width: append-rem($f-input-border-left-size);
+  border-style: $f-input-border-style;
+  border-color: $f-light-input-border-color;
+  border-radius: $f-input-border-radius;
+  color: $f-light-input-text-color;
+  font-size: $text-m-pure;
+  font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+  font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+  font-weight: $f-input-font-weight;
+  line-height: $f-input-line-height;
+  padding: $f-input-padding-y $f-input-padding-x;
+  -webkit-border-radius: $f-input-border-radius;
+  -moz-border-radius: $f-input-border-radius;
+  -ms-border-radius: $f-input-border-radius;
+  -o-border-radius: $f-input-border-radius;
+  height: append-rem($f-input-height);
+}
+
+@mixin f-light-btn-style {
+  background-color: $f-light-btn-background;
+  color: $f-light-btn-text-color;
+  border-style: $f-btn-border-style;
+  border-width: $f-btn-border-size;
+  border-color: $f-light-btn-border-color;
+  border-radius: $f-btn-border-radius;
+  -webkit-border-radius: $f-btn-border-radius;
+  -moz-border-radius: $f-btn-border-radius;
+  -ms-border-radius: $f-btn-border-radius;
+  -o-border-radius: $f-btn-border-radius;
+  font-size: $text-m-pure;
+  font-size: fluidCalc($f-btn-text-size-min, $f-btn-text-size-max);
+  font-size: fluidClamp($f-btn-text-size-min, $f-btn-text-size-max);
+  font-weight: $f-btn-font-weight;
+  line-height: $f-btn-line-height;
+  padding: $f-btn-padding-y $f-btn-padding-x;
+  margin-top: $f-btn-margin-top;
+  text-align: center;
+  -webkit-text-decoration: $f-btn-text-decoration;
+  text-decoration: $f-btn-text-decoration;
+  text-transform: $f-btn-text-transform;
+
+  &:hover {
+    background-color: $f-light-btn-background-hover;
+    color: $f-light-btn-text-color-hover;
+    border-color: $f-light-btn-border-color-hover;
+  }
+}
+
+@mixin f-light-label-style {
+  background-color: $f-light-label-background-color;
+  color: $f-light-label-text-color;
+  font-size: $text-s-pure;
+  font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+  font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+  font-weight: $f-label-font-weight;
+  line-height: $f-label-line-height;
+  margin-bottom: $f-label-margin-bottom;
+  text-transform: $f-label-text-transform;
+  padding: $f-label-padding-y $f-label-padding-x;
+}
+
+@mixin f-dark-label-style {
+  background-color: $f-dark-label-background-color;
+  color: $f-dark-light-label-text-color;
+  font-size: $text-s-pure;
+  font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+  font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+  font-weight: $f-label-font-weight;
+  line-height: $f-label-line-height;
+  margin-bottom: $f-label-margin-bottom;
+  text-transform: $f-label-text-transform;
+  padding: $f-label-padding-y $f-label-padding-x;
+}
+
+@mixin f-light-option-label-style {
+  background-color: $f-light-option-background-color;
+  display: inline-block;
+  color: $f-light-label-text-color;
+  font-family: inherit;
+  font-size: append-rem($f-option-label-font-size-min);
+  font-size: fluidCalc(
+    $f-option-label-font-size-min,
+    $f-option-label-font-size-max
+  );
+  font-size: fluidClamp(
+    $f-option-label-font-size-min,
+    $f-option-label-font-size-max
+  );
+  font-weight: $f-option-label-font-weight;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  -webkit-padding-start: 1.75em;
+  padding-inline-start: 1.75em;
+}
+
+// Dark Forms
+
+@mixin f-dark-input-style {
+  background-color: $f-dark-input-background;
+  border-top-width: append-rem($f-input-border-top-size);
+  border-right-width: append-rem($f-input-border-right-size);
+  border-bottom-width: append-rem($f-input-border-bottom-size);
+  border-left-width: append-rem($f-input-border-left-size);
+  border-style: $f-input-border-style;
+  border-color: $f-dark-input-border-color;
+  border-radius: $f-input-border-radius;
+  color: $f-dark-input-text-color;
+  font-size: $text-m-pure;
+  font-size: fluidCalc($f-input-text-size-min, $f-input-text-size-max);
+  font-size: fluidClamp($f-input-text-size-min, $f-input-text-size-max);
+  font-weight: $f-input-font-weight;
+  line-height: $f-input-line-height;
+  padding: $f-input-padding-y $f-input-padding-x;
+  -webkit-border-radius: $f-input-border-radius;
+  -moz-border-radius: $f-input-border-radius;
+  -ms-border-radius: $f-input-border-radius;
+  -o-border-radius: $f-input-border-radius;
+  height: append-rem($f-input-height);
+}
+
+@mixin f-dark-btn-style {
+  background-color: $f-dark-btn-background;
+  color: $f-dark-btn-text-color;
+  border-style: $f-btn-border-style;
+  border-width: $f-btn-border-size;
+  border-color: $f-dark-btn-border-color;
+  border-radius: $f-btn-border-radius;
+  -webkit-border-radius: $f-btn-border-radius;
+  -moz-border-radius: $f-btn-border-radius;
+  -ms-border-radius: $f-btn-border-radius;
+  -o-border-radius: $f-btn-border-radius;
+  font-size: $text-m-pure;
+  font-size: fluidCalc($f-btn-text-size-min, $f-btn-text-size-max);
+  font-size: fluidClamp($f-btn-text-size-min, $f-btn-text-size-max);
+  font-weight: $f-btn-font-weight;
+  line-height: $f-btn-line-height;
+  padding: $f-btn-padding-y $f-btn-padding-x;
+  margin-top: $f-btn-margin-top;
+  text-align: center;
+  -webkit-text-decoration: $f-btn-text-decoration;
+  text-decoration: $f-btn-text-decoration;
+  text-transform: $f-btn-text-transform;
+
+  &:hover {
+    background-color: $f-dark-btn-background-hover;
+    color: $f-dark-btn-text-color-hover;
+    border-color: $f-dark-btn-border-color-hover;
+  }
+}
+
+@mixin f-dark-label-style {
+  background-color: $f-dark-label-background-color;
+  color: $f-dark-label-text-color;
+  font-size: $text-s-pure;
+  font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+  font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+  font-weight: $f-label-font-weight;
+  line-height: $f-label-line-height;
+  margin-bottom: $f-label-margin-bottom;
+  text-transform: $f-label-text-transform;
+  padding: $f-label-padding-y $f-label-padding-x;
+}
+
+@mixin f-dark-label-style {
+  background-color: $f-dark-label-background-color;
+  color: $f-dark-label-text-color;
+  font-size: $text-s-pure;
+  font-size: fluidCalc($f-label-size-min, $f-label-size-max);
+  font-size: fluidClamp($f-label-size-min, $f-label-size-max);
+  font-weight: $f-label-font-weight;
+  line-height: $f-label-line-height;
+  margin-bottom: $f-label-margin-bottom;
+  text-transform: $f-label-text-transform;
+  padding: $f-label-padding-y $f-label-padding-x;
+}
+
+@mixin f-dark-option-label-style {
+  background-color: $f-dark-option-background-color;
+  display: inline-block;
+  color: $f-dark-label-text-color;
+  font-family: inherit;
+  font-size: append-rem($f-option-label-font-size-min);
+  font-size: fluidCalc(
+    $f-option-label-font-size-min,
+    $f-option-label-font-size-max
+  );
+  font-size: fluidClamp(
+    $f-option-label-font-size-min,
+    $f-option-label-font-size-max
+  );
+  font-weight: $f-option-label-font-weight;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  -webkit-padding-start: 1.75em;
+  padding-inline-start: 1.75em;
+}

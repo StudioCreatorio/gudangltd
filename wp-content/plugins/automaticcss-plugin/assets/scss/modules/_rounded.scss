@@ -1,0 +1,8 @@
+//GENERATE ROUNDED CLASSES
+@if $option-rounded == on {
+  @each $size, $value in $radius {
+    .rounded--#{$size} {
+      border-radius: #{$value};
+    }
+  }
+}

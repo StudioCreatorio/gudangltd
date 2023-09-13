@@ -1,0 +1,81 @@
+@if $option-aspect-ratios == on {
+  @each $ratio, $value in $aspect-ratios {
+    .aspect--#{$ratio} {
+      aspect-ratio: #{$value};
+    }
+    // Support for images
+    img.aspect--#{$ratio} {
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    // Support for iframes
+    // Requires builder specific overrides
+    .aspect--#{$ratio} iframe {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: #{$value};
+    }
+  }
+
+  // Generate Breakpoint Classes
+  // Changes here need to be made for each builder as well
+
+  @each $extension, $value in $breakpoints {
+    @include breakpoint($extension) {
+      @each $ratio, $value in $aspect-ratios {
+        .aspect--#{$extension}-#{$ratio} {
+          aspect-ratio: #{$value};
+        }
+
+        img.aspect--#{$extension}-#{$ratio} {
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+
+        .aspect--#{$extension}-#{$ratio} iframe {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: #{$value};
+        }
+      }
+    }
+  }
+
+  // Generate Fallback Classes
+
+  @supports not (aspect-ratio: 16 / 9) {
+    @each $ratio, $value in $aspect-ratio-fallbacks {
+      .aspect--#{$ratio} {
+        &::before {
+          float: left;
+          padding-top: $value;
+          content: "";
+        }
+        &::after {
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+    }
+    // Generate Fallback Breakpoint Classes
+    @each $extension, $extension-value in $breakpoints {
+      @include breakpoint($extension) {
+        @each $ratio, $value in $aspect-ratio-fallbacks {
+          .aspect--#{$ratio} {
+            &::before {
+              float: left;
+              padding-top: $value;
+              content: "";
+            }
+            &::after {
+              display: block;
+              content: "";
+              clear: both;
+            }
+          }
+        }
+      }
+    }
+  }
+}

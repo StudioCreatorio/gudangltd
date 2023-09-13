@@ -1,0 +1,523 @@
+@import "../dashboard/breakpoints";
+@import "../modules/flex-grid/flex-grid-mixins";
+@import "../modules/grid/grid-mixins";
+@import "../modules/gap/gap-mixins";
+
+// MAX WIDTH
+@mixin breakpoint($extension) {
+  @media (max-width: map-get($breakpoints, $extension)) {
+    @content;
+  }
+}
+
+// MIN WIDTH
+@mixin breakpoint-up($extension) {
+  @media (min-width: map-get($breakpoints, $extension)) {
+    @content;
+  }
+}
+
+// Text
+@mixin fluid-text($pure, $min, $max) {
+  font-size: #{$pure}rem;
+  font-size: fluidCalc($min, $max);
+  font-size: fluidClamp($min, $max);
+}
+
+@mixin map-get-fluid-text($extension) {
+  font-size: map-get(map-get($textSizing, pure), text-#{$extension}-pure);
+  font-size: map-get(map-get($textSizing, calc), text-#{$extension}-calc);
+  font-size: map-get(map-get($textSizing, clamp), text-#{$extension}-clamp);
+}
+
+@mixin map-get-fluid-heading($extension) {
+  font-size: map-get(map-get($headingSizes, pure), #{$extension}-pure);
+  font-size: map-get(map-get($headingSizes, calc), #{$extension}-calc);
+  font-size: map-get(map-get($headingSizes, clamp), #{$extension}-clamp);
+}
+
+// Padding
+@mixin fluid-padding($pure, $min, $max) {
+  padding: #{$pure};
+  padding: fluidCalc($min, $max);
+  padding: fluidClamp($min, $max);
+}
+
+@mixin map-get-padding($extension) {
+  padding: map-get(map-get($spacing, pure), space-#{$extension}-pure);
+  padding: map-get(map-get($spacing, calc), space-#{$extension}-calc);
+  padding: map-get(map-get($spacing, clamp), space-#{$extension}-clamp);
+}
+
+@mixin fluid-section-padding($pure, $min, $max) {
+  padding: #{$pure} append-rem($section-padding-x-pure);
+  padding: fluidCalc($min, $max)
+    fluidCalc($section-padding-x-min, $section-padding-x-max);
+  padding: fluidClamp($min, $max)
+    fluidClamp($section-padding-x-min, $section-padding-x-max);
+}
+
+@mixin map-get-section-spacing($extension) {
+  padding: map-get(
+      map-get($sectionSpacing, pure),
+      section-space-#{$extension}-pure
+    )
+    append-rem($section-padding-x-pure);
+  padding: map-get(
+      map-get($sectionSpacing, calc),
+      section-space-#{$extension}-calc
+    )
+    fluidCalc($section-padding-x-min, $section-padding-x-max);
+  padding: map-get(
+      map-get($sectionSpacing, clamp),
+      section-space-#{$extension}-clamp
+    )
+    fluidClamp($section-padding-x-min, $section-padding-x-max);
+}
+
+@mixin map-get-header-padding($extension) {
+  padding: map-get(map-get($spacing, pure), space-#{$extension}-pure) 0;
+  padding: map-get(map-get($spacing, calc), space-#{$extension}-calc) 0;
+  padding: map-get(map-get($spacing, clamp), space-#{$extension}-clamp) 0;
+}
+
+///// Buttons
+@mixin button($style: solid) {
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  border-radius: var(--btn-radius);
+  border-style: solid;
+  text-transform: var(--btn-text-transform);
+  -webkit-text-decoration: var(--btn-text-decoration);
+  text-decoration: var(--btn-text-decoration);
+  letter-spacing: var(--btn-letter-spacing);
+  font-weight: var(--btn-weight);
+  font-style: var(--btn-text-style);
+  min-inline-size: var(--btn-width);
+  line-height: var(--btn-line-height);
+  justify-content: center;
+  text-align: center;
+  @if $style == solid {
+    border-width: var(--btn-border-size);
+  }
+  @if $style == outline {
+    border-width: var(--outline-btn-border-size);
+  }
+  @if $option-btn-text-size == on {
+    font-size: $text-m-pure;
+    font-size: fluidCalc($btn-text-min, $btn-text-max);
+    font-size: fluidClamp($btn-text-min, $btn-text-max);
+  } @else {
+    font-size: $text-m-pure;
+    font-size: fluidCalc($text-m-min, $text-m-max);
+    font-size: fluidClamp($text-m-min, $text-m-max);
+  }
+}
+
+@mixin outline-btn-default {
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  border-width: var(--outline-btn-border-size);
+  border-radius: var(--btn-radius);
+  text-transform: var(--btn-text-transform);
+  font-weight: var(--btn-weight);
+}
+@mixin btn-primary {
+  background-color: $btn-primary-bg;
+  color: $btn-primary-text;
+  padding: $btn-pad-y $btn-pad-x;
+  border-width: $btn-border-size;
+  border-color: $btn-primary-border-color;
+  border-radius: $btn-radius;
+  text-transform: $btn-text-transform;
+  letter-spacing: $btn-letter-spacing;
+  font-weight: $btn-weight;
+  @if $option-btn-text-size == on {
+    font-size: $text-m-pure;
+    font-size: fluidCalc($btn-text-min, $btn-text-max);
+    font-size: fluidClamp($btn-text-min, $btn-text-max);
+  } @else {
+    font-size: $text-m-pure;
+    font-size: fluidCalc($text-m-min, $text-m-max);
+    font-size: fluidClamp($text-m-min, $text-m-max);
+  }
+}
+@mixin if-btn-text-size-on {
+  @if $btn-text-size-option == on {
+    @content;
+  }
+}
+@mixin btn-primary-hover {
+  border-width: $btn-border-size;
+  background-color: $btn-primary-hover;
+  color: $btn-primary-hover-text;
+  border-color: $btn-primary-hover-border-color;
+}
+@mixin btn-default { // Deprecated
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  border-width: var(--btn-border-size);
+  border-radius: var(--btn-radius);
+  text-transform: var(--btn-text-transform);
+  -webkit-text-decoration: var(--btn-text-decoration);
+  text-decoration: var(--btn-text-decoration);
+  letter-spacing: var(--btn-letter-spacing);
+  font-weight: var(--btn-weight);
+  font-style: var(--btn-text-style);
+  min-inline-size: var(--btn-width);
+  line-height: var(--btn-line-height);
+  justify-content: center;
+  text-align: center;
+}
+
+
+// Owl Spacing
+@mixin map-get-owl($extension) {
+  margin-block-start: map-get(map-get($spacing, pure), space-#{$extension}-pure);
+  margin-block-start: map-get(map-get($spacing, calc), space-#{$extension}-calc);
+  margin-block-start: map-get(map-get($spacing, clamp), space-#{$extension}-clamp);
+}
+
+// Gap
+@mixin map-get-gap($extension) {
+  gap: map-get(map-get($spacing, pure), space-#{$extension}-pure);
+  gap: map-get(map-get($spacing, calc), space-#{$extension}-calc);
+  gap: map-get(map-get($spacing, clamp), space-#{$extension}-clamp);
+}
+
+// Columns Gap
+@mixin map-get-col-gap($extension) {
+  -moz-column-gap: map-get(map-get($spacing, pure), space-#{$extension}-pure);
+  column-gap: map-get(map-get($spacing, pure), space-#{$extension}-pure);
+  -moz-column-gap: map-get(map-get($spacing, calc), space-#{$extension}-calc);
+  column-gap: map-get(map-get($spacing, calc), space-#{$extension}-calc);
+  -moz-column-gap: map-get(map-get($spacing, clamp), space-#{$extension}-clamp);
+  column-gap: map-get(map-get($spacing, clamp), space-#{$extension}-clamp);
+}
+
+// Platform & Feature Options
+
+@mixin if-builders-off {
+  @if $option-bricks == off and $option-oxygen == off {
+    @content;
+  }
+}
+
+@mixin if-woocommerce-on {
+  @if $option-woocommerce == on {
+    @content;
+  }
+}
+
+@mixin if-smooth-scrolling-on {
+  @if $option-smooth-scrolling == on {
+    @content;
+  }
+}
+
+@mixin if-wsform-on {
+  @if $option-wsform == on {
+    @content;
+  }
+}
+
+@mixin if-bricks-on {
+  @if $option-bricks == on {
+    @content;
+  }
+}
+
+@mixin if-bricks-off {
+  @if $option-bricks == off {
+    @content;
+  }
+}
+
+@mixin if-oxygen-off {
+  @if $option-oxygen == off {
+    @content;
+  }
+}
+
+// Site Defaults
+
+@mixin site-defaults {
+  @if $option-boxed-layout == on {
+    html {
+      background-color: $device-bg-color;
+    }
+  }
+
+  body {
+    @include map-get-fluid-text(m);
+    line-height: $base-text-lh;
+    background-color: $body-bg-color;
+    color: $body-color;
+    @if $option-boxed-layout == on {
+      inline-size: 100%;
+      max-inline-size: $body-max-width;
+      box-shadow: $body-box-shadow;
+      border-color: $body-border-color;
+      border-style: $body-border-style;
+      border-width: $body-border-width;
+      border-radius: $body-border-radius;
+      margin-block-start: #{$body-margin-top} !important;
+      margin-inline: auto !important;
+    }
+  }
+
+  @if $option-bricks == on {
+    body.bricks-is-frontend,
+    body:not(.bricks-is-frontend) {
+      color: $body-color;
+    }
+  }
+
+  body a {
+    color: $link-color;
+    font-weight: $link-weight;
+    -webkit-text-decoration: $link-decoration;
+    text-decoration: $link-decoration;
+    text-underline-offset: $link-underline-offset;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+
+  h1 {
+    @include map-get-fluid-heading(h1);
+    line-height: $h1-lh;
+    color: $h1-color;
+    max-inline-size: $heading-line-length;
+  }
+  h2 {
+    @include map-get-fluid-heading(h2);
+    line-height: $h2-lh;
+    color: $h2-color;
+    max-inline-size: $h2-line-length;
+  }
+  h3 {
+    @include map-get-fluid-heading(h3);
+    line-height: $h3-lh;
+    color: $h3-color;
+    max-inline-size: $h3-line-length;
+  }
+  h4 {
+    @include map-get-fluid-heading(h4);
+    line-height: $h4-lh;
+    color: $h4-color;
+    max-inline-size: $h4-line-length;
+  }
+  h5 {
+    @include map-get-fluid-heading(h5);
+    line-height: $h5-lh;
+    color: $h5-color;
+    max-inline-size: $h5-line-length;
+  }
+  h6 {
+    @include map-get-fluid-heading(h6);
+    line-height: $h6-lh;
+    color: $h6-color;
+    max-inline-size: $h6-line-length;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      font-weight: inherit;
+      text-decoration: inherit;
+      color: currentcolor;
+      text-underline-offset: $link-underline-offset;
+
+      &:hover {
+        color: currentcolor;
+      }
+    }
+  }
+
+    p {
+      max-inline-size: $text-line-length;
+    }
+  }
+
+// Focus Style
+
+// Focus style mixin used within framework
+@mixin default-focus-style($type: $focus-style) {
+  @if $type == outline {
+    outline-style: solid;
+    outline-color: var(--focus-color);
+    outline-width: var(--focus-width);
+    outline-offset: var(--focus-offset);
+  }
+  @if $type == shadow {
+    box-shadow: 0 0 0 var(--focus-width) var(--focus-color);
+    outline: none;
+  }
+}
+
+// Focus style mixin for users
+@mixin focus-parent($style: shadow) {
+  &:focus-within {
+    @if $style == "shadow" {
+      box-shadow: 0 0 0 var(--focus-width) var(--focus-color);
+    }
+    @if $style == "outline" {
+      outline: var(--focus-width) solid var(--focus-color);
+      outline-offset: var(--focus-offset);
+    }
+  }
+  & :focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@mixin focus-styles {
+  *:focus,
+  button:focus {
+    @include default-focus-style;
+  }
+
+  *:focus:not(:focus-visible),
+  button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /*Disables focus on finger touch for mobile devices*/
+  :focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  // Custom Focus Colors
+  // Requires Builder Overrides
+
+  @each $color, $value in $core-colors {
+    *:focus {
+      &.focus--#{$color} {
+        --focus-color: var(--#{$color});
+      }
+    }
+    .focus--#{$color} *:focus {
+      --focus-color: var(--#{$color});
+    }
+  }
+}
+
+// Generate code at all breakpoints
+
+@mixin at-each-breakpoint {
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint($breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Overlays
+
+@mixin overlay($overlay-bg: var(--black-trans-60), $overlay-opacity: null, $overlay-bg-image: null) {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    // Need to check if there's a background image declared or not so we can
+    // create a valid background string
+
+    @if not $overlay-bg-image {
+      background: var(--overlay-bg, $overlay-bg);
+    } @else {
+      background: var(--overlay-bg, $overlay-bg), var(--overlay-bg-image, $overlay-bg-image);
+    }
+
+    opacity: var(--overlay-opacity, $overlay-opacity);
+  }
+
+}
+
+// Clickable Parent for Builders (Internal)
+
+@mixin load-clickable-parent($target) {
+    .clickable-parent:not(a) {
+      position: static;
+
+      a {
+        position: static;
+      }
+
+      > a::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer !important;
+        display: flex;
+      }
+    }
+
+    button.clickable-parent,
+    a.clickable-parent {
+      position: static;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer !important;
+        display: flex;
+      }
+    }
+    // Remove effect from page builder target
+    #{$target} a.clickable-parent::after {
+      content: '';
+      position: relative;
+    }
+  }
+
+// Clickable Parent (for Users)
+
+@mixin clickable-parent {
+  position: static;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      cursor: pointer !important;
+      display: flex;
+    }
+}
+
+///// Grid
+
+@mixin grid($columns, $rows, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+// @mixin auto-grid() {
+//   display: grid;
+//   grid-template-columns: null;
+//   grid-template-rows: null;
+//   gap: null;
+// }
+
+//// Animations
+
+@mixin delay-children($child-count: 1, $delay: 100ms) {
+  @for $i from 1 through $child-count {
+      &:nth-child(#{$i}) {
+          animation-delay: calc(#{$delay} * #{$i});
+      }
+  }
+}

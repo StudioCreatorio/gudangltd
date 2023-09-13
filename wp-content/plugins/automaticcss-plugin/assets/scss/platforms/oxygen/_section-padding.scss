@@ -1,0 +1,63 @@
+@if $option-section-padding == on {
+  @each $size, $extension in $sizeExtensions {
+    .pad-section--#{$extension}:not(.ct-section),
+    .pad-section--#{$extension} .ct-section-inner-wrap {
+      @if $size == xs {
+        @include map-get-section-spacing(xs);
+      } @else if $size == s {
+        @include map-get-section-spacing(s);
+      } @else if $size == m {
+        @include map-get-section-spacing(m);
+      } @else if $size == l {
+        @include map-get-section-spacing(l);
+      } @else if $size == xl {
+        @include map-get-section-spacing(xl);
+      } @else if $size == xxl {
+        @include map-get-section-spacing(xxl);
+      }
+    }
+  }
+  .pad-section--none:not(.ct-section),
+  .pad-section--none .ct-section-inner-wrap {
+    padding: 0 fluidClamp($section-padding-x-min, $section-padding-x-max);
+  }
+
+  @each $breakpoint, $value in $breakpoints {
+    @include breakpoint($breakpoint) {
+      @each $size, $extension in $sizeExtensions {
+        .pad-section--#{$breakpoint}-#{$extension}:not(.ct-section),
+        .pad-section--#{$breakpoint}-#{$extension} .ct-section-inner-wrap {
+          @if $size == xs {
+            @include map-get-section-spacing(xs);
+          } @else if $size == s {
+            @include map-get-section-spacing(s);
+          } @else if $size == m {
+            @include map-get-section-spacing(m);
+          } @else if $size == l {
+            @include map-get-section-spacing(l);
+          } @else if $size == xl {
+            @include map-get-section-spacing(xl);
+          } @else if $size == xxl {
+            @include map-get-section-spacing(xxl);
+          }
+        }
+        .pad-section--#{$breakpoint}-none:not(.ct-section),
+        .pad-section--#{$breakpoint}-none .ct-section-inner-wrap {
+          padding: 0 fluidClamp($section-padding-x-min, $section-padding-x-max);
+        }
+        .pad--none--#{$breakpoint}:not(.ct-section),
+        .pad--none--#{$breakpoint} .ct-section-inner-wrap {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+
+  .pad--none .ct-section-inner-wrap {
+    padding: 0 !important;
+  }
+}
+
+section.fr-hero-padding {
+  padding-block: var(--fr-hero-padding);
+}

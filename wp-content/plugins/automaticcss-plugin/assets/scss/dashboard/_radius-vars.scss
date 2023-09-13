@@ -1,0 +1,9 @@
+$base-radius: 1rem !default;
+$radius-scale: 1.5 !default;
+
+$radius-s-math: $base-radius / $radius-scale;
+$radius-xs-math: $radius-s-math / $radius-scale;
+$radius-m-math: $base-radius;
+$radius-l-math: $base-radius * $radius-scale;
+$radius-xl-math: $radius-l-math * $radius-scale;
+$radius-xxl-math: $radius-xl-math * $radius-scale;

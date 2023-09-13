@@ -1,0 +1,74 @@
+// Button Colors
+
+@if $option-buttons == on {
+  @each $buttonColor, $buttonProps in $buttons {
+    .btn--#{$buttonColor},
+    .bricks-button.btn--#{$buttonColor} {
+      background-color: map-get(
+        map-get($buttons, $buttonColor),
+        background-clr
+      );
+      color: map-get(map-get($buttons, $buttonColor), text-clr);
+      cursor: pointer;
+      border-style: solid;
+      border-color: map-get(map-get($buttons, $buttonColor), border-clr);
+      @include button;
+
+      &:hover {
+        background-color: map-get(
+          map-get($buttons, $buttonColor),
+          background-clr-hover
+        );
+        color: map-get(map-get($buttons, $buttonColor), text-clr-hover);
+        border-color: map-get(
+          map-get($buttons, $buttonColor),
+          border-clr-hover
+        );
+        cursor: pointer;
+      }
+    }
+
+    .btn--#{$buttonColor}.btn--outline,
+    .bricks-button.btn--#{$buttonColor}.btn--outline {
+      background-color: transparent;
+      border-style: solid;
+      cursor: pointer;
+      color: map-get(map-get($buttons, $buttonColor), outline-text-clr);
+      border-color: map-get(
+        map-get($buttons, $buttonColor),
+        outline-border-clr
+      );
+      @include outline-btn-default;
+
+      &:hover {
+        background-color: map-get(
+          map-get($buttons, $buttonColor),
+          outline-background-clr-hover
+        );
+        color: map-get(map-get($buttons, $buttonColor), outline-text-clr-hover);
+      }
+    }
+  }
+
+  // Button Sizes
+
+  @each $size, $extension in $sizeExtensions {
+    .btn--#{$extension},
+    .bricks-button.btn--#{$extension} {
+      @if $size == xs {
+        @include map-get-fluid-text(xs);
+      } @else if $size == s {
+        @include map-get-fluid-text(s);
+      } @else if $size == m {
+        @include map-get-fluid-text(m);
+      } @else if $size == l {
+        @include map-get-fluid-text(l);
+      } @else if $size == xl {
+        @include map-get-fluid-text(xl);
+      } @else if $size == xxl {
+        @include map-get-fluid-text(xxl);
+      }
+      cursor: pointer;
+    }
+  }
+}

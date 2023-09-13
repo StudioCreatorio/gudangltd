@@ -1,0 +1,4896 @@
+{
+	"tabs": {
+		"viewport": {
+			"title": "Viewport",
+			"description": "Website width & breakpoints.",
+			"content": {
+				"Website Dimensions": {
+					"type": "panel",
+					"title": "Website Dimensions",
+					"content": {
+						"vp": {
+							"type": "group",
+							"title": "Content Width",
+							"tooltip": "Set a minimum content width (1st field) and maximum content width (2nd field).",
+							"content": {
+								"vp-min": {
+									"type": "variable",
+									"title": "Viewport Minimum"
+								},
+								"vp-max": {
+									"type": "variable",
+									"title": "Website Width"
+								},
+								"last-tab": {
+									"type": "variable"
+								}
+							}
+						}
+					}
+				},
+				"breakpoints": {
+					"type": "panel",
+					"title": "Breakpoints",
+					"content": {
+						"active-breakpoints-divider": {
+							"type": "divider",
+							"content": "<span class=\"text-divider\">Active Breakpoints</a>"
+						},
+						"breakpoint-xxl": {
+							"type": "variable",
+							"title": "XXL"
+						},
+						"breakpoint-xl": {
+							"type": "variable",
+							"title": "XL"
+						},
+						"breakpoint-l": {
+							"type": "variable",
+							"title": "L"
+						},
+						"breakpoint-m": {
+							"type": "variable",
+							"title": "M"
+						},
+						"breakpoint-s": {
+							"type": "variable",
+							"title": "S"
+						},
+						"breakpoint-xs": {
+							"type": "variable",
+							"title": "XS"
+						},
+						"breakpoint-settings-divider": {
+							"type": "divider",
+							"content": "<span class=\"text-divider\">Breakpoint Options</a>"
+						},
+						"option-breakpoint-xxl": {
+							"type": "variable",
+							"title": "Add XXL Breakpoint",
+							"tooltip": "Turn on the XXL breakpoint."
+						},
+						"option-breakpoint-xs": {
+							"type": "variable",
+							"title": "Add XS Breakpoint",
+							"tooltip": "Turn on the XS breakpoint."
+						}
+					}
+				},
+				"body": {
+					"type": "panel",
+					"title": "Body",
+					"tooltip": "",
+					"content": {
+						"option-boxed-layout": {
+							"type": "variable",
+							"title": "Boxed Layout",
+							"tooltip": "Enable a boxed layout for your website."
+						},
+						"body-bg-color": {
+							"type": "variable",
+							"title": "Website Background Color",
+							"tooltip": "Set the default background color for your website (ACSS variable recommended).",
+							"placeholder": "var(--white)"
+						},
+						"device-bg-color": {
+							"type": "variable",
+							"title": "Device Background Color",
+							"tooltip": "",
+							"placeholder": "var(--white)"
+						},
+						"body-max-width": {
+							"type": "variable",
+							"title": "Boxed Layout Width",
+							"tooltip": "",
+							"placeholder": "1920px"
+						},
+						"body-box-shadow": {
+							"type": "variable",
+							"title": "Box Shadow",
+							"tooltip": "",
+							"placeholder": "0 0 80px 0 var(--shade-ultra-dark-trans-20)"
+						},
+						"body-margin-top": {
+							"type": "variable",
+							"title": "Margin Top",
+							"tooltip": "",
+							"placeholder": "0 auto"
+						},
+						"body-border-width": {
+							"type": "variable",
+							"title": "Border Width",
+							"tooltip": "",
+							"placeholder": "0"
+						},
+						"body-border-radius": {
+							"type": "variable",
+							"title": "Border Radius",
+							"tooltip": "",
+							"placeholder": "0"
+						},
+						"body-border-color": {
+							"type": "variable",
+							"title": "Border Color",
+							"tooltip": "",
+							"placeholder": "transparent"
+						},
+						"body-border-style": {
+							"type": "variable",
+							"title": "Border Style",
+							"tooltip": "",
+							"placeholder": "none"
+						}
+					}
+				}
+			}
+		},
+		"colors": {
+			"title": "Palette",
+			"description": "Brand colors & shades.",
+			"content": {
+				"action": {
+					"type": "panel",
+					"title": "Action",
+					"tooltip": "The action color of your website (used for buttons & links).",
+					"variable": "option-action-clr",
+					"content": {
+						"color-action": {
+							"type": "variable",
+							"default": "#E56C70",
+							"title": "Hex Value",
+							"tooltip": "",
+							"description": ""
+						},
+						"action-shades": {
+							"type": "accordion",
+							"title": "Edit Action Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"action-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"action-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"action-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"action-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"action-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"action-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"action-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"action-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"action-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"action-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"action-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"action-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"action-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"action-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"primary": {
+					"type": "panel",
+					"title": "Primary",
+					"tooltip": "The most used color of your website.",
+					"variable": "option-primary-clr",
+					"content": {
+						"color-primary": {
+							"type": "variable",
+							"default": "#E56C70",
+							"title": "Hex Value",
+							"tooltip": "",
+							"description": ""
+						},
+						"primary-shades": {
+							"type": "accordion",
+							"title": "Edit Primary Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"primary-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"primary-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"primary-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"primary-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"primary-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"primary-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"primary-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"primary-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"primary-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"primary-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"primary-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"primary-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"primary-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"primary-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"secondary": {
+					"type": "panel",
+					"title": "Secondary",
+					"tooltip": "An alternate to the primary color.",
+					"variable": "option-secondary-clr",
+					"content": {
+						"color-secondary": {
+							"type": "variable",
+							"default": "#6C5879",
+							"title": "Hex Value",
+							"tooltip": "",
+							"description": ""
+						},
+						"secondary-shades": {
+							"type": "accordion",
+							"title": "Edit Secondary Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"secondary-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"secondary-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"secondary-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"secondary-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"secondary-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"secondary-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"secondary-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"secondary-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"secondary-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"secondary-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"secondary-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"secondary-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"secondary-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"secondary-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"accent": {
+					"type": "panel",
+					"title": "Accent",
+					"tooltip": "Typically the least used color on the website.",
+					"variable": "option-accent-clr",
+					"content": {
+						"color-accent": {
+							"type": "variable",
+							"default": "#EAAC8B",
+							"title": "Hex Value",
+							"tooltip": "",
+							"description": ""
+						},
+						"accent-shades": {
+							"type": "accordion",
+							"title": "Edit Accent Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"accent-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"accent-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"accent-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"accent-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"accent-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"accent-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"accent-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"accent-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"accent-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"accent-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"accent-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"accent-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"accent-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"accent-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"base": {
+					"type": "panel",
+					"title": "Base",
+					"tooltip": "Typically the darkest color for the website (used for text and dark backgrounds).",
+					"variable": "option-base-clr",
+					"content": {
+						"color-base": {
+							"type": "variable",
+							"default": "#344F6F",
+							"title": "Hex Value",
+							"tooltip": "",
+							"description": ""
+						},
+						"base-shades": {
+							"type": "accordion",
+							"title": "Edit Base Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"base-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"base-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"base-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"base-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"base-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"base-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"base-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"base-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"base-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"base-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"base-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"base-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"base-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"base-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"shade": {
+					"type": "panel",
+					"title": "Shade",
+					"tooltip": "Default black base. Adjust if you want to slightly change its hue. Adjustments won't effect \"white\" or \"black\" classes.",
+					"variable": "",
+					"description": "",
+					"content": {
+						"color-shade": {
+							"type": "variable",
+							"default": "#000000",
+							"title": "Hex Value",
+							"tooltip": ""
+						},
+						"shade-shades": {
+							"type": "accordion",
+							"title": "Edit Shades",
+							"description": "Adjust each shade’s HSL values. Higher values provide more saturation/lightness and lower values provide less. Don't adjust the hue unless you know exactly what you're doing.",
+							"content": {
+								"shade-hover": {
+									"type": "group",
+									"title": "Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"shade-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"shade-ultra-light": {
+									"type": "group",
+									"title": "Ultra Light",
+									"content": {
+										"shade-ultra-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-ultra-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-ultra-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"shade-light": {
+									"type": "group",
+									"title": "Light",
+									"content": {
+										"shade-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"shade-medium": {
+									"type": "group",
+									"title": "Medium",
+									"content": {
+										"shade-medium-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-medium-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-medium-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"shade-dark": {
+									"type": "group",
+									"title": "Dark",
+									"content": {
+										"shade-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"shade-ultra-dark": {
+									"type": "group",
+									"title": "Ultra Dark",
+									"content": {
+										"shade-ultra-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"shade-ultra-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"shade-ultra-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"contextual-colors": {
+					"type": "panel",
+					"title": "Contextual Colors",
+					"tooltip": "Set the contextual colors for your website.",
+					"variable": "option-contextual-colors",
+					"content": {
+						"success-color": {
+							"type": "accordion",
+							"title": "Success",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"color-success": {
+									"type": "variable",
+									"title": "Success Color"
+								},
+								"success-light": {
+									"type": "group",
+									"title": "Success Light",
+									"content": {
+										"success-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"success-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"success-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"success-dark": {
+									"type": "group",
+									"title": "Success Dark",
+									"content": {
+										"success-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"success-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"success-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"success-hover": {
+									"type": "group",
+									"title": "Success Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"success-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"success-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"success-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						},
+						"danger-color": {
+							"type": "accordion",
+							"title": "Danger",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"color-danger": {
+									"type": "variable",
+									"title": "Hex Value"
+								},
+								"danger-light": {
+									"type": "group",
+									"title": "Danger Light",
+									"content": {
+										"danger-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"danger-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"danger-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"danger-dark": {
+									"type": "group",
+									"title": "Danger Dark",
+									"content": {
+										"danger-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"danger-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"danger-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"danger-hover": {
+									"type": "group",
+									"title": "Danger Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"danger-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"danger-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"danger-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						},
+						"warning-color": {
+							"type": "accordion",
+							"title": "Warning",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"color-warning": {
+									"type": "variable",
+									"title": "Warning Color"
+								},
+								"warning-light": {
+									"type": "group",
+									"title": "warning Light",
+									"content": {
+										"warning-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"warning-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"warning-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"warning-dark": {
+									"type": "group",
+									"title": "Warning Dark",
+									"content": {
+										"warning-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"warning-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"warning-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"warning-hover": {
+									"type": "group",
+									"title": "Warning Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"warning-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"warning-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"warning-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						},
+						"info-color": {
+							"type": "accordion",
+							"title": "Info",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"color-info": {
+									"type": "variable",
+									"title": "Info Color"
+								},
+								"info-light": {
+									"type": "group",
+									"title": "Info Light",
+									"content": {
+										"info-light-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"info-light-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"info-light-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"info-dark": {
+									"type": "group",
+									"title": "Info Dark",
+									"content": {
+										"info-dark-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"info-dark-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"info-dark-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								},
+								"info-hover": {
+									"type": "group",
+									"title": "Info Hover",
+									"tooltip": "Set hover lightness as a multiple (e.g. \"1.15\" for 15% lighter)",
+									"content": {
+										"info-hover-h": {
+											"type": "variable",
+											"unit": "H"
+										},
+										"info-hover-s": {
+											"type": "variable",
+											"unit": "S"
+										},
+										"info-hover-l": {
+											"type": "variable",
+											"unit": "L"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"typography": {
+			"title": "Typography",
+			"description": "Fluid responsive headings & text.",
+			"content": {
+				"root-font-size": {
+					"type": "panel",
+					"title": "Root Font Size",
+					"tooltip": "Typically 100% or 62.5%. <a target=\"_blank\" href=\"https://community.automaticcss.com/c/setup/manual-typography-overrides\">See documentation</a> ",
+					"variable": "root-font-size"
+				},
+				"fluid-headings": {
+					"type": "panel",
+					"title": "Headings",
+					"tooltip": "",
+					"content": {
+						"base-size": {
+							"type": "group",
+							"title": "Base Heading Size",
+							"tooltip": "Set the base min & max values for fluid headings.",
+							"content": {
+								"base-heading-mob": {
+									"type": "variable",
+									"unit": "px"
+								},
+								"base-heading-desk": {
+									"type": "variable",
+									"unit": "px"
+								}
+							}
+						},
+						"heading-scale": {
+							"type": "variable",
+							"title": "Desktop Scale",
+							"tooltip": "The degree of change between heading sizes on desktop."
+						},
+						"heading-scale-custom": {
+							"type": "variable",
+							"title": "Custom Desktop Scale",
+							"tooltip": "Set your own mathematical desktop scale value."
+						},
+						"mob-heading-scale": {
+							"type": "variable",
+							"title": "Mobile Scale",
+							"tooltip": "The degree of change between heading sizes on mobile."
+						},
+						"mob-heading-scale-custom": {
+							"type": "variable",
+							"title": "Custom Mobile Scale",
+							"tooltip": "Set your own mathematical mobile scale value."
+						},
+						"heading-colors": {
+							"type": "accordion",
+							"title": "Heading Colors",
+							"tooltip": "",
+							"description": "Set default colors for each heading level using an ACSS variable. <strong>NOTE: ACSS does not set heading colors by default. The following fields only have placeholders.</strong>",
+							"content": {
+								"h1-color": {
+									"type": "variable",
+									"title": "H1",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								},
+								"h2-color": {
+									"type": "variable",
+									"title": "H2",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								},
+								"h3-color": {
+									"type": "variable",
+									"title": "H3",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								},
+								"h4-color": {
+									"type": "variable",
+									"title": "H4",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								},
+								"h5-color": {
+									"type": "variable",
+									"title": "H5",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								},
+								"h6-color": {
+									"type": "variable",
+									"title": "H6",
+									"tooltip": "",
+									"placeholder": "var(--base)"
+								}
+							}
+						},
+						"heading-line-heights": {
+							"type": "accordion",
+							"title": "Heading Line Heights",
+							"tooltip": "",
+							"description": "Set the line height for each heading size.",
+							"content": {
+								"h1-lh": {
+									"type": "variable",
+									"title": "H1",
+									"tooltip": ""
+								},
+								"h2-lh": {
+									"type": "variable",
+									"title": "H2",
+									"tooltip": ""
+								},
+								"h3-lh": {
+									"type": "variable",
+									"title": "H3",
+									"tooltip": ""
+								},
+								"h4-lh": {
+									"type": "variable",
+									"title": "H4",
+									"tooltip": ""
+								},
+								"h5-lh": {
+									"type": "variable",
+									"title": "H5",
+									"tooltip": ""
+								},
+								"h6-lh": {
+									"type": "variable",
+									"title": "H6",
+									"tooltip": ""
+								}
+							}
+						},
+						"heading-line-lengths": {
+							"type": "accordion",
+							"title": "Heading Line Lengths",
+							"tooltip": "",
+							"description": "Set the heading line length to a specific number of characters for maximum readability. The recommended value is anywhere from 45ch to&nbsp;80ch.",
+							"content": {
+								"heading-line-length": {
+									"type": "variable",
+									"title": "H1",
+									"tooltip": ""
+								},
+								"h2-line-length": {
+									"type": "variable",
+									"title": "H2",
+									"tooltip": ""
+								},
+								"h3-line-length": {
+									"type": "variable",
+									"title": "H3",
+									"tooltip": ""
+								},
+								"h4-line-length": {
+									"type": "variable",
+									"title": "H4",
+									"tooltip": ""
+								},
+								"h5-line-length": {
+									"type": "variable",
+									"title": "H5",
+									"tooltip": ""
+								},
+								"h6-line-length": {
+									"type": "variable",
+									"title": "H6",
+									"tooltip": ""
+								}
+							}
+						},
+						"heading-overrides-accordion": {
+							"type": "accordion",
+							"title": "Heading Size Overrides",
+							"tooltip": "",
+							"description": "Set any heading size manually. The first input is the mobile value and the second input is the desktop value. You can choose to leave the mobile input blank and only change the desktop value if you'd like. All sizes will remain responsive according to the values you set.",
+							"content": {
+								"h1-overrides": {
+									"type": "group",
+									"title": "H1",
+									"content": {
+										"h1-min": {
+											"type": "variable",
+											"title": "H1 Text Size (Mobile)",
+											"tooltip": "Input the smallest size H1 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h1-max": {
+											"type": "variable",
+											"title": "H1 Text Size (Desktop)",
+											"tooltip": "Input the largest size H1 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"h2-overrides": {
+									"type": "group",
+									"title": "H2",
+									"content": {
+										"h2-min": {
+											"type": "variable",
+											"title": "H2 Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want H2 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h2-max": {
+											"type": "variable",
+											"title": "H2 Text Size (Desktop)",
+											"tooltip": "Input the largest size you want H2 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"h3-overrides": {
+									"type": "group",
+									"title": "H3",
+									"content": {
+										"h3-min": {
+											"type": "variable",
+											"title": "H3 Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want H3 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h3-max": {
+											"type": "variable",
+											"title": "H3 Text Size (Desktop)",
+											"tooltip": "Input the largest size you want H3 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"h4-overrides": {
+									"type": "group",
+									"title": "H4",
+									"content": {
+										"h4-min": {
+											"type": "variable",
+											"title": "H4 Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want H4 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h4-max": {
+											"type": "variable",
+											"title": "H4 Text Size (Desktop)",
+											"tooltip": "Input the largest size you want H4 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"h5-overrides": {
+									"type": "group",
+									"title": "H5",
+									"content": {
+										"h5-min": {
+											"type": "variable",
+											"title": "H5 Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want H5 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h5-max": {
+											"type": "variable",
+											"title": "H5 Text Size (Desktop)",
+											"tooltip": "Input the largest size you want H5 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"h6-overrides": {
+									"type": "group",
+									"title": "H6",
+									"content": {
+										"h6-min": {
+											"type": "variable",
+											"title": "H6 Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want H6 headings to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"h6-max": {
+											"type": "variable",
+											"title": "H6 Text Size (Desktop)",
+											"tooltip": "Input the largest size you want H6 headings to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								}
+							}
+						},
+						"option-balance-headings": {
+							"type": "variable",
+							"title": "Automatically Balance Headings",
+							"tooltip": "Prevent orphans in headings (in supported browsers)."
+						}
+					}
+				},
+				"fluid-text": {
+					"type": "panel",
+					"title": "Text",
+					"tooltip": "",
+					"content": {
+						"body-color": {
+							"type": "variable",
+							"title": "Default Text Color",
+							"tooltip": "Set the default body text color for your website (ACSS variable recommended).",
+							"placeholder": "var(--base)"
+						},
+						"base-size": {
+							"type": "group",
+							"title": "Base Text Size",
+							"tooltip": "Set the base min & max values for fluid text.",
+							"content": {
+								"base-text-mob": {
+									"type": "variable",
+									"unit": "px"
+								},
+								"base-text-desk": {
+									"type": "variable",
+									"unit": "px"
+								}
+							}
+						},
+						"text-scale": {
+							"type": "variable",
+							"title": "Desktop Scale",
+							"tooltip": "The degree of change between text sizes on desktop."
+						},
+						"text-scale-custom": {
+							"type": "variable",
+							"title": "Custom Desktop Scale",
+							"tooltip": "Set your own mathematical desktop scale value."
+						},
+						"mob-text-scale": {
+							"type": "variable",
+							"title": "Mobile Scale",
+							"tooltip": "The degree of change between text sizes on mobile."
+						},
+						"mob-text-scale-custom": {
+							"type": "variable",
+							"title": "Custom Mobile Scale",
+							"tooltip": "Set your own mathematical mobile scale value."
+						},
+						"text-line-heights": {
+							"type": "accordion",
+							"title": "Text Line Heights",
+							"tooltip": "",
+							"description": "Set the line height for each text size.",
+							"content": {
+								"text-xxl-lh": {
+									"type": "variable",
+									"title": "XXL Text Line Height",
+									"tooltip": ""
+								},
+								"text-xl-lh": {
+									"type": "variable",
+									"title": "XL Text Line Height",
+									"tooltip": ""
+								},
+								"text-l-lh": {
+									"type": "variable",
+									"title": "L Text Line Height",
+									"tooltip": ""
+								},
+								"base-text-lh": {
+									"type": "variable",
+									"title": "M/Base Text Line Height",
+									"tooltip": ""
+								},
+								"text-s-lh": {
+									"type": "variable",
+									"title": "S Text Line Height",
+									"tooltip": ""
+								},
+								"text-xs-lh": {
+									"type": "variable",
+									"title": "XS Text Line Height",
+									"tooltip": ""
+								}
+							}
+						},
+						"text-line-lengths": {
+							"type": "accordion",
+							"title": "Text Line Lengths",
+							"tooltip": "",
+							"description": "Set the text line length to a specific number of characters for maximum readability. The recommended value is anywhere from 45ch to 80ch. This setting only affects paragraphs and&nbsp;lists, but can affect containers when a text size class is applied at the container level.",
+							"content": {
+								"text-xxl-length": {
+									"type": "variable",
+									"title": "XXL Text Line Length",
+									"tooltip": ""
+								},
+								"text-xl-length": {
+									"type": "variable",
+									"title": "XL Text Line Length",
+									"tooltip": ""
+								},
+								"text-l-length": {
+									"type": "variable",
+									"title": "L Text Line Length",
+									"tooltip": ""
+								},
+								"text-line-length": {
+									"type": "variable",
+									"title": "M/Base Text Line Length",
+									"tooltip": ""
+								},
+								"text-s-length": {
+									"type": "variable",
+									"title": "S Text Line Length",
+									"tooltip": ""
+								},
+								"text-xs-length": {
+									"type": "variable",
+									"title": "XS Text Line Length",
+									"tooltip": ""
+								}
+							}
+						},
+						"text-overrides-accordion": {
+							"type": "accordion",
+							"title": "Text Size Overrides",
+							"tooltip": "",
+							"description": "Set any text size manually. The first input is the mobile value and the second input is the desktop value. You can choose to leave the mobile input blank and only change the desktop value if you'd like. All sizes will remain responsive according to the values you set.",
+							"content": {
+								"xxl-overrides": {
+									"type": "group",
+									"title": "XXL",
+									"content": {
+										"text-xxl-min": {
+											"type": "variable",
+											"title": "\"XXL\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"XXL\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-xxl-max": {
+											"type": "variable",
+											"title": "\"XXL\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"XXL\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"xl-overrides": {
+									"type": "group",
+									"title": "XL",
+									"content": {
+										"text-xl-min": {
+											"type": "variable",
+											"title": "\"XL\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"XL\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-xl-max": {
+											"type": "variable",
+											"title": "\"XL\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"XL\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"l-overrides": {
+									"type": "group",
+									"title": "L",
+									"content": {
+										"text-l-min": {
+											"type": "variable",
+											"title": "\"L\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"L\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-l-max": {
+											"type": "variable",
+											"title": "\"L\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"L\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"m-overrides": {
+									"type": "group",
+									"title": "M",
+									"content": {
+										"text-m-min": {
+											"type": "variable",
+											"title": "\"M\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"M\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-m-max": {
+											"type": "variable",
+											"title": "\"M\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"M\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"s-overrides": {
+									"type": "group",
+									"title": "S",
+									"content": {
+										"text-s-min": {
+											"type": "variable",
+											"title": "\"S\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"S\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-s-max": {
+											"type": "variable",
+											"title": "\"S\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"S\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"xs-overrides": {
+									"type": "group",
+									"title": "XS",
+									"content": {
+										"text-xs-min": {
+											"type": "variable",
+											"title": "\"S\" Text Size (Mobile)",
+											"tooltip": "Input the smallest size you want \"XS\" text to be on mobile devices.",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"text-xs-max": {
+											"type": "variable",
+											"title": "\"S\" Text Size (Desktop)",
+											"tooltip": "Input the largest size you want \"XS\" text to be on desktop devices.",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								}
+							}
+						},
+						"option-balance-text": {
+							"type": "variable",
+							"title": "Automatically Balance Text",
+							"tooltip": "Prevent orphans in pargraphs, lists, and quotes (in supported browsers)."
+						}
+					}
+				},
+				"typography-spacing": {
+					"type": "panel",
+					"title": "Typography Spacing",
+					"description": "Make your typography spacing more consistent and automatic.",
+					"tooltip": "",
+					"content": {
+						"option-paragraph-fix": {
+							"type": "variable",
+							"title": "Smart Spacing",
+							"tooltip": "Resets user-agent typography spacing and applies smart gap spacing to typography."
+						},
+						"default-heading-spacing": {
+							"type": "variable",
+							"title": "Heading Spacing",
+							"tooltip": "Set the top margin value for adjacent sibling headings."
+						},
+						"default-paragraph-spacing": {
+							"type": "variable",
+							"title": "Paragraph Spacing",
+							"tooltip": "Set the top margin value for adjacent sibling paragraphs."
+						},
+						"default-list-spacing": {
+							"type": "variable",
+							"title": "List Spacing",
+							"tooltip": "Set the top margin value for adjacent sibling lists (ul, ol)."
+						},
+						"default-list-item-spacing": {
+							"type": "variable",
+							"title": "List Item Spacing",
+							"tooltip": "Set the top margin value for adjacent sibling list items (li)."
+						}
+					}
+				},
+				"text-multiplier": {
+					"type": "panel",
+					"title": "'Larger' Multiplier",
+					"tooltip": "",
+					"content": {
+						"multiplier-values": {
+							"type": "group",
+							"title": "Text Larger",
+							"tooltip": "Sets a min and max for the 'text--larger' class",
+							"content": {
+								"text-multiplier-min": {
+									"type": "variable"
+								},
+								"text-multiplier": {
+									"type": "variable"
+								}
+							}
+						}
+					}
+				},
+				"text-size-fallbacks": {
+					"type": "panel",
+					"title": "Fallbacks",
+					"tooltip": "Controls text & heading sizes on devices that don't support calc() or clamp().",
+					"content": {
+						"fallbacks-accordion": {
+							"type": "accordion",
+							"title": "Edit Fallbacks",
+							"content": {
+								"text-xxl-pure": {
+									"type": "variable",
+									"title": "XXL/H1",
+									"tooltip": ""
+								},
+								"text-xl-pure": {
+									"type": "variable",
+									"title": "XL/H2",
+									"tooltip": ""
+								},
+								"text-l-pure": {
+									"type": "variable",
+									"title": "L/H3",
+									"tooltip": ""
+								},
+								"text-m-pure": {
+									"type": "variable",
+									"title": "M/H4",
+									"tooltip": ""
+								},
+								"text-s-pure": {
+									"type": "variable",
+									"title": "S/H5",
+									"tooltip": ""
+								},
+								"text-xs-pure": {
+									"type": "variable",
+									"title": "XS/H6",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"spacing": {
+			"title": "Spacing",
+			"description": "Fluid responsive spacing.",
+			"content": {
+				"main-spacing-system": {
+					"type": "panel",
+					"title": "Main Spacing",
+					"tooltip": "",
+					"description": "Set the base value for margin, padding, gaps, etc.",
+					"content": {
+						"base-spacing": {
+							"type": "group",
+							"title": "Base Spacing",
+							"tooltip": "Set the min & max values for fluid margin, padding, and gaps.",
+							"content": {
+								"base-space-min": {
+									"type": "variable",
+									"title": "Base Spacing (Mobile)",
+									"tooltip": "",
+									"unit": "px"
+								},
+								"base-space": {
+									"type": "variable",
+									"title": "Base Spacing",
+									"tooltip": "",
+									"unit": "px"
+								}
+							}
+						},
+						"space-scale": {
+							"type": "variable",
+							"title": "Desktop Scale",
+							"tooltip": "The degree of change between spacing sizes on desktop."
+						},
+						"space-scale-custom": {
+							"type": "variable",
+							"title": "Custom Desktop Scale",
+							"tooltip": "Set your own mathematical scale value."
+						},
+						"mob-space-scale": {
+							"type": "variable",
+							"title": "Mobile Scale",
+							"tooltip": "The degree of change between spacing sizes on mobile."
+						},
+						"mob-space-scale-custom": {
+							"type": "variable",
+							"title": "Custom Mobile Scale",
+							"tooltip": "Set your own mathematical mobile scale value."
+						}
+					}
+				},
+				"section-spacing-system": {
+					"type": "panel",
+					"title": "Section Spacing",
+					"tooltip": "",
+					"description": "Choose base section padding.",
+					"content": {
+						"space-adjust-section": {
+							"type": "variable",
+							"title": "Base Multiplier (Desktop)",
+							"tooltip": "Controls top & bottom section padding on desktop by multiplying Base Spacing."
+						},
+						"mob-space-adjust-section": {
+							"type": "variable",
+							"title": "Base Multiplier (Mobile)",
+							"tooltip": "Controls top & bottom section padding at the minimum device size by multiplying Base Spacing."
+						},
+						"left-right-padding": {
+							"type": "group",
+							"title": "Inline Padding (Gutter)",
+							"tooltip": "Set the min & max values for fluid left & right section padding.",
+							"content": {
+								"section-padding-x-min": {
+									"type": "variable",
+									"title": "Left/Right Section Padding (min)",
+									"tooltip": "Set a min value for responsive left/right section padding. This determines the distance between your content and the edge of the screen on laptops and mobile devices.",
+									"unit": "px"
+								},
+								"section-padding-x-max": {
+									"type": "variable",
+									"title": "Left/Right Section Padding (max)",
+									"tooltip": "Set a max value for responsive left/right section padding. This determines the distance between your content and the edge of the screen on laptops and mobile devices.",
+									"unit": "px"
+								}
+							}
+						}
+					}
+				},
+				"contextual-spacing": {
+					"type": "panel",
+					"title": "Contextual Spacing",
+					"tooltip": "",
+					"description": "Define standardized spacing for specific situations.",
+					"content": {
+						"container-spacing-divider": {
+							"type": "divider",
+							"content": "<span class=\"text-divider\">Container Spacing</a>"
+						},
+						"contextual-container-gap": {
+							"type": "variable",
+							"title": "Container Gap",
+							"tooltip": "The default value for spacing between containers in sections using .container-gap or var(--container-gap)."
+						},
+						"option-container-gap": {
+							"type": "variable",
+							"title": "Automatic Container Spacing",
+							"tooltip": "Automatically space containers in section using var(--container-gap)."
+						},
+						"content-spacing-divider": {
+							"type": "divider",
+							"content": "<span class=\"text-divider\">Content Spacing</a>"
+						},
+						"contextual-content-gap": {
+							"type": "variable",
+							"title": "Content Gap",
+							"tooltip": "Default value for spacing between content using .content-gap or var(--content-gap)."
+						},
+						"option-content-gap": {
+							"type": "variable",
+							"title": "Automatic Content Spacing",
+							"tooltip": "Automatically space content in containers using var(--content-gap)."
+						},
+						"grid-spacing-divider": {
+							"type": "divider",
+							"content": "<span class=\"text-divider\">Grid Spacing</a>"
+						},
+						"contextual-grid-gap": {
+							"type": "variable",
+							"title": "Grid Gap",
+							"tooltip": "The default value for spacing between grid items using .grid-gap or var(--grid-gap)."
+						},
+						"option-grid-gap": {
+							"type": "variable",
+							"title": "Automatic Grid Spacing",
+							"tooltip": "Automatically space grid items using var(--grid-gap)."
+						}
+					}
+				}
+			}
+		},
+		"buttons": {
+			"title": "Buttons & Links",
+			"description": "Global button & link styling.",
+			"content": {
+				"option-buttons": {
+					"type": "panel",
+					"title": "Button Functionality",
+					"tooltip": "",
+					"variable": "option-buttons"
+				},
+				"button-defaults": {
+					"type": "panel",
+					"title": "Button Defaults",
+					"tooltip": "",
+					"content": {
+						"option-btn-text-size": {
+							"type": "variable",
+							"title": "Custom Button Text Size",
+							"tooltip": "By default, button text inherits the \"M\" text size. Turn this setting on to set a custom text size for buttons."
+						},
+						"btn-text": {
+							"type": "group",
+							"title": "Text Size",
+							"tooltip": "Set a mobile font size (1st field) and desktop font size (2nd field).",
+							"content": {
+								"btn-text-min": {
+									"type": "variable",
+									"title": "Font-Size (mobile)",
+									"tooltip": "Set a minimum value for responsive default text sizing on buttons."
+								},
+								"btn-text-max": {
+									"type": "variable",
+									"title": "Font-Size (desktop)",
+									"tooltip": "Set a maximum value for responsive default text sizing on buttons."
+								}
+							}
+						},
+						"button-padding": {
+							"type": "group",
+							"title": "Button Padding",
+							"tooltip": "Set top/bottom & left/right button padding. Accepts any units (\"em\" recommended).",
+							"content": {
+								"btn-pad-y": {
+									"type": "variable",
+									"title": "Top/Bottom Button Padding",
+									"tooltip": "Adjust the vertical padding on buttons.",
+									"unit": "y"
+								},
+								"btn-pad-x": {
+									"type": "variable",
+									"title": "Left/Right Button Padding",
+									"tooltip": "Adjust the horizontal padding on buttons.",
+									"unit": "x"
+								}
+							}
+						},
+						"btn-width": {
+							"type": "variable",
+							"title": "Minimum Button Width",
+							"tooltip": "Buttons won't be narrower than this width. Note: Can cause horizontal scrolling issues if value is too large."
+						},
+						"button-text-defaults": {
+							"type": "accordion",
+							"title": "Button Text Styling",
+							"content": {
+								"btn-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"btn-letter-spacing": {
+									"type": "variable",
+									"title": "Letter Spacing",
+									"tooltip": "Use a value & unit (e.g. .025em)"
+								},
+								"btn-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"btn-text-style": {
+									"type": "variable",
+									"title": "Font Style",
+									"tooltip": ""
+								},
+								"btn-text-transform": {
+									"type": "variable",
+									"title": "Text Transform",
+									"tooltip": ""
+								},
+								"btn-text-decoration": {
+									"type": "variable",
+									"title": "Text Decoration",
+									"tooltip": ""
+								}
+							}
+						},
+						"button-border-defaults": {
+							"type": "accordion",
+							"title": "Button Border Styling",
+							"content": {
+								"btn-border-size": {
+									"type": "variable",
+									"title": "Border Width",
+									"tooltip": ""
+								},
+								"outline-btn-border-size": {
+									"type": "variable",
+									"title": "Outline Border Width",
+									"tooltip": ""
+								},
+								"btn-radius": {
+									"type": "variable",
+									"title": "Button Radius",
+									"tooltip": "Use an ACSS radius variable or any value with a unit (\"em\" recommended)."
+								}
+							}
+						}
+					}
+				},
+				"link-defaults": {
+					"type": "panel",
+					"title": "Link Defaults",
+					"tooltip": "Set default styling for links.",
+					"content": {
+						"link-color": {
+							"type": "variable",
+							"title": "Link Color",
+							"tooltip": ""
+						},
+						"link-color-hover": {
+							"type": "variable",
+							"title": "Link Hover Color",
+							"tooltip": ""
+						},
+						"link-weight": {
+							"type": "variable",
+							"title": "Link Weight",
+							"tooltip": ""
+						},
+						"link-decoration": {
+							"type": "variable",
+							"title": "Link Decoration",
+							"tooltip": ""
+						},
+						"link-underline-offset": {
+							"type": "variable",
+							"title": "Link Underline Offset",
+							"tooltip": "Offset the underline style on underlined links (e.g. .25em)"
+						}
+					}
+				},
+				"action-button": {
+					"type": "panel",
+					"title": "Action Button",
+					"tooltip": "",
+					"content": {
+						"option-action-btn": {
+							"type": "variable",
+							"title": "Load Action Button Styles",
+							"tooltip": "Turn Action button classes on or off."
+						},
+						"action-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Action Button Styling",
+							"content": {
+								"btn-action-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-action-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-action-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-action-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-action-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-action-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"action-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"action-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"primary-button": {
+					"type": "panel",
+					"title": "Primary Button",
+					"tooltip": "",
+					"content": {
+						"option-primary-btn": {
+							"type": "variable",
+							"title": "Load Primary Button Styles",
+							"tooltip": "Turn primary button classes on or off."
+						},
+						"primary-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Primary Button Styling",
+							"content": {
+								"btn-primary-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-primary-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-primary-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-primary-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-primary-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-primary-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"primary-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"primary-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"secondary-button": {
+					"type": "panel",
+					"title": "Secondary Button",
+					"tooltip": "",
+					"content": {
+						"option-secondary-btn": {
+							"type": "variable",
+							"title": "Load Secondary Button Styles",
+							"tooltip": "Turn secondary button classes on or off."
+						},
+						"secondary-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Secondary Button Styling",
+							"content": {
+								"btn-secondary-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-secondary-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-secondary-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-secondary-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-secondary-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-secondary-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"secondary-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"secondary-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"accent-button": {
+					"type": "panel",
+					"title": "Accent Button",
+					"tooltip": "",
+					"content": {
+						"option-accent-btn": {
+							"type": "variable",
+							"title": "Load Accent Button Styles",
+							"tooltip": "Turn accent button classes on or off."
+						},
+						"accent-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Accent Button Styling",
+							"content": {
+								"btn-accent-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-accent-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-accent-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-accent-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-accent-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-accent-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"accent-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"accent-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"base-button": {
+					"type": "panel",
+					"title": "Base Button",
+					"tooltip": "",
+					"content": {
+						"option-base-btn": {
+							"type": "variable",
+							"title": "Load Base Button Styles",
+							"tooltip": "Turn base button classes on or off."
+						},
+						"base-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Base Button Styling",
+							"content": {
+								"btn-base-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-base-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-base-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-base-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-base-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-base-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"base-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"base-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"black-button": {
+					"type": "panel",
+					"title": "Black Button",
+					"tooltip": "",
+					"content": {
+						"option-black-btn": {
+							"type": "variable",
+							"title": "Load Black Button Styles",
+							"tooltip": "Turn black button classes on or off."
+						},
+						"black-button-accordion": {
+							"type": "accordion",
+							"title": "Edit Black Button Styling",
+							"content": {
+								"btn-black-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-black-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-black-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-black-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-black-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-black-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"black-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"black-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"white-button": {
+					"type": "panel",
+					"title": "White Button",
+					"tooltip": "",
+					"content": {
+						"option-white-btn": {
+							"type": "variable",
+							"title": "Load White Button Styles",
+							"tooltip": "Turn white button classes on or off."
+						},
+						"white-button-accordion": {
+							"type": "accordion",
+							"title": "Edit White Button Styling",
+							"content": {
+								"btn-white-bg": {
+									"type": "variable",
+									"title": "Background Color",
+									"tooltip": ""
+								},
+								"btn-white-hover": {
+									"type": "variable",
+									"title": "Hover Background Color",
+									"tooltip": ""
+								},
+								"btn-white-text": {
+									"type": "variable",
+									"title": "Text Color",
+									"tooltip": ""
+								},
+								"btn-white-hover-text": {
+									"type": "variable",
+									"title": "Hover Text Color",
+									"tooltip": ""
+								},
+								"btn-white-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"btn-white-hover-border-color": {
+									"type": "variable",
+									"title": "Hover Border Color",
+									"tooltip": ""
+								},
+								"white-outline-btn-text": {
+									"type": "variable",
+									"title": "Outline Text Color",
+									"tooltip": ""
+								},
+								"white-outline-hover-text": {
+									"type": "variable",
+									"title": "Outline Hover Text Color",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"additional-styling": {
+			"title": "Additional Styling",
+			"description": "More styling settings.",
+			"content": {
+				"accessibility": {
+					"type": "panel",
+					"title": "Accessibility",
+					"tooltip": "",
+					"content": {
+						"focus-style": {
+							"type": "variable",
+							"title": "Focus Style",
+							"tooltip": ""
+						},
+						"focus-color": {
+							"type": "variable",
+							"title": "Focus Color",
+							"tooltip": ""
+						},
+						"focus-width": {
+							"type": "variable",
+							"title": "Focus Width",
+							"tooltip": "Thickness of the focus line."
+						},
+						"focus-offset": {
+							"type": "variable",
+							"title": "Focus Offset",
+							"tooltip": ""
+						}
+					}
+				},
+				"header": {
+					"type": "panel",
+					"title": "Header Styling",
+					"tooltip": "",
+					"content": {
+						"header-heights": {
+							"type": "accordion",
+							"title": "Header Heights",
+							"tooltip": "",
+							"description": "Set your header height (per breakpoint). Used for var(--header-height), automatic sticky offset, and automatic scroll offset.",
+							"content": {
+								"header-height": {
+									"type": "variable",
+									"title": "Header Height",
+									"tooltip": ""
+								},
+								"header-height-l": {
+									"type": "variable",
+									"title": "Header Height (L)",
+									"tooltip": "Header height at the 'L' breakpoint."
+								},
+								"header-height-m": {
+									"type": "variable",
+									"title": "Header Height (M)",
+									"tooltip": "Header height at the 'M' breakpoint."
+								},
+								"header-height-s": {
+									"type": "variable",
+									"title": "Header Height (S)",
+									"tooltip": "Header height at the 'S' breakpoint."
+								}
+							}
+						},
+						"option-offset-page-content": {
+							"type": "variable",
+							"title": "Offset Page Content Automatically",
+							"tooltip": "Offset your page content to account for the height of your header. Note: Header height values must be filled out above - only use when header is positioned Absolute or Fixed)."
+						}
+					}
+				},
+				"scroll-styling": {
+					"type": "panel",
+					"title": "Scroll Styling",
+					"tooltip": "Set your scroll margins (per breakpoint). These are used for scroll offset and sticky offset.",
+					"content": {
+						"scroll-margins": {
+							"type": "accordion",
+							"title": "Scroll Offsets",
+							"tooltip": "",
+							"description": "While header heights (above) are used for scroll offset, you can choose to set an additional offset value to increase the offset.",
+							"content": {
+								"scroll-margin": {
+									"type": "variable",
+									"title": "Scroll Offset",
+									"tooltip": "Set an offset at desktop."
+								},
+								"scroll-margin-l": {
+									"type": "variable",
+									"title": "Scroll Offset (L)",
+									"tooltip": "Set an offset at the 'L' breakpoint."
+								},
+								"scroll-margin-m": {
+									"type": "variable",
+									"title": "Scroll Offset (M)",
+									"tooltip": "Set an offset at the 'M' breakpoint."
+								},
+								"scroll-margin-s": {
+									"type": "variable",
+									"title": "Scroll Offset (S)",
+									"tooltip": "Set an offset at the 'S' breakpoint."
+								}
+							}
+						}
+					}
+				},
+				"sticky": {
+					"type": "panel",
+					"title": "Sticky Settings",
+					"tooltip": "Adjust the distance from top for sticky elements. Accepts values with units, calcs, or variables. <a href=\"https://community.automaticcss.com/c/classes/position-classes-sticky\" target=\"_blank\">See documentation</a>",
+					"content": {
+						"option-sticky-offset": {
+							"type": "variable",
+							"title": "Offset Sticky Elements Automatically",
+							"tooltip": "Use scroll offsets and header heights for sticky elements?"
+						},
+						"manual-sticky-offsets": {
+							"type": "accordion",
+							"title": "Manual Sticky Offsets",
+							"tooltip": "",
+							"description": "If you don't use auto-offset, you can set manual offsets for your sticky offset classes.",
+							"content": {
+								"sticky-top-s": {
+									"type": "variable",
+									"title": "Top Margin (Small)",
+									"tooltip": "Value for .sticky-top--s"
+								},
+								"sticky-top-m": {
+									"type": "variable",
+									"title": "Top Margin (Medium)",
+									"tooltip": "Value for .sticky-top--m"
+								},
+								"sticky-top-l": {
+									"type": "variable",
+									"title": "Top Margin (Large)",
+									"tooltip": "Value for .sticky-top--l"
+								}
+							}
+						}
+					}
+				},
+				"box-shadows": {
+					"type": "panel",
+					"title": "Box Shadows",
+					"tooltip": "",
+					"content": {
+						"box-shadow-1": {
+							"type": "accordion",
+							"title": "Box Shadow 1",
+							"tooltip": "",
+							"description": "Warning: Setting these values will replace <strong>.box-shadow--m</strong> and <strong>var(--box-shadow-m)</strong> with a custom name and value.",
+							"content": {
+								"box-shadow-1-name": {
+									"type": "variable",
+									"title": "Box Shadow 1 Name",
+									"tooltip": "Replace the extension with a custom name (e.g. 'primary' will create .box-shadow--primary and var(--box-shadow-primary))."
+								},
+								"box-shadow-1-value": {
+									"type": "variable",
+									"title": "Box Shadow 1 Value",
+									"tooltip": "Supports any valid box shadow value, including multi-layer box shadows and inset shadows."
+								}
+							}
+						},
+						"box-shadow-2": {
+							"type": "accordion",
+							"title": "Box Shadow 2",
+							"tooltip": "",
+							"description": "Warning: Setting these values will replace <strong>.box-shadow--l</strong> and <strong>var(--box-shadow-l)</strong> with a custom name and value.",
+							"content": {
+								"box-shadow-2-name": {
+									"type": "variable",
+									"title": "Box Shadow 2 Name",
+									"tooltip": "Replace the extension with a custom name (e.g. 'primary' will create .box-shadow--primary and var(--box-shadow-primary))."
+								},
+								"box-shadow-2-value": {
+									"type": "variable",
+									"title": "Box Shadow 2 Value",
+									"tooltip": "Supports any valid box shadow value, including multi-layer box shadows and inset shadows."
+								}
+							}
+						},
+						"box-shadow-3": {
+							"type": "accordion",
+							"title": "Box Shadow 3",
+							"tooltip": "",
+							"description": "Warning: Setting these values will replace <strong>.box-shadow--xl</strong> and <strong>var(--box-shadow-xl)</strong> with a custom name and value.",
+							"content": {
+								"box-shadow-3-name": {
+									"type": "variable",
+									"title": "Box Shadow 3 Name",
+									"tooltip": "Replace the extension with a custom name (e.g. 'primary' will create .box-shadow--primary and var(--box-shadow-primary))."
+								},
+								"box-shadow-3-value": {
+									"type": "variable",
+									"title": "Box Shadow 3 Value",
+									"tooltip": "Supports any valid box shadow value, including multi-layer box shadows and inset shadows."
+								}
+							}
+						}
+					}
+				},
+				"Selection": {
+					"type": "panel",
+					"title": "Selection Styling",
+					"tooltip": "Customize your website's selection text (cursor highlighting).",
+					"content": {
+						"selection-bg": {
+							"type": "variable",
+							"title": "Selection Background",
+							"tooltip": "Sets the default selection background color for your website.",
+							"placeholder": "var(--action)"
+						},
+						"selection-text": {
+							"type": "variable",
+							"title": "Selection Text Color",
+							"tooltip": "Sets the default selection text color for your website.",
+							"placeholder": "var(--action-ultra-light)"
+						},
+						"selection-bg-alt": {
+							"type": "variable",
+							"title": "Alt Selection Background",
+							"tooltip": "Sets the background color value for .selection--alt class.",
+							"placeholder": "var(--black)"
+						},
+						"selection-text-alt": {
+							"type": "variable",
+							"title": "Alt Selection Text Color",
+							"tooltip": "Sets the text color value for .selection--alt class.",
+							"placeholder": "var(--white)"
+						}
+					}
+				},
+				"radius-system": {
+					"type": "panel",
+					"title": "Radius System",
+					"tooltip": "",
+					"content": {
+						"base-radius": {
+							"type": "variable",
+							"title": "Base Radius",
+							"tooltip": "Set the base radius for classes (.rounded) and variables (--radius)."
+						},
+						"radius-scale": {
+							"type": "variable",
+							"title": "Radius Scale",
+							"tooltip": "Controls the degree of change between radius sizes."
+						}
+					}
+				},
+				"columns": {
+					"type": "panel",
+					"title": "Columns",
+					"tooltip": "Adjust the width of columns and column rulers. <a href=\"https://community.automaticcss.com/c/classes/text-content-column-classes\" target=\"_blank\">See documentation</a>",
+					"content": {
+						"column-widths": {
+							"type": "accordion",
+							"title": "Column Widths",
+							"tooltip": "",
+							"description": "Adjust the widths of text columns (.col-width classes).",
+							"content": {
+								"col-width-s": {
+									"type": "variable",
+									"title": "Column Width (Small)",
+									"tooltip": ""
+								},
+								"col-width-m": {
+									"type": "variable",
+									"title": "Column Width (Medium)",
+									"tooltip": ""
+								},
+								"col-width-l": {
+									"type": "variable",
+									"title": "Column Width (Large)",
+									"tooltip": ""
+								}
+							}
+						},
+						"columns-rule-widths": {
+							"type": "accordion",
+							"title": "Column Rule Widths",
+							"tooltip": "",
+							"description": "Adjust the width of text column rulers (vertical dividers).",
+							"content": {
+								"col-rule-width-s": {
+									"type": "variable",
+									"title": "Column Rule Width  (Small)",
+									"tooltip": ""
+								},
+								"col-rule-width-m": {
+									"type": "variable",
+									"title": "Column Rule Width  (Medium)",
+									"tooltip": ""
+								},
+								"col-rule-width-l": {
+									"type": "variable",
+									"title": "Column Rule Width  (Large)",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"plugin": {
+			"title": "Options",
+			"description": "Set the options for the Automatic.css plugin",
+			"content": {
+				"accessibility-settings": {
+					"type": "panel",
+					"title": "Accessibility",
+					"tooltip": "",
+					"content": {
+						"option-reduce-motion": {
+							"type": "variable",
+							"title": "Reduce Motion",
+							"tooltip": "Reduce motion and animations for user that prefer reduced motion (important for accessibility)."
+						}
+					}
+				},
+				"smooth-scroll-settings": {
+					"type": "panel",
+					"title": "Smooth Scrolling",
+					"tooltip": "",
+					"content": {
+						"option-smooth-scrolling": {
+							"type": "variable",
+							"title": "Enable CSS Smooth Scrolling",
+							"tooltip": "You can set an offset under 'Additional Styling' > Header Styling."
+						}
+					}
+				},
+				"builder-settings": {
+					"type": "panel",
+					"title": "Builder Settings",
+					"tooltip": "",
+					"content": {
+						"option-builder-input-validation": {
+							"type": "variable",
+							"title": "Variable expansion & validation",
+							"tooltip": "Auto-expands variables and calc functions while validating and fixing broken values.<br><a href=\"https://community.automaticcss.com/s/user-guide/\" target=\"_blank\">Read more</a>"
+						},
+						"option-contextual-menus-enable": {
+							"type": "variable",
+							"title": "Contextual Menus (Classes/Variables)",
+							"tooltip": "Adds context menus for inserting classes and variables.<br><a href=\"https://community.automaticcss.com/s/user-guide/\" target=\"_blank\">Read more</a>"
+						},
+						"option-keyboard-nav-hover-preview-enable": {
+							"type": "variable",
+							"title": "Style Preview & Keyboard Enhancement",
+							"tooltip": "Hit Tab to select and preview a class or hover over a class for live preview. While tabbed, you can start typing to instantly add/remove characters to the selected class name.<br><a href=\"https://community.automaticcss.com/s/user-guide/\" target=\"_blank\">Read more</a>"
+						},
+						"option-bricks-color-swatches-checkerboard-enable": {
+							"type": "variable",
+							"title": "Enhance Transparent Color Swatches (Bricks)",
+							"tooltip": "Adds a checkerboard background to the Bricks color swatches to better distinguish transparent colors.<br><a href=\"https://community.automaticcss.com/s/user-guide/\" target=\"_blank\">Read more</a>"
+						}
+					}
+				},
+				"gutenberg": {
+					"type": "panel",
+					"title": "Gutenberg",
+					"tooltip": "Enable Gutenberg related features",
+					"variable": "option-gutenberg-enable",
+					"content": {
+						"option-gutenberg-load-styling-backend": {
+							"type": "variable",
+							"title": "Load ACSS stylesheets in the block editor",
+							"tooltip": "Allows you to style content in the block editor with Automatic.css classes."
+						},
+						"option-gutenberg-color-palette-generate": {
+							"type": "variable",
+							"title": "Generate Gutenberg Color Palette",
+							"tooltip": "Add the Automatic.css colors in the Gutenberg palette."
+						},
+						"option-gutenberg-color-palette-replace": {
+							"type": "variable",
+							"title": "Replace Gutenberg Color Palette",
+							"tooltip": "Replace the default Gutenberg color palette with the Automatic.css colors."
+						},
+						"option-move-gutenberg-css-input": {
+							"type": "variable",
+							"title": "Class-First Workflow",
+							"tooltip": "Moves the input for custom CSS classes to the top of the Block settings panel."
+						}
+					}
+				},
+				"framework-settings": {
+					"type": "panel",
+					"title": "Framework Settings",
+					"tooltip": "",
+					"content": {
+						"group-pro-mode": {
+							"type": "group",
+							"title": "Pro Mode",
+							"tooltip": "Disables non-critical classes while retaining the variables for users who mostly use custom classes. Pro Mode makes ACSS about 50% lighter.",
+							"content": {
+								"button-pro-mode": {
+									"type": "button",
+									"label": "Activate"
+								},
+								"button-pro-mode-reset": {
+									"type": "button",
+									"label": "Reset"
+								}
+							}
+						},
+						"option-backgrounds": {
+							"type": "variable",
+							"title": "Background Classes",
+							"tooltip": "Turn off bg-- classes."
+						},
+						"option-owl": {
+							"type": "variable",
+							"title": "Owl Spacing Classes",
+							"tooltip": "Turn off owl-- classes."
+						},
+						"option-margin": {
+							"type": "variable",
+							"title": "Margin Classes",
+							"tooltip": "Turn off margin-- classes."
+						},
+						"option-padding": {
+							"type": "variable",
+							"title": "Padding Classes",
+							"tooltip": "Turn off pad-- classes."
+						},
+						"option-section-padding": {
+							"type": "variable",
+							"title": "Section Padding Classes",
+							"tooltip": "Turn off pad-section-- classes."
+						},
+						"option-overlays": {
+							"type": "variable",
+							"title": "Overlay Classes",
+							"tooltip": "Turn off overlay-- classes."
+						},
+						"option-text-color": {
+							"type": "variable",
+							"title": "Text Color Classes",
+							"tooltip": "Turn off text--[color] classes."
+						},
+						"option-link-color": {
+							"type": "variable",
+							"title": "Link Color Classes",
+							"tooltip": "Turn off link--[color] classes."
+						},
+						"option-opacities": {
+							"type": "variable",
+							"title": "Opacity Classes",
+							"tooltip": "Turn off opacity-- classes."
+						},
+						"option-box-shadows": {
+							"type": "variable",
+							"title": "Box-Shadow Classes",
+							"tooltip": "Turn off box-shadow-- classes."
+						},
+						"option-breakouts": {
+							"type": "variable",
+							"title": "Breakout Classes",
+							"tooltip": "Turn off breakout-- classes."
+						},
+						"option-position": {
+							"type": "variable",
+							"title": "Position Classes",
+							"tooltip": "Turn off position-- classes and sticky-- classes."
+						},
+						"option-centering": {
+							"type": "variable",
+							"title": "Centering Classes",
+							"tooltip": "Turn off center-- classes."
+						},
+						"option-flip": {
+							"type": "variable",
+							"title": "Flip Classes",
+							"tooltip": "Turn off flip-- classes."
+						},
+						"option-object-fit": {
+							"type": "variable",
+							"title": "Object Fit Classes",
+							"tooltip": "Turn off object-fit-- classes."
+						},
+						"option-height": {
+							"type": "variable",
+							"title": "Height Classes",
+							"tooltip": "Turn off height-- classes."
+						},
+						"option-grid": {
+							"type": "variable",
+							"title": "Grid Classes",
+							"tooltip": "Turn off grid--, .col-span--, row-span--, col-start--, & row-start-- classes."
+						},
+						"option-flex-grids": {
+							"type": "variable",
+							"title": "Flex Grid Classes",
+							"tooltip": "Turn off flex-grid-- classes."
+						},
+						"option-gaps": {
+							"type": "variable",
+							"title": "Gap Classes",
+							"tooltip": "Turn off gap-- classes."
+						},
+						"option-flex": {
+							"type": "variable",
+							"title": "Flexbox Classes",
+							"tooltip": "Turn off flex--, align--, & justify-- classes."
+						},
+						"option-width": {
+							"type": "variable",
+							"title": "Width Classes",
+							"tooltip": "Turn off width-- classes."
+						},
+						"option-rounded": {
+							"type": "variable",
+							"title": "Rounded / Radius",
+							"tooltip": "Turn off rounded-- classes"
+						},
+						"option-aspect-ratios": {
+							"type": "variable",
+							"title": "Aspect Ratio Classes",
+							"tooltip": "Turn off aspect-- classes."
+						},
+						"option-z-index": {
+							"type": "variable",
+							"title": "Z-Index Classes",
+							"tooltip": "Turn off z-- classes."
+						},
+						"option-columns": {
+							"type": "variable",
+							"title": "Column Classes",
+							"tooltip": "Turn off col-count--, col-width--, col-gap-- classes."
+						},
+						"option-marker-colors": {
+							"type": "variable",
+							"title": "Marker Color Classes",
+							"tooltip": "Turn off marker-- classes."
+						},
+						"option-display": {
+							"type": "variable",
+							"title": "Display Classes",
+							"tooltip": "Turn off display-- classes."
+						},
+						"option-visibility": {
+							"type": "variable",
+							"title": "Visibility Classes",
+							"tooltip": "Turn off visibility-- classes."
+						},
+						"option-corner-ribbons": {
+							"type": "variable",
+							"title": "Corner Ribbons",
+							"tooltip": "Turn off corner ribbons."
+						},
+						"option-contextual-color-classes": {
+							"type": "variable",
+							"title": "Contextual Color Classes",
+							"tooltip": "Turn off contextual color classes."
+						},
+						"option-deprecated": {
+							"type": "variable",
+							"title": "Load Deprecated Styles",
+							"tooltip": "Will load all deprecated ACSS framework modules."
+						}
+					}
+				},
+				"plugin-settings": {
+					"type": "panel",
+					"title": "Plugin Settings",
+					"tooltip": "",
+					"content": {
+						"admin-bar-enabled": {
+							"type": "variable",
+							"title": "Admin Bar Link",
+							"tooltip": "Add a link to the settings page in the admin bar."
+						},
+						"admin-link-position": {
+							"type": "variable",
+							"title": "Admin Link Position",
+							"tooltip": "Set the position of the admin link. See <a href=\"https://developer.wordpress.org/reference/functions/add_menu_page/#default-bottom-of-menu-structure\" target=\"_blank\">documentation</a>"
+						},
+						"receive-beta-releases": {
+							"type": "variable",
+							"title": "Receive beta releases",
+							"tooltip": ""
+						},
+						"debug-enabled": {
+							"type": "variable",
+							"title": "Enable debugging",
+							"tooltip": ""
+						},
+						"delete-on-deactivation": {
+							"type": "variable",
+							"title": "Delete on deactivation",
+							"tooltip": "Type \"yes\" if we should delete the plugin's options when you deactivate the plugin."
+						}
+					}
+				}
+			}
+		},
+		"frames": {
+			"title": "Frames",
+			"description": "Set global styling for Frames components. <br>Note: A <a href=\"https://getframes.io\" target=\"_blank\">Frames membership</a> is required.",
+			"content": {
+				"option-frames": {
+					"type": "panel",
+					"title": "Load Frames Styling",
+					"tooltip": "Required when using Frames components.",
+					"variable": "option-frames"
+				},
+				"background-styling": {
+					"type": "panel",
+					"title": "Backgrounds",
+					"tooltip": "",
+					"content": {
+						"fr-bg-light": {
+							"type": "variable",
+							"title": "Background (Light)",
+							"tooltip": ""
+						},
+						"fr-bg-dark": {
+							"type": "variable",
+							"title": "Background (Dark)",
+							"tooltip": ""
+						}
+					}
+				},
+				"text-styling": {
+					"type": "panel",
+					"title": "Text",
+					"tooltip": "",
+					"content": {
+						"fr-text-light": {
+							"type": "variable",
+							"title": "Text (Light)",
+							"tooltip": ""
+						},
+						"fr-text-dark": {
+							"type": "variable",
+							"title": "Text (Dark)",
+							"tooltip": ""
+						}
+					}
+				},
+				"content-styling": {
+					"type": "panel",
+					"title": "Content",
+					"tooltip": "",
+					"content": {
+						"fr-hero-padding": {
+							"type": "variable",
+							"title": "Hero Padding",
+							"tooltip": "Default value for top/bottom hero padding."
+						},
+						"fr-lede-width": {
+							"type": "variable",
+							"title": "Lede Width",
+							"tooltip": "The max-width (in characters) of lede paragraphs, blurbs, etc."
+						}
+					}
+				},
+				"card-styling": {
+					"type": "panel",
+					"title": "Cards",
+					"tooltip": "",
+					"content": {
+						"card-spacing": {
+							"type": "accordion",
+							"title": "Spacing",
+							"content": {
+								"fr-card-padding": {
+									"type": "variable",
+									"title": "Padding",
+									"tooltip": ""
+								},
+								"fr-card-gap": {
+									"type": "variable",
+									"title": "Card Element Gap",
+									"tooltip": "Controls default spacing between elements in cards."
+								}
+							}
+						},
+						"card-border": {
+							"type": "accordion",
+							"title": "Borders",
+							"content": {
+								"fr-card-border-size": {
+									"type": "variable",
+									"title": "Border Size",
+									"tooltip": ""
+								},
+								"fr-card-border-color": {
+									"type": "variable",
+									"title": "Border Color",
+									"tooltip": ""
+								},
+								"fr-card-border-style": {
+									"type": "variable",
+									"title": "Border Style",
+									"tooltip": ""
+								},
+								"fr-card-radius": {
+									"type": "variable",
+									"title": "Border Radius",
+									"tooltip": ""
+								}
+							}
+						},
+						"card-avatar": {
+							"type": "accordion",
+							"title": "Avatars",
+							"content": {
+								"fr-card-avatar-radius": {
+									"type": "variable",
+									"title": "Avatar Radius",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"frames-components": {
+					"type": "panel",
+					"title": "Components",
+					"tooltip": "",
+					"content": {
+					}
+				},
+				"additional-frames-options": {
+					"type": "panel",
+					"title": "Additional Frames Options",
+					"tooltip": "",
+					"content": {
+						"option-bricks-gallery-thumb-size": {
+							"type": "variable",
+							"title": "Adjust Template Thumbnail Size",
+							"tooltip": "Sets the aspect ratio for thumbnails in the template library to 4/3 so you can see more of each frame."
+						}
+					}
+				}
+			}
+		},
+		"forms": {
+			"title": "Form Styling",
+			"description": "Set global styling for forms using <strong>.form--light</strong> and <strong>.form--dark</strong>. <br><strong>Support for:</strong> Bricks (native forms) & WSForm.",
+			"content": {
+				"option-forms": {
+					"type": "panel",
+					"title": "Load Form Styling",
+					"tooltip": "Required for styling forms with ACSS.",
+					"variable": "option-forms"
+				},
+				"form-default-styling": {
+					"type": "panel",
+					"title": "Form Default Styles",
+					"tooltip": "",
+					"content": {
+						"form-default-labels": {
+							"type": "accordion",
+							"title": "Label Styling",
+							"tooltip": "",
+							"description": "Style your form labels (text above the inputs).",
+							"content": {
+								"f-label-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-label-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-label-size-min": {
+											"type": "variable",
+											"title": "Label Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-label-size-max": {
+											"type": "variable",
+											"title": "Label Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-label-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"f-label-font-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"f-label-text-transform": {
+									"type": "variable",
+									"title": "Text Transform",
+									"tooltip": ""
+								},
+								"f-label-spacing-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Spacing</a>"
+								},
+								"f-label-margin-bottom": {
+									"type": "variable",
+									"title": "Bottom Margin",
+									"tooltip": ""
+								},
+								"f-label-padding": {
+									"type": "group",
+									"title": "Padding",
+									"content": {
+										"f-label-padding-y": {
+											"type": "variable",
+											"tooltip": "",
+											"unit": "y",
+											"placeholder": "0"
+										},
+										"f-label-padding-x": {
+											"type": "variable",
+											"tooltip": "",
+											"unit": "x",
+											"placeholder": "0"
+										}
+									}
+								}
+							}
+						},
+						"form-default-legends": {
+							"type": "accordion",
+							"title": "Legend Styling",
+							"tooltip": "",
+							"description": "Style your form legends (fieldset captions) - <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend\">Learn More</a>",
+							"content": {
+								"label-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-legend-size-min": {
+											"type": "variable",
+											"title": "Legend Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-legend-size-max": {
+											"type": "variable",
+											"title": "Legend Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-legend-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"f-legend-text-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"f-legend-margin-bottom": {
+									"type": "variable",
+									"title": "Bottom Margin",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-helps": {
+							"type": "accordion",
+							"title": "Help Styling",
+							"tooltip": "",
+							"description": "Style your form help text (text below the inputs)",
+							"content": {
+								"help-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-help-size-min": {
+											"type": "variable",
+											"title": "Help Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-help-size-max": {
+											"type": "variable",
+											"title": "Help Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-help-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"f-help-text-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-fields": {
+							"type": "accordion",
+							"title": "Field & Fieldset Styling",
+							"tooltip": "",
+							"description": "Style your fields & fieldsets - <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset\">Learn More</a>",
+							"content": {
+								"f-fieldset-margin-bottom": {
+									"type": "variable",
+									"title": "Fieldset Bottom Margin",
+									"tooltip": "Set the vertical space between input groups."
+								},
+								"f-field-margin-bottom": {
+									"type": "variable",
+									"title": "Field Bottom Margin",
+									"tooltip": "Set the vertical space between inputs."
+								},
+								"f-grid-gutter": {
+									"type": "variable",
+									"title": "Grid Gutter",
+									"tooltip": "Set the distance between form elements."
+								}
+							}
+						},
+						"form-default-inputs": {
+							"type": "accordion",
+							"title": "Input Styling",
+							"tooltip": "",
+							"description": "Style your form input fields.",
+							"content": {
+								"f-input-height": {
+									"type": "variable",
+									"title": "Height",
+									"tooltip": "Setting a height on inputs creates visual consistency."
+								},
+								"f-input-padding": {
+									"type": "group",
+									"title": "Input Padding",
+									"tooltip": "",
+									"content": {
+										"f-input-padding-y": {
+											"type": "variable",
+											"title": "Top/Bottom Input Padding",
+											"tooltip": "Adjust the vertical padding on inputs.",
+											"unit": "y"
+										},
+										"f-input-padding-x": {
+											"type": "variable",
+											"title": "Left/Right Input Padding",
+											"tooltip": "Adjust the horizontal padding on inputs.",
+											"unit": "x"
+										}
+									}
+								},
+								"f-input-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Border</a>"
+								},
+								"f-input-border-style": {
+									"type": "variable",
+									"title": "Border Style",
+									"tooltip": ""
+								},
+								"f-input-border-radius": {
+									"type": "variable",
+									"title": "Border Radius",
+									"tooltip": ""
+								},
+								"f-input-border-size-y": {
+									"type": "group",
+									"title": "Border Width (Y)",
+									"tooltip": "Top & Bottom Border Width",
+									"content": {
+										"f-input-border-top-size": {
+											"type": "variable",
+											"title": "",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-input-border-bottom-size": {
+											"type": "variable",
+											"title": "",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										}
+									}
+								},
+								"f-input-border-size-x": {
+									"type": "group",
+									"title": "Border Width (X)",
+									"tooltip": "Left & Right Border Width",
+									"content": {
+										"f-input-border-left-size": {
+											"type": "variable",
+											"title": "",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-input-border-right-size": {
+											"type": "variable",
+											"title": "",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										}
+									}
+								},
+								"f-input-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-input-text-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-input-text-size-min": {
+											"type": "variable",
+											"title": "Input Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-input-text-size-max": {
+											"type": "variable",
+											"title": "Input Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-input-font-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"f-input-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-main-button": {
+							"type": "accordion",
+							"title": "Global & Submit Button Styling",
+							"tooltip": "",
+							"description": "Applies to the submit button while also creating some shared styles for secondary buttons.",
+							"content": {
+								"f-button-spacing-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Spacing</a>"
+								},
+								"f-btn-margin-top": {
+									"type": "variable",
+									"title": "Top Margin",
+									"tooltip": ""
+								},
+								"f-button-padding": {
+									"type": "group",
+									"title": "Button Padding",
+									"tooltip": "",
+									"content": {
+										"f-btn-padding-y": {
+											"type": "variable",
+											"title": "Top/Bottom Button Padding",
+											"tooltip": "Adjust the vertical padding on inputs.",
+											"unit": "y"
+										},
+										"f-btn-padding-x": {
+											"type": "variable",
+											"title": "Left/Right Button Padding",
+											"tooltip": "Adjust the horizontal padding on inputs.",
+											"unit": "x"
+										}
+									}
+								},
+								"f-btn-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Border</a>"
+								},
+								"f-btn-border-style": {
+									"type": "variable",
+									"title": "Border Style",
+									"tooltip": ""
+								},
+								"f-btn-border-radius": {
+									"type": "variable",
+									"title": "Border Radius",
+									"tooltip": ""
+								},
+								"f-btn-border-size": {
+									"type": "variable",
+									"title": "Border Size",
+									"tooltip": ""
+								},
+								"f-btn-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-btn-text-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-btn-text-size-min": {
+											"type": "variable",
+											"title": "Button Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-btn-text-size-max": {
+											"type": "variable",
+											"title": "Button Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-btn-font-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"f-btn-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"f-btn-text-transform": {
+									"type": "variable",
+									"title": "Text Transform",
+									"tooltip": ""
+								},
+								"f-btn-text-decoration": {
+									"type": "variable",
+									"title": "Text Decoration",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-radio-buttons": {
+							"type": "accordion",
+							"title": "Option Input Styling",
+							"tooltip": "",
+							"description": "Style your radio and checkbox inputs. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio\" target=\"_blank\">Learn More</a>",
+							"content": {
+								"f-option-label-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-option-label-font-size-min": {
+											"type": "variable",
+											"title": "Label Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-option-label-font-size-max": {
+											"type": "variable",
+											"title": "Label Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-option-label-font-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-progress": {
+							"type": "accordion",
+							"title": "Progress Bar Styling",
+							"tooltip": "",
+							"description": "Style your progress bars.",
+							"content": {
+								"f-progress-height": {
+									"type": "variable",
+									"title": "Height",
+									"tooltip": ""
+								},
+								"f-progress-bar-radius": {
+									"type": "variable",
+									"title": "Border Radius",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-default-tabs": {
+							"type": "accordion",
+							"title": "Tab Styling",
+							"tooltip": "",
+							"description": "Style your tabs.",
+							"content": {
+								"f-tab-spacing-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Spacing</a>"
+								},
+								"f-tab-margin-x": {
+									"type": "variable",
+									"title": "Left/Right Margin",
+									"tooltip": ""
+								},
+								"f-tab-width": {
+									"type": "variable",
+									"title": "Tab Width",
+									"tooltip": ""
+								},
+								"f-tab-padding": {
+									"type": "group",
+									"title": "Tab Padding",
+									"tooltip": "",
+									"content": {
+										"f-tab-padding-y": {
+											"type": "variable",
+											"title": "Top/Bottom Tab Padding",
+											"tooltip": "Adjust the vertical padding on tabs.",
+											"unit": "y"
+										},
+										"f-tab-padding-x": {
+											"type": "variable",
+											"title": "Left/Right Tab Padding",
+											"tooltip": "Adjust the horizontal padding on tabs.",
+											"unit": "x"
+										}
+									}
+								},
+								"f-tab-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Borders</a>"
+								},
+								"f-tab-border-style": {
+									"type": "variable",
+									"title": "Border Style",
+									"tooltip": ""
+								},
+								"f-tab-border-radius": {
+									"type": "variable",
+									"title": "Border Radius",
+									"tooltip": ""
+								},
+								"f-tab-border-size": {
+									"type": "variable",
+									"title": "Border Size",
+									"tooltip": ""
+								},
+								"f-tab-active-border-bottom-size": {
+									"type": "variable",
+									"title": "Active Bottom Border Size",
+									"tooltip": "Certain tab designs call for controlling the bottom border size."
+								},
+								"f-tab-active-border-style": {
+									"type": "variable",
+									"title": "Active Border Style",
+									"tooltip": ""
+								},
+								"f-tab-active-border-size": {
+									"type": "variable",
+									"title": "Active Border Size",
+									"tooltip": ""
+								},
+								"f-tab-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-tab-text-size": {
+									"type": "group",
+									"title": "Text Size",
+									"content": {
+										"f-tab-text-size-min": {
+											"type": "variable",
+											"title": "Tab Text Size (Mobile)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "min"
+										},
+										"f-tab-text-size-max": {
+											"type": "variable",
+											"title": "Tab Text Size (Desktop)",
+											"tooltip": "",
+											"unit": "px",
+											"placeholder": "max"
+										}
+									}
+								},
+								"f-tab-text-weight": {
+									"type": "variable",
+									"title": "Font Weight",
+									"tooltip": ""
+								},
+								"f-tab-active-text-weight": {
+									"type": "variable",
+									"title": "Active Font Weight",
+									"tooltip": ""
+								},
+								"f-tab-text-line-height": {
+									"type": "variable",
+									"title": "Line Height",
+									"tooltip": ""
+								},
+								"f-tab-text-align": {
+									"type": "variable",
+									"title": "Text Align",
+									"tooltip": ""
+								},
+								"f-tab-text-transform": {
+									"type": "variable",
+									"title": "Text Transform",
+									"tooltip": ""
+								},
+								"f-tab-text-decoration": {
+									"type": "variable",
+									"title": "Text Decoration",
+									"tooltip": ""
+								},
+								"f-tab-group-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Tab Group (Tabs Container)</a>"
+								},
+								"f-tab-group-padding": {
+									"type": "group",
+									"title": "Tab Padding",
+									"tooltip": "",
+									"content": {
+										"f-tab-group-padding-y": {
+											"type": "variable",
+											"title": "Top/Bottom Tab Group Padding",
+											"tooltip": "Adjust the vertical padding on tabs.",
+											"unit": "y"
+										},
+										"f-tab-group-padding-x": {
+											"type": "variable",
+											"title": "Left/Right Tab Group Padding",
+											"tooltip": "Adjust the horizontal padding on tabs.",
+											"unit": "x"
+										}
+									}
+								},
+								"f-tab-group-border-bottom-size": {
+									"type": "variable",
+									"title": "Border Bottom Size",
+									"tooltip": ""
+								},
+								"f-tab-group-border-bottom-style": {
+									"type": "variable",
+									"title": "Border Bottom Style",
+									"tooltip": ""
+								},
+								"f-tab-group-margin-bottom": {
+									"type": "variable",
+									"title": "Margin Bottom",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"form-light-styling": {
+					"type": "panel",
+					"title": "Form Light Styles",
+					"tooltip": "Style forms that appear on a light background or via a light theme. Applies to the .form--light class.",
+					"content": {
+						"form-light-labels": {
+							"type": "accordion",
+							"title": "Label Styling",
+							"tooltip": "",
+							"description": "Style your form labels (text above the inputs).",
+							"content": {
+								"f-label-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-light-label-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-label-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-light-label-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-label-required-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Required Asterisk</a>"
+								},
+								"f-light-required-color": {
+									"type": "variable",
+									"title": "Asterisk Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-legends": {
+							"type": "accordion",
+							"title": "Legend Styling",
+							"tooltip": "",
+							"description": "Style your form legends (fieldset captions) - <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend\">Learn More</a>",
+							"content": {
+								"f-light-legend-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-helps": {
+							"type": "accordion",
+							"title": "Help Styling",
+							"tooltip": "",
+							"description": "Style your form help text (text below the inputs)",
+							"content": {
+								"f-light-help-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-inputs": {
+							"type": "accordion",
+							"title": "Input Styling",
+							"tooltip": "",
+							"description": "Style your form input fields.",
+							"content": {
+								"f-input-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-light-input-background": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--white)"
+								},
+								"f-light-input-border-color": {
+									"type": "variable",
+									"title": "Border Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--white)"
+								},
+								"f-input-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-light-input-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-input-placeholder-color": {
+									"type": "variable",
+									"title": "Placeholder Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-input-placeholder-opacity": {
+									"type": "variable",
+									"title": "Placeholder Text Opacity (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-main-button": {
+							"type": "accordion",
+							"title": "Global & Submit Button Styling",
+							"tooltip": "",
+							"description": "Applies to the submit button while also creating some shared styles for secondary buttons.",
+							"content": {
+								"f-button-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-light-btn-background": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-light-btn-background-hover": {
+									"type": "variable",
+									"title": "Background Hover Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary-hover)"
+								},
+								"f-btn-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Border</a>"
+								},
+								"f-light-btn-border-color": {
+									"type": "variable",
+									"title": "Border Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-light-btn-border-color-hover": {
+									"type": "variable",
+									"title": "Hover Border Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary-hover)"
+								},
+								"f-btn-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-light-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-secondary-buttons": {
+							"type": "accordion",
+							"title": "Secondary Button Styling",
+							"tooltip": "",
+							"description": "Change the color of your secondary form buttons. <br>All other styles are shared with the primary submit style.",
+							"content": {
+								"f-button-secondary-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Secondary Button</a>"
+								},
+								"f-light-secondary-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-secondary-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-secondary-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-secondary-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-button-previous-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Previous Button</a>"
+								},
+								"f-light-prev-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-prev-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-prev-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-prev-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-button-save-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Save Button</a>"
+								},
+								"f-light-save-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-save-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-save-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-save-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-button-reset-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Reset Button</a>"
+								},
+								"f-light-reset-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-reset-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-reset-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-reset-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-button-clear-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Clear Button</a>"
+								},
+								"f-light-clear-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-clear-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-clear-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-clear-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-radio-buttons": {
+							"type": "accordion",
+							"title": "Option Input Styling",
+							"tooltip": "",
+							"description": "Style your radio and checkbox inputs. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio\" target=\"_blank\">Learn More</a>",
+							"content": {
+								"f-light-option-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-option-action-color": {
+									"type": "variable",
+									"title": "Action Color (Light)",
+									"tooltip": "Color when activated."
+								},
+								"f-light-option-border-color": {
+									"type": "variable",
+									"title": "Border Color (Light)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-progress": {
+							"type": "accordion",
+							"title": "Progress Bar Styling",
+							"tooltip": "",
+							"description": "Style your progress bars.",
+							"content": {
+								"f-light-progress-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": "The background/container color of your progress bar."
+								},
+								"f-light-progress-bar-fill-color": {
+									"type": "variable",
+									"title": "Fill Color (Light)",
+									"tooltip": "The color of the actual progress meter."
+								}
+							}
+						},
+						"form-light-tabs": {
+							"type": "accordion",
+							"title": "Tab Styling",
+							"tooltip": "",
+							"description": "Style your tabs.",
+							"content": {
+								"f-tab-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-light-tab-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": "The color of a tab when it's not selected.",
+									"placeholder": "transparent"
+								},
+								"f-light-tab-active-background-color": {
+									"type": "variable",
+									"title": "Active Background Color (Light)",
+									"tooltip": "The color of a selected tab.",
+									"placeholder": "transparent"
+								},
+								"f-tab-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Borders</a>"
+								},
+								"f-light-tab-border-color": {
+									"type": "variable",
+									"title": "Border Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-light-tab-active-border-color": {
+									"type": "variable",
+									"title": "Active Border Color (Light)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-light-tab-border-bottom-color": {
+									"type": "variable",
+									"title": "Border Bottom Color (Light)",
+									"tooltip": "Certain tab designs call for controlling the bottom border color.",
+									"placeholder": "var(--shade-light)"
+								},
+								"f-tab-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-light-tab-text-color": {
+									"type": "variable",
+									"title": "Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-tab-active-text-color": {
+									"type": "variable",
+									"title": "Active Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-tab-inactive-text-color": {
+									"type": "variable",
+									"title": "Inactive Text Color (Light)",
+									"tooltip": ""
+								},
+								"f-tab-group-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Tab Group (Tabs Container)</a>"
+								},
+								"f-light-tab-group-background-color": {
+									"type": "variable",
+									"title": "Background Color (Light)",
+									"tooltip": ""
+								},
+								"f-light-tab-group-border-bottom-color": {
+									"type": "variable",
+									"title": "Border Bottom Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-light-range-slider": {
+							"type": "accordion",
+							"title": "Range Slider Styling",
+							"tooltip": "",
+							"description": "Style your range sliders. Note: to customize the color of the lower and upper track you need to enable it in Range Slider's Field Settings",
+							"content": {
+								"f-light-range-left-track-color": {
+									"type": "variable",
+									"title": "Left Track Color (Light)",
+									"tooltip": "Background color of the left track (before the thumb)"
+								},
+								"f-light-range-right-track-color": {
+									"type": "variable",
+									"title": "Right Track Color (Light)",
+									"tooltip": "Background color of the right track (after the thumb)"
+								},
+								"f-light-range-thumb-color": {
+									"type": "variable",
+									"title": "Thumb Color (Light)",
+									"tooltip": "The 'handle' of the range slider."
+								}
+							}
+						},
+						"form-light-accessibility": {
+							"type": "accordion",
+							"title": "Accessibility Styling",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"f-light-focus-color": {
+									"type": "variable",
+									"title": "Focus Color (Light)",
+									"tooltip": "Accepts vars without transparencies"
+								},
+								"f-light-focus-color-opacity": {
+									"type": "variable",
+									"title": "Focus box-shadow Opacity (Light)",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				},
+				"form-dark-styling": {
+					"type": "panel",
+					"title": "Form Dark Styles",
+					"tooltip": "Style forms that appear on a dark background or via a dark theme. Applies to the .form--dark class.",
+					"content": {
+						"form-dark-labels": {
+							"type": "accordion",
+							"title": "Label Styling",
+							"tooltip": "",
+							"description": "Style your form labels (text above the inputs).",
+							"content": {
+								"f-label-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-dark-label-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-label-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-dark-label-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-label-required-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Required Asterisk</a>"
+								},
+								"f-dark-required-color": {
+									"type": "variable",
+									"title": "Asterisk Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-legends": {
+							"type": "accordion",
+							"title": "Legend Styling",
+							"tooltip": "",
+							"description": "Style your form legends (fieldset captions) - <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend\">Learn More</a>",
+							"content": {
+								"f-dark-legend-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-helps": {
+							"type": "accordion",
+							"title": "Help Styling",
+							"tooltip": "",
+							"description": "Style your form help text (text below the inputs)",
+							"content": {
+								"f-dark-help-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-inputs": {
+							"type": "accordion",
+							"title": "Input Styling",
+							"tooltip": "",
+							"description": "Style your form input fields.",
+							"content": {
+								"f-input-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-dark-input-background": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--white)"
+								},
+								"f-dark-input-border-color": {
+									"type": "variable",
+									"title": "Border Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--white)"
+								},
+								"f-input-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-dark-input-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-input-placeholder-color": {
+									"type": "variable",
+									"title": "Placeholder Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-input-placeholder-opacity": {
+									"type": "variable",
+									"title": "Placeholder Text Opacity (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-main-button": {
+							"type": "accordion",
+							"title": "Global & Submit Button Styling",
+							"tooltip": "",
+							"description": "Applies to the submit button while also creating some shared styles for secondary buttons.",
+							"content": {
+								"f-button-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-dark-btn-background": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-dark-btn-background-hover": {
+									"type": "variable",
+									"title": "Background Hover Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary-hover)"
+								},
+								"f-btn-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Border</a>"
+								},
+								"f-dark-btn-border-color": {
+									"type": "variable",
+									"title": "Border Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-dark-btn-border-color-hover": {
+									"type": "variable",
+									"title": "Hover Border Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary-hover)"
+								},
+								"f-btn-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-dark-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-secondary-buttons": {
+							"type": "accordion",
+							"title": "Secondary Button Styling",
+							"tooltip": "",
+							"description": "Change the color of your secondary form buttons. <br>All other styles are shared with the primary submit style.",
+							"content": {
+								"f-button-secondary-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Secondary Button</a>"
+								},
+								"f-dark-secondary-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-secondary-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-secondary-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-secondary-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-button-previous-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Previous Button</a>"
+								},
+								"f-dark-prev-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-prev-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-prev-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-prev-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-button-save-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Save Button</a>"
+								},
+								"f-dark-save-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-save-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-save-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-save-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-button-reset-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Reset Button</a>"
+								},
+								"f-dark-reset-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-reset-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-reset-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-reset-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-button-clear-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Clear Button</a>"
+								},
+								"f-dark-clear-btn-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-clear-btn-background-color-hover": {
+									"type": "variable",
+									"title": "Hover Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-clear-btn-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-clear-btn-text-color-hover": {
+									"type": "variable",
+									"title": "Hover Text Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-radio-buttons": {
+							"type": "accordion",
+							"title": "Option Input Styling",
+							"tooltip": "",
+							"description": "Style your radio and checkbox inputs. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio\" target=\"_blank\">Learn More</a>",
+							"content": {
+								"f-dark-option-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-option-action-color": {
+									"type": "variable",
+									"title": "Action Color (Dark)",
+									"tooltip": "Color when activated."
+								},
+								"f-dark-option-border-color": {
+									"type": "variable",
+									"title": "Border Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-progress": {
+							"type": "accordion",
+							"title": "Progress Bar Styling",
+							"tooltip": "",
+							"description": "Style your progress bars.",
+							"content": {
+								"f-dark-progress-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": "The background/container color of your progress bar."
+								},
+								"f-dark-progress-bar-fill-color": {
+									"type": "variable",
+									"title": "Fill Color (Dark)",
+									"tooltip": "The color of the actual progress meter."
+								}
+							}
+						},
+						"form-dark-tabs": {
+							"type": "accordion",
+							"title": "Tab Styling",
+							"tooltip": "",
+							"description": "Style your tabs.",
+							"content": {
+								"f-tab-background-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Background</a>"
+								},
+								"f-dark-tab-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": "The color of a tab when it's not selected.",
+									"placeholder": "transparent"
+								},
+								"f-dark-tab-active-background-color": {
+									"type": "variable",
+									"title": "Active Background Color (Dark)",
+									"tooltip": "The color of a selected tab.",
+									"placeholder": "transparent"
+								},
+								"f-tab-border-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Borders</a>"
+								},
+								"f-dark-tab-border-color": {
+									"type": "variable",
+									"title": "Border Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-dark-tab-active-border-color": {
+									"type": "variable",
+									"title": "Active Border Color (Dark)",
+									"tooltip": "",
+									"placeholder": "var(--primary)"
+								},
+								"f-dark-tab-border-bottom-color": {
+									"type": "variable",
+									"title": "Border Bottom Color (Dark)",
+									"tooltip": "Certain tab designs call for controlling the bottom border color.",
+									"placeholder": "var(--shade-dark)"
+								},
+								"f-tab-text-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Text</a>"
+								},
+								"f-dark-tab-text-color": {
+									"type": "variable",
+									"title": "Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-tab-active-text-color": {
+									"type": "variable",
+									"title": "Active Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-tab-inactive-text-color": {
+									"type": "variable",
+									"title": "Inactive Text Color (Dark)",
+									"tooltip": ""
+								},
+								"f-tab-group-divider": {
+									"type": "divider",
+									"content": "<span class=\"text-divider\">Tab Group (Tabs Container)</a>"
+								},
+								"f-dark-tab-group-background-color": {
+									"type": "variable",
+									"title": "Background Color (Dark)",
+									"tooltip": ""
+								},
+								"f-dark-tab-group-border-bottom-color": {
+									"type": "variable",
+									"title": "Border Bottom Color (Dark)",
+									"tooltip": ""
+								}
+							}
+						},
+						"form-dark-range-slider": {
+							"type": "accordion",
+							"title": "Range Slider Styling",
+							"tooltip": "",
+							"description": "Style your range sliders. Note: to customize the color of the lower and upper track you need to enable it in Range Slider's Field Settings",
+							"content": {
+								"f-dark-range-left-track-color": {
+									"type": "variable",
+									"title": "Left Track Color (Dark)",
+									"tooltip": "Background color of the left track (before the thumb)"
+								},
+								"f-dark-range-right-track-color": {
+									"type": "variable",
+									"title": "Right Track Color (Dark)",
+									"tooltip": "Background color of the right track (after the thumb)"
+								},
+								"f-dark-range-thumb-color": {
+									"type": "variable",
+									"title": "Thumb Color (Dark)",
+									"tooltip": "The 'handle' of the range slider."
+								}
+							}
+						},
+						"form-dark-accessibility": {
+							"type": "accordion",
+							"title": "Accessibility Styling (WSForm only)",
+							"tooltip": "",
+							"description": "",
+							"content": {
+								"f-dark-focus-color": {
+									"type": "variable",
+									"title": "Focus Color (Dark)",
+									"tooltip": "Accepts vars without transparencies"
+								},
+								"f-dark-focus-color-opacity": {
+									"type": "variable",
+									"title": "Focus box-shadow Opacity (Dark)",
+									"tooltip": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"setup": {
+			"title": "Guides",
+			"description": "Helpful resources for ACSS.",
+			"content": {
+				"setup-guide": {
+					"type": "panel",
+					"title": "Setup Guide",
+					"description": "Automatic.css is fundamentally different from other utility class systems. This is precisely what makes it so powerful and preferential. Before trying to use the system, it's important that you understand how it works. You'll find all documentation, setup steps, tips, tricks, and support in the <a href=\"https://community.automaticcss.com/\" target=\"_blank\">private Automatic.css Community</a> (license required)."
+				},
+				"style-guide-oxy": {
+					"type": "panel",
+					"title": "Style Guide (Oxygen)",
+					"description": "To install the official ACSS UI Style Guide in Oxygen, click the Oxygen design set key to copy it and then follow our <a href=\"https://community.automaticcss.com/c/setup/installing-the-ui-style-guide\" target=\"_blank\">UI Style Guide installation instructions</a>",
+					"content": {
+						"design-set-key": {
+							"type": "variable",
+							"title": "Design Set Key",
+							"tooltip": "Click to copy the key for the Oxygen design set"
+						}
+					}
+				},
+				"style-guide-bricks": {
+					"type": "panel",
+					"title": "Style Guide (Bricks)",
+					"description": "To install the official ACSS UI Style Guide in Bricks Builder, copy the remote template URL below and follow <a target=\"_blank\" href=\"https://community.automaticcss.com/c/help-me-61e0b2/how-to-install-the-ui-style-guide-in-bricks-builder\">these instructions.</a>",
+					"content": {
+						"design-set-key-bricks": {
+							"type": "variable",
+							"title": "Remote Template URL",
+							"tooltip": "Click to copy the remote template URL for the Bricks Style Guide"
+						}
+					}
+				}
+			}
+		}
+	}
+}

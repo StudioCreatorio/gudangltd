@@ -1,0 +1,351 @@
+// GENERATE TEXT COLOR CLASSES
+
+@if $option-text-color == on {
+  @each $color-name, $color-value in $core-colors {
+    .text--#{$color-name} {
+        color: var(--#{$color-name});
+    }
+  }
+}
+
+// GENERATE TEXT SIZE CLASSES
+
+@each $size, $extension in $textExtensions {
+  .text--#{$extension},
+  .text--#{$extension} > p,
+  .text--#{$extension} > ol li,
+  .text--#{$extension} > ul li {
+    @if $size == xs {
+      @include map-get-fluid-text(xs);
+      line-height: $text-xs-lh;
+      max-inline-size: $text-xs-length;
+    } @else if $size == s {
+      @include map-get-fluid-text(s);
+      line-height: $text-s-lh;
+      max-inline-size: $text-s-length;
+    } @else if $size == m {
+      @include map-get-fluid-text(m);
+      line-height: $base-text-lh;
+      max-inline-size: $text-line-length;
+    } @else if $size == l {
+      @include map-get-fluid-text(l);
+      line-height: $text-l-lh;
+      max-inline-size: $text-l-length;
+    } @else if $size == xl {
+      @include map-get-fluid-text(xl);
+      line-height: $text-xl-lh;
+      max-inline-size: $text-xl-length;
+    } @else if $size == xxl {
+      @include map-get-fluid-text(xxl);
+      line-height: $text-xxl-lh;
+      max-inline-size: $text-xxl-length;
+    }
+  }
+}
+
+// GENERATE HEADING CLASSES
+
+@each $size in $headingExtensions {
+  .h--#{$size} {
+    @if $size == "6" {
+      @include map-get-fluid-heading(h6);
+      line-height: $h6-lh;
+      max-inline-size: $h6-line-length;
+    } @else if $size == "5" {
+      @include map-get-fluid-heading(h5);
+      line-height: $h5-lh;
+      max-inline-size: $h5-line-length;
+    } @else if $size == "4" {
+      @include map-get-fluid-heading(h4);
+      line-height: $h4-lh;
+      max-inline-size: $h4-line-length;
+    } @else if $size == "3" {
+      @include map-get-fluid-heading(h3);
+      line-height: $h3-lh;
+      max-inline-size: $h3-line-length;
+    } @else if $size == "2" {
+      @include map-get-fluid-heading(h2);
+      line-height: $h2-lh;
+      max-inline-size: $h2-line-length;
+    } @else if $size == "1" {
+      @include map-get-fluid-heading(h1);
+      line-height: $h1-lh;
+      max-inline-size: $heading-line-length;
+    }
+  }
+}
+
+// Larger
+@if $option-text-larger == on {
+  @each $size, $extension in $textExtensions {
+    .text--#{$extension}.text--larger {
+      @if $size == xs {
+        font-size: $text-xs-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-xs-min * $text-multiplier-min,
+          $text-xs-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-xs-min * $text-multiplier-min,
+          $text-xs-max * $text-multiplier
+        );
+      } @else if $size == s {
+        font-size: $text-s-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-s-min * $text-multiplier-min,
+          $text-s-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-s-min * $text-multiplier-min,
+          $text-s-max * $text-multiplier
+        );
+      } @else if $size == m {
+        font-size: $text-m-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-m-min * $text-multiplier-min,
+          $text-m-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-m-min * $text-multiplier-min,
+          $text-m-max * $text-multiplier
+        );
+      } @else if $size == l {
+        font-size: $text-l-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-l-min * $text-multiplier-min,
+          $text-l-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-l-min * $text-multiplier-min,
+          $text-l-max * $text-multiplier
+        );
+      } @else if $size == xl {
+        font-size: $text-xl-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-xl-min * $text-multiplier-min,
+          $text-xl-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-xl-min * $text-multiplier-min,
+          $text-xl-max * $text-multiplier
+        );
+      } @else if $size == xxl {
+        font-size: $text-xxl-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $text-xxl-min * $text-multiplier-min,
+          $text-xxl-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $text-xxl-min * $text-multiplier-min,
+          $text-xxl-max * $text-multiplier
+        );
+      }
+    }
+  }
+
+  @each $size in $headingExtensions {
+    .h--#{$size}.text--larger {
+      @if $size == h6 {
+        font-size: $text-xs-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h6-min * $text-multiplier-min,
+          $h6-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h6-min * $text-multiplier-min,
+          $h6-max * $text-multiplier
+        );
+      } @else if $size == h5 {
+        font-size: $text-s-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h5-min * $text-multiplier-min,
+          $h5-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h5-min * $text-multiplier-min,
+          $h5-max * $text-multiplier
+        );
+      } @else if $size == h4 {
+        font-size: $text-m-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h4-min * $text-multiplier-min,
+          $h4-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h4-min * $text-multiplier-min,
+          $h4-max * $text-multiplier
+        );
+      } @else if $size == h3 {
+        font-size: $text-l-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h3-min * $text-multiplier-min,
+          $h3-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h3-min * $text-multiplier-min,
+          $h3-max * $text-multiplier
+        );
+      } @else if $size == h2 {
+        font-size: $text-xl-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h2-min * $text-multiplier-min,
+          $h2-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h2-min * $text-multiplier-min,
+          $h2-max * $text-multiplier
+        );
+      } @else if $size == h1 {
+        font-size: $text-xxl-pure * $text-multiplier-min;
+        font-size: fluidCalc(
+          $h1-min * $text-multiplier-min,
+          $h1-max * $text-multiplier
+        );
+        font-size: fluidClamp(
+          $h1-min * $text-multiplier-min,
+          $h1-max * $text-multiplier
+        );
+      }
+    }
+  }
+
+  // Headings Larger
+
+  h1.text--larger {
+    font-size: $text-xxl-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h1-min * $text-multiplier-min,
+      $h1-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h1-min * $text-multiplier-min,
+      $h1-max * $text-multiplier
+    );
+  }
+  h2.text--larger {
+    font-size: $text-xl-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h2-min * $text-multiplier-min,
+      $h2-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h2-min * $text-multiplier-min,
+      $h2-max * $text-multiplier
+    );
+  }
+  h3.text--larger {
+    font-size: $text-l-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h3-min * $text-multiplier-min,
+      $h3-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h3-min * $text-multiplier-min,
+      $h3-max * $text-multiplier
+    );
+  }
+  h4.text--larger {
+    font-size: $text-m-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h4-min * $text-multiplier-min,
+      $h4-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h4-min * $text-multiplier-min,
+      $h4-max * $text-multiplier
+    );
+  }
+  h5.text--larger {
+    font-size: $text-s-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h5-min * $text-multiplier-min,
+      $h5-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h5-min * $text-multiplier-min,
+      $h5-max * $text-multiplier
+    );
+  }
+  h6.text--larger {
+    font-size: $text-xs-pure * $text-multiplier-min;
+    font-size: fluidCalc(
+      $h6-min * $text-multiplier-min,
+      $h6-max * $text-multiplier
+    );
+    font-size: fluidClamp(
+      $h6-min * $text-multiplier-min,
+      $h6-max * $text-multiplier
+    );
+  }
+}
+
+// Text Weights
+// Also Found in Oxygen Overrides
+@each $weight, $value in $textWeights {
+  .text--#{$weight} {
+    font-weight: $value;
+  }
+}
+
+// Text Styles
+// Also Found in Oxygen Overrides
+@each $style, $value in $textStyles {
+  .text--#{$style} {
+    font-style: $value;
+  }
+}
+
+// Text Decorations
+// Also Found in Oxygen Overrides
+@each $decoration, $value in $textDecorations {
+  .text--#{$decoration} {
+    -webkit-text-decoration: $value;
+    text-decoration: $value;
+  }
+}
+
+// Text Transforms
+// Also Found in Oxygen Overrides
+@each $transform, $value in $textTransforms {
+  .text--#{$transform} {
+    text-transform: $value;
+  }
+}
+
+// Text Alignments
+// Also Found in Oxygen Overrides
+@each $alignment, $value in $textAlignments {
+  .text--#{$alignment} {
+    text-align: $value;
+  }
+}
+
+// Text Balancing
+
+@if $option-balance-text == on {
+  p:where(:only-of-type), li:not(nav li, nav a), blockquote {
+    text-wrap: balance;
+  }
+}
+@if $option-balance-headings == on {
+  h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+  }
+}
+
+.balance {
+  text-wrap: balance;
+
+  p, li, blockquote, h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+}
+
+.unbalance {
+  text-wrap: unset;
+
+  p, li, blockquote, h1, h2, h3, h4, h5, h6 {
+    text-wrap: unset;
+  }
+}

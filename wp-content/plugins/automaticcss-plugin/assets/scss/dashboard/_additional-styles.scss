@@ -1,0 +1,41 @@
+// Body Styling
+$device-bg-color: null !default;
+$body-max-width: null !default;
+$body-box-shadow: null !default;
+$body-margin-top: null !default;
+$body-border-color: null !default;
+$body-border-style: null !default;
+$body-border-width: null !default;
+$body-border-radius: null !default;
+
+
+// Focus Styles
+$focus-style: outline !default;
+$focus-color: var(--action) !default;
+$focus-offset: 0.25em !default;
+$focus-width: .2rem !default;
+
+// Header Styles
+$header-height: 0 !default;
+$header-height-l: 0 !default;
+$header-height-m: 0 !default;
+$header-height-s: 0 !default;
+$option-offset-page-content: off !default;
+
+// Scroll Styles
+$scroll-margin: 0 !default;
+$scroll-margin-l: 0 !default;
+$scroll-margin-m: 0 !default;
+$scroll-margin-s: 0 !default;
+
+// Combined Offset
+$offset: $scroll-margin + $header-height;
+$offset-l: $scroll-margin-l + $header-height-l;
+$offset-m: $scroll-margin-m + $header-height-m;
+$offset-s: $scroll-margin-s + $header-height-s;
+
+// Selection Styles
+$selection-bg: null !default;
+$selection-text: null !default;
+$selection-bg-alt: null !default;
+$selection-text-alt: null !default;

@@ -1,0 +1,9 @@
+// Header Padding
+
+@each $size, $extension in $sizeExtensions {
+  .pad-header--#{$extension} {
+    padding: map-get(map-get($spacing, pure), space-#{$extension}-pure) 0;
+    padding: map-get(map-get($spacing, calc), space-#{$extension}-calc) 0;
+    padding: map-get(map-get($spacing, clamp), space-#{$extension}-clamp) 0;
+  }
+}

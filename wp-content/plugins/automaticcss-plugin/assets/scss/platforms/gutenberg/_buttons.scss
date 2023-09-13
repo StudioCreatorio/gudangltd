@@ -1,0 +1,90 @@
+@if $option-buttons == on and $option-gutenberg-enable == on and $option-generate-blocks == off {
+      @each $buttonColor, $buttonProps in $buttons {
+        .btn--#{$buttonColor}:not(.wp-block-button),
+        .wp-block-button.btn--#{$buttonColor} > .wp-block-button__link,
+        .wp-block-button.btn--#{$buttonColor} > a {
+          background-color: map-get(
+            map-get($buttons, $buttonColor),
+            background-clr
+          );
+          color: map-get(map-get($buttons, $buttonColor), text-clr);
+          border-style: solid;
+          border-color: map-get(map-get($buttons, $buttonColor), border-clr);
+          @include button;
+          font-size: map-get(map-get($textSizing, pure), text-m-pure);
+          font-size: fluidCalc($btn-text-min, $btn-text-max);
+          font-size: fluidClamp($btn-text-min, $btn-text-max);
+  
+          &:hover {
+            background-color: map-get(
+              map-get($buttons, $buttonColor),
+              background-clr-hover
+            );
+            color: map-get(map-get($buttons, $buttonColor), text-clr-hover);
+            border-color: map-get(
+              map-get($buttons, $buttonColor),
+              border-clr-hover
+            );
+            cursor: pointer;
+          }
+        }
+  
+        .btn--#{$buttonColor}:not(.wp-block-button).btn--outline,
+        .wp-block-button.btn--#{$buttonColor}.btn--outline > a,
+        .wp-block-button.btn--#{$buttonColor}.btn--outline > .wp-block-button__link {
+          background-color: transparent;
+          border-style: solid;
+          color: map-get(map-get($buttons, $buttonColor), outline-text-clr);
+          border-color: map-get(
+            map-get($buttons, $buttonColor),
+            outline-border-clr
+          );
+          @include outline-btn-default;
+  
+          &:hover {
+            background-color: map-get(
+              map-get($buttons, $buttonColor),
+              outline-background-clr-hover
+            );
+            cursor: pointer;
+            color: map-get(
+              map-get($buttons, $buttonColor),
+              outline-text-clr-hover
+            );
+          }
+        }
+      }
+  
+      // GENERATE BUTTON SIZES
+      @each $size, $extension in $sizeExtensions {
+        .btn--#{$extension}:not(.wp-block-button),
+        .wp-block-button.btn--#{$extension} > a,
+        .wp-block-button.btn--#{$extension} > .wp-block-button__link {
+          @include button;
+          @if $size == xs {
+            @include map-get-fluid-text(xs);
+          } @else if $size == s {
+            @include map-get-fluid-text(s);
+          } @else if $size == m {
+            @include map-get-fluid-text(m);
+          } @else if $size == l {
+            @include map-get-fluid-text(l);
+          } @else if $size == xl {
+            @include map-get-fluid-text(xl);
+          } @else if $size == xxl {
+            @include map-get-fluid-text(xxl);
+          }
+          cursor: pointer;
+        }
+      }
+  
+      a[class*="btn--"] {
+        display: inline-flex;
+      }
+  
+      .btn--clear {
+        background: none;
+        border: none;
+      }
+  }
+  

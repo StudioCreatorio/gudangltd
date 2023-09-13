@@ -1,0 +1,126 @@
+// Bases
+
+$root-font-size: 62.5% !default;
+
+// Fluid Text
+$base-text-desk: 1.8 !default;
+$base-text-mob: 1.6 !default;
+$text-scale: 1.333 !default;
+$mob-text-scale: 1.2 !default;
+
+$text-xs-stop: 1.1 !default;
+$text-s-stop: 1.2 !default;
+
+$text-xxl-lh: 1.5 !default;
+$text-xl-lh: 1.5 !default;
+$text-l-lh: 1.5 !default;
+$base-text-lh: 1.5 !default;
+$text-s-lh: 1.5 !default;
+$text-xs-lh: 1.5 !default;
+
+$text-line-length: null !default;
+$text-xxl-length: null !default;
+$text-xl-length: null !default;
+$text-l-length: null !default;
+$text-s-length: null !default;
+$text-xs-length: null !default;
+
+
+$link-decoration: null !default;
+$link-underline-offset: null !default;
+$link-weight: 400 !default;
+
+$default-paragraph-spacing: 1em !default;
+$default-list-spacing: 1em !default;
+$default-list-item-spacing: .5em !default;
+
+// Fluid Headings
+$base-heading-desk: $base-text-desk !default;
+$base-heading-mob: $base-text-mob !default;
+$heading-scale: $text-scale !default;
+$mob-heading-scale: $mob-text-scale !default;
+
+$h6-stop: $text-xs-stop !default;
+$h5-stop: $text-s-stop !default;
+
+$h1-lh: 1.2 !default;
+$h2-lh: 1.2 !default;
+$h3-lh: 1.2 !default;
+$h4-lh: 1.2 !default;
+$h5-lh: 1.2 !default;
+$h6-lh: 1.2 !default;
+
+$heading-line-length: null !default;
+$h2-line-length: null !default;
+$h3-line-length: null !default;
+$h4-line-length: null !default;
+$h5-line-length: null !default;
+$h6-line-length: null !default;
+
+$default-heading-spacing: 1.5em !default;
+
+// Line Heights
+
+$base-text-lh: 1.6 !default;
+$base-heading-lh: 1.2 !default;
+$h1-lh: 1.2 !default;
+$h2-lh: 1.2 !default;
+$h3-lh: 1.2 !default;
+$h4-lh: 1.2 !default;
+$h5-lh: 1.2 !default;
+$h6-lh: 1.2 !default;
+
+// Multiplier
+
+$text-multiplier: 1.5 !default; // Controls the .text--larger class
+$text-multiplier-min: 1.1 !default; // Adds mobile control for .text--larger class
+
+// DEFAULT
+
+$body-color: null !default;
+$body-bg-color: null !default;
+$h1-color: null !default;
+$h2-color: null !default;
+$h3-color: null !default;
+$h4-color: null !default;
+$h5-color: null !default;
+$h6-color: null !default;
+
+// PURE FALLBACKS
+
+$text-xs-pure: 1.26rem !default;
+$text-s-pure: 1.42rem !default;
+$text-m-pure: 1.8rem !default;
+$text-l-pure: 2.025rem !default;
+$text-xl-pure: 2.28rem !default;
+$text-xxl-pure: 2.565rem !default;
+
+// TEXT SIZES
+
+$text-m-max: $base-text-desk !default;
+$text-m-min: $base-text-mob !default;
+$text-xs-max: $base-text-desk / pow($text-scale, 2) !default;
+$text-xs-min: $base-text-mob / pow($mob-text-scale, 2) !default;
+$text-s-max: $base-text-desk / $text-scale !default;
+$text-s-min: $base-text-mob / $mob-text-scale !default;
+$text-l-max: $base-text-desk * pow($text-scale, 1) !default;
+$text-l-min: $base-text-mob * pow($mob-text-scale, 1) !default;
+$text-xl-max: $base-text-desk * pow($text-scale, 2) !default;
+$text-xl-min: $base-text-mob * pow($mob-text-scale, 2) !default;
+$text-xxl-max: $base-text-desk * pow($text-scale, 3) !default;
+$text-xxl-min: $base-text-mob * pow($mob-text-scale, 3) !default;
+
+// HEADING SIZES
+
+$h4-max: $base-heading-desk !default;
+$h4-min: $base-heading-mob !default;
+$h6-max: $base-heading-desk / pow($heading-scale, 2) !default;
+$h6-min: $base-heading-mob / pow($mob-heading-scale, 2) !default;
+$h5-max: $base-heading-desk / $heading-scale !default;
+$h5-min: $base-heading-mob / $mob-heading-scale !default;
+$h3-max: $base-heading-desk * pow($heading-scale, 1) !default;
+$h3-min: $base-heading-mob * pow($mob-heading-scale, 1) !default;
+$h2-max: $base-heading-desk * pow($heading-scale, 2) !default;
+$h2-min: $base-heading-mob * pow($mob-heading-scale, 2) !default;
+$h1-max: $base-heading-desk * pow($heading-scale, 3) !default;
+$h1-min: $base-heading-mob * pow($mob-heading-scale, 3) !default;

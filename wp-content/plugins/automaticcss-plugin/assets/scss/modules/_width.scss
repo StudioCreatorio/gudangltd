@@ -1,0 +1,28 @@
+@if $option-width == on {
+  @each $widthName, $widthValue in $widths {
+    .width--#{$widthName}:not([class*="breakout--"]) {
+      inline-size: 100%;
+      max-inline-size: #{$widthValue};
+
+      @if $widthName == vp-max {
+        margin-inline: auto;
+      }
+    }
+  }
+
+  .width--auto {
+    inline-size: auto !important;
+    inline-size: 100%;
+  }
+  .content-width:not([class*="breakout--"]) {
+    inline-size: 100%;
+    max-inline-size: var(--content-width);
+    margin-inline: auto;
+  }
+  .content-width--safe:not([class*="breakout--"]) {
+    inline-size: 100%;
+    max-inline-size: var(--content-width-safe);
+    margin-inline: auto;
+  }
+
+} // End option check

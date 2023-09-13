@@ -1,0 +1,548 @@
+@import "../../helpers/functions";
+@import "../../dashboard/breakpoints";
+@import "../../dashboard/spacing-vars";
+@import "../../maps/spacing-maps";
+@import "../../maps/size-maps";
+@import "../../helpers/calc-math";
+@import "../../maps/height-maps";
+@import "../../maps/flex-maps";
+@import "../../modules/grid/grid-maps";
+@import "../../maps/color-maps";
+@import "../../dashboard/button-vars";
+@import "../../dashboard/text-vars";
+@import "../../maps/text-maps";
+@import "../../maps/button-maps";
+@import "../../helpers/mixins";
+@import "../../maps/breakout-maps";
+@import "../../dashboard/options";
+@import "../../maps/aspect-maps";
+@import "../../maps/col-maps";
+
+// DEFAULTS
+body {
+  @include fluid-text($text-m-pure, $text-m-min, $text-m-max);
+  // line-height: $base-text-lh;
+}
+
+// DEFAULT SECTION PADDING
+.ct-section-inner-wrap {
+  @include fluid-section-padding(
+    $section-space-m-pure,
+    $section-m-min,
+    $section-m-max
+  );
+}
+
+// DEFAULT HEADER PADDING
+
+.oxy-header-container {
+  padding-inline: append-rem($section-padding-x);
+}
+
+// SECTION PADDING
+
+@each $size, $extension in $sizeExtensions {
+  .pad-section--#{$extension} .ct-section-inner-wrap {
+    @if $size == xs {
+      @include map-get-section-spacing(xs);
+    } @else if $size == s {
+      @include map-get-section-spacing(s);
+    } @else if $size == m {
+      @include map-get-section-spacing(m);
+    } @else if $size == l {
+      @include map-get-section-spacing(l);
+    } @else if $size == xl {
+      @include map-get-section-spacing(xl);
+    } @else if $size == xxl {
+      @include map-get-section-spacing(xxl);
+    }
+  }
+}
+
+.pad-section--none .ct-section-inner-wrap {
+  padding: 0 append-rem($section-padding-x);
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @each $size, $extension in $sizeExtensions {
+      .pad-section--#{$breakpoint}-#{$extension} .ct-section-inner-wrap {
+        @if $size == xs {
+          @include map-get-section-spacing(xs);
+        } @else if $size == s {
+          @include map-get-section-spacing(s);
+        } @else if $size == m {
+          @include map-get-section-spacing(m);
+        } @else if $size == l {
+          @include map-get-section-spacing(l);
+        } @else if $size == xl {
+          @include map-get-section-spacing(xl);
+        } @else if $size == xxl {
+          @include map-get-section-spacing(xxl);
+        }
+      }
+      .pad-section--#{$breakpoint}-none .ct-section-inner-wrap {
+        padding: 0 append-rem($section-padding-x);
+      }
+      .pad--none--#{$breakpoint} .ct-section-inner-wrap {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+.pad--none .ct-section-inner-wrap {
+  padding: 0 !important;
+}
+
+// MIN HEIGHTS
+@each $height in $heights {
+  @if $height != full {
+    .ct-section.height--#{$height} > .ct-section-inner-wrap {
+      min-block-size: #{$height}vh;
+    }
+  } @else if $height == full {
+    .ct-section.height--#{$height} > .ct-section-inner-wrap {
+      min-block-size: 100vh;
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @each $height in $heights {
+      @if $height != full {
+        .ct-section.height--#{$breakpoint}-#{$height} > .ct-section-inner-wrap {
+          min-block-size: #{$height}vh;
+        }
+      } @else if $height == full {
+        .ct-section.height--#{$breakpoint}-#{$height} > .ct-section-inner-wrap {
+          min-block-size: 100vh;
+        }
+      }
+    }
+  }
+}
+
+// MAX HEIGHTS
+@each $height in $heights {
+  @if $height != full {
+    .ct-section.max-height--#{$height} > .ct-section-inner-wrap {
+      max-block-size: #{$height}vh;
+    }
+  } @else if $height == full {
+    .ct-section.max-height--#{$height} > .ct-section-inner-wrap {
+      max-block-size: 100vh;
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @each $height in $heights {
+      @if $height != full {
+        .ct-section.max-height--#{$breakpoint}-#{$height}
+          > .ct-section-inner-wrap {
+          max-block-size: #{$height}vh;
+        }
+      } @else if $height == full {
+        .ct-section.max-height--#{$breakpoint}-#{$height}
+          > .ct-section-inner-wrap {
+          max-block-size: 100vh;
+        }
+      }
+    }
+  }
+}
+
+// OWL SPACING (SECTIONS)
+@each $size, $extension in $sizeExtensions {
+  .ct-section.owl--#{$extension} .ct-section-inner-wrap > * + * {
+    @if $size == xs {
+      @include map-get-owl(xs);
+    } @else if $size == s {
+      @include map-get-owl(s);
+    } @else if $size == m {
+      @include map-get-owl(m);
+    } @else if $size == l {
+      @include map-get-owl(l);
+    } @else if $size == xl {
+      @include map-get-owl(xl);
+    } @else if $size == xxl {
+      @include map-get-owl(xxl);
+    }
+  }
+}
+
+// FLEX
+
+@each $direction, $value in $flexDirections {
+  .ct-section.flex--#{$direction} .ct-section-inner-wrap {
+    display: flex;
+    flex-direction: #{$value};
+  }
+}
+
+// Flex Breakpoints
+@include breakpoint(xl) {
+  @each $direction, $value in $flexDirections {
+    .ct-section.flex--#{$direction}-xl .ct-section-inner-wrap {
+      display: flex;
+      flex-direction: #{$value};
+    }
+  }
+}
+
+@include breakpoint(l) {
+  @each $direction, $value in $flexDirections {
+    .ct-section.flex--#{$direction}-l .ct-section-inner-wrap {
+      display: flex;
+      flex-direction: #{$value};
+    }
+  }
+}
+
+@include breakpoint(m) {
+  @each $direction, $value in $flexDirections {
+    .ct-section.flex--#{$direction}-m .ct-section-inner-wrap {
+      display: flex;
+      flex-direction: #{$value};
+    }
+  }
+}
+
+@include breakpoint(s) {
+  @each $direction, $value in $flexDirections {
+    .ct-section.flex--#{$direction}-s .ct-section-inner-wrap {
+      display: flex;
+      flex-direction: #{$value};
+    }
+  }
+}
+
+// ALIGNMENTS
+
+@each $alignmentType, $directionSet in $alignments {
+  @each $direction, $value in $directionSet {
+    @if $alignmentType != self {
+      .ct-section.#{$alignmentType}--#{$direction} .ct-section-inner-wrap {
+        display: flex;
+        #{$alignmentType}: $value;
+      }
+    } @else if $alignmentType == self {
+      .ct-section.#{$alignmentType}--#{$direction} .ct-section-inner-wrap {
+        display: flex;
+        align-self: $value;
+      }
+    }
+  }
+}
+
+// Grids
+@each $grid-type, $col-set in $grids {
+  @each $col-count, $value in $col-set {
+    .ct-section.grid--#{$col-count} .ct-section-inner-wrap {
+      display: grid !important;
+      grid-template-columns: #{$value};
+      inline-size: 100%;
+    }
+  }
+}
+// Grid Breakpoints
+@include breakpoint(xl) {
+  @each $grid-type, $col-set in $grids {
+    @each $col-count, $value in $col-set {
+      @if $grid-type == standard {
+        .ct-section.grid--xl-#{$col-count} .ct-section-inner-wrap {
+          grid-template-columns: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(l) {
+  @each $grid-type, $col-set in $grids {
+    @each $col-count, $value in $col-set {
+      @if $grid-type == standard {
+        .ct-section.grid--l-#{$col-count} .ct-section-inner-wrap {
+          grid-template-columns: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(m) {
+  @each $grid-type, $col-set in $grids {
+    @each $col-count, $value in $col-set {
+      @if $grid-type == standard {
+        .ct-section.grid--m-#{$col-count} .ct-section-inner-wrap {
+          grid-template-columns: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(s) {
+  @each $grid-type, $col-set in $grids {
+    @each $col-count, $value in $col-set {
+      @if $grid-type == standard {
+        .ct-section.grid--s-#{$col-count} .ct-section-inner-wrap {
+          grid-template-columns: #{$value};
+        }
+      }
+    }
+  }
+}
+
+// AUTO STAGGERED GRID MOBILE FIX
+
+@include breakpoint(l) {
+  .ct-section.grid--auto-1-2 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+  .ct-section.grid--auto-1-3 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+  .ct-section.grid--auto-3-2 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+  .ct-section.grid--auto-2-3 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+  .ct-section.grid--auto-2-1 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+  .ct-section.grid--auto-3-1 .ct-section-inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(#{$auto-break-3}, 100vw - #{$auto-grid-math}), 1fr)
+    );
+  }
+}
+
+//GRID GAPS
+@each $size, $extension in $sizeExtensions {
+  .ct-section.gap--#{$extension} > .ct-section-inner-wrap {
+    @if $size == xs {
+      @include map-get-gap(xs);
+    } @else if $size == s {
+      @include map-get-gap(s);
+    } @else if $size == m {
+      @include map-get-gap(m);
+    } @else if $size == l {
+      @include map-get-gap(l);
+    } @else if $size == xl {
+      @include map-get-gap(xl);
+    } @else if $size == xxl {
+      @include map-get-gap(xxl);
+    }
+  }
+}
+
+// GENERATE BUTTON COLORS & OUTLINE BUTTONS
+
+@each $buttonColor, $buttonProps in $buttons {
+  .ct-link-button.btn--#{$buttonColor} {
+    background-color: map-get(map-get($buttons, $buttonColor), background-clr);
+    color: map-get(map-get($buttons, $buttonColor), text-clr);
+    cursor: pointer;
+    border-style: solid;
+    border-color: map-get(map-get($buttons, $buttonColor), border-clr);
+    @include button;
+    font-size: map-get(map-get($textSizing, pure), text-m-pure);
+    font-size: map-get(map-get($textSizing, calc), text-m-calc);
+    font-size: map-get(map-get($textSizing, clamp), text-m-clamp);
+
+    &:hover {
+      background-color: map-get(
+        map-get($buttons, $buttonColor),
+        background-clr-hover
+      );
+      color: map-get(map-get($buttons, $buttonColor), text-clr-hover);
+      border-color: map-get(map-get($buttons, $buttonColor), border-clr-hover);
+      cursor: pointer;
+    }
+  }
+
+  .ct-link-button.btn--#{$buttonColor}.btn--outline {
+    background-color: transparent;
+    border-style: solid;
+    cursor: pointer;
+    color: map-get(map-get($buttons, $buttonColor), outline-text-clr);
+    border-color: map-get(map-get($buttons, $buttonColor), outline-border-clr);
+    @include outline-btn-default;
+
+    &:hover {
+      background-color: map-get(
+        map-get($buttons, $buttonColor),
+        outline-background-clr-hover
+      );
+      color: map-get(map-get($buttons, $buttonColor), outline-text-clr-hover);
+    }
+  }
+}
+
+// GENERATE BUTTON SIZES
+@each $size, $extension in $sizeExtensions {
+  .ct-link-button.btn--#{$extension} {
+    @if $size == xs {
+      @include map-get-fluid-text(xs);
+    } @else if $size == s {
+      @include map-get-fluid-text(s);
+    } @else if $size == m {
+      @include map-get-fluid-text(m);
+    } @else if $size == l {
+      @include map-get-fluid-text(l);
+    } @else if $size == xl {
+      @include map-get-fluid-text(xl);
+    } @else if $size == xxl {
+      @include map-get-fluid-text(xxl);
+    }
+    @include button;
+    cursor: pointer;
+  }
+}
+
+// BREAKOUTS
+@include breakpoint-up(xl) {
+  @each $breakout, $breakoutValue in $breakouts {
+    $breakoutMath: vw($breakoutValue / 2);
+
+    .ct-image.breakout--#{$breakout} {
+      inline-size: vw($breakoutValue);
+      max-inline-size: vw($breakoutValue) !important;
+      margin: 0 calc(-#{$breakoutMath} + 50%);
+    }
+  }
+}
+.ct-image.breakout--full {
+  inline-size: 100vw !important;
+  max-inline-size: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  align-self: flex-start;
+}
+@include breakpoint(xl) {
+  [class*="breakout--"]:not(.breakout--full) {
+    inline-size: 100% !important;
+    max-inline-size: 100% !important;
+    margin: 0;
+  }
+}
+
+.ct-section.stretch .ct-section-inner-wrap {
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: stretch;
+  justify-items: stretch;
+}
+
+// Skip link
+.ct-link-text.link--skip {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  transform: translateY(-250%);
+  @include button;
+  background: $btn-action-bg;
+  color: $btn-action-text;
+}
+
+.ct-link-text.link--skip:focus {
+  transform: translateY(0);
+}
+
+.ct-section.flex--wrap > .ct-section-inner-wrap {
+  flex-wrap: wrap;
+}
+
+// Text Style Classes
+
+// Text Weights
+@each $weight, $value in $textWeights {
+  .ct-span.text--#{$weight} {
+    font-weight: $value;
+  }
+}
+
+// Text Styles
+@each $style, $value in $textStyles {
+  .ct-span.text--#{$style} {
+    font-style: $value;
+  }
+}
+
+// Text Decorations
+@each $decoration, $value in $textDecorations {
+  .ct-span.text--#{$decoration} {
+    -webkit-text-decoration: $value;
+    text-decoration: $value;
+  }
+}
+
+// Text Transforms
+@each $transform, $value in $textTransforms {
+  .ct-span.text--#{$transform} {
+    text-transform: $value;
+  }
+}
+
+// Text Alignments
+@each $alignment, $value in $textAlignments {
+  .ct-span.text--#{$alignment} {
+    text-align: $value;
+  }
+}
+
+//// Aspect Ratios
+
+@each $ratio, $value in $aspect-ratios {
+  .ct-video.aspect--#{$ratio} {
+    > .oxygen-vsb-responsive-video-wrapper > iframe {
+      position: relative;
+    }
+    > .oxygen-vsb-responsive-video-wrapper {
+      padding-block-end: 0 !important;
+    }
+  }
+}
+
+@each $extension, $value in $breakpoints {
+  @include breakpoint($extension) {
+    @each $ratio, $value in $aspect-ratios {
+      .aspect--#{$extension}-#{$ratio} {
+        > .oxygen-vsb-responsive-video-wrapper > iframe {
+          position: relative;
+        }
+        > .oxygen-vsb-responsive-video-wrapper {
+          padding-block-end: 0 !important;
+        }
+      }
+    }
+  }
+}

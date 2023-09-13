@@ -1,0 +1,11 @@
+@if $option-backgrounds == on {
+  @each $color, $color-sets in $all-colors {
+    @each $color-set, $color-names in $color-sets {
+      @each $color-name, $color-value in $color-names {
+        .bg--#{$color-name} {
+          background-color: var(--#{$color-name});
+        }
+      }
+    }
+  }
+}

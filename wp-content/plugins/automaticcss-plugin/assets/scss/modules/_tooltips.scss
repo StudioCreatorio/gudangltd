@@ -1,0 +1,147 @@
+[role="tooltip"], [class*="brxe-"][role="tooltip"] {
+    // Variables
+    --tip-bg: var(--shade-dark);
+    --tip-text-color: var(--shade-ultra-light);
+    --tip-shadow: 2px 2px 20px var(--shade-ultra-dark-trans-10);
+    --tip-padding-block: .75ch;
+    --tip-padding-inline: 1.5ch;
+    --tip-radius: var(--radius-xs);
+    --tip-line-height: 1.2;
+    --tip-text-align: center;
+    --tip-triangle-peak: 10px;
+    --tip-triangle-slope: 14px;
+    --isRTL: -1;
+
+    // Styling
+    opacity: 0;
+    inline-size: max-content;
+    max-inline-size: 25ch;
+    background-color: var(--tip-bg);
+    text-align: start;
+    font-size: var(--text-s);
+    font-weight: normal;
+    line-height: var(--tip-line-height);
+    border-radius: var(--tip-radius);
+    -webkit-border-radius: var(--tip-radius);
+    -moz-border-radius: var(--tip-radius);
+    -ms-border-radius: var(--tip-radius);
+    -o-border-radius: var(--tip-radius);
+    margin: 0;
+    padding: var(--tip-padding-block) var(--tip-padding-inline);
+    filter: drop-shadow(var(--tip-shadow));
+    -webkit-filter: drop-shadow(var(--tip-shadow));
+    color: var(--tip-text-color);
+    position: absolute;
+    z-index: 1;
+    text-align: var(--tip-text-align);
+    transition: opacity .3s ease;
+    &:dir(rtl) {
+        --isRTL: 1;
+    }
+
+    // Accessibility enhancement for screen readers
+
+    &::before {
+        content: "; Has tooltip: ";
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+    }
+
+    // Tooltip Triangle
+
+    &::after {
+        content: "";
+        border: var(--tip-triangle-peak) solid;
+        border-color: var(--tip-triangle);
+        position: absolute;
+    }
+
+    // Positions
+
+    &[tip-position="block-start"],
+    &[tip-position="top"] {
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        inset-block-end: calc(100% + var(--tip-padding-block) + var(--tip-triangle-peak));
+
+        &::after {
+            --tip-triangle: var(--tip-bg) transparent transparent transparent;
+            bottom: calc(0% - var(--tip-triangle-peak) * 2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+    &[tip-position="inline-end"],
+    &[tip-position="right"] {
+        inset-block-start: 50%;
+        inset-inline-start: calc(100% + var(--tip-padding-inline) + var(--tip-triangle-peak));
+
+        &::after {
+            --tip-triangle: transparent var(--tip-bg) transparent transparent;
+            top: 50%;
+            left: calc(0% - var(--tip-triangle-peak) * 2);
+            transform: translateY(-50%);
+        }
+    }
+    &[tip-position="block-end"],
+    &[tip-position="bottom"] {
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        inset-block-start: calc(100% + var(--tip-padding-block) + var(--tip-triangle-peak));
+
+        &::after {
+            --tip-triangle: transparent transparent var(--tip-bg) transparent;
+            top: calc(0% - var(--tip-triangle-peak) * 2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &[tip-position="inline-start"],
+    &[tip-position="left"] {
+        inset-block-start: 50%;
+        inset-inline-end: calc(100% + var(--tip-padding-inline) + var(--tip-triangle-peak));
+
+        &::after {
+            --tip-triangle: transparent transparent transparent var(--tip-bg);
+            top: 50%;
+            right: calc(0% - var(--tip-triangle-peak) * 2);
+            transform: translateY(-50%);
+        }
+    }
+
+    // Vertically center the inline tooltips
+
+    &:is([tip-position="inline-start"], [tip-position="left"], [tip-position="inline-end"], [tip-position="right"]) {
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+
+}
+
+// Set parent to relative if there's a direct tool-tip child
+
+:has([role="tooltip"]) {
+    position: relative;
+    cursor: pointer;
+
+    // Show tool-tip on hover, focus, etc.
+
+    &:is(:hover, :focus-visible, :active) > [role="tooltip"] {
+        opacity: 1;
+        transition-delay: 200ms;
+    }
+
+}
+
+.bricks-area :has( > [role="tooltip"]) {
+    border-block-end: 1px dashed black;
+}

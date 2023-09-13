@@ -1,0 +1,198 @@
+// The basic automatic.css stylesheet won't load correctly in the block editor when enqueued with add_editor_style(),
+// because the contents of html and body styles are mushed together in the .editor-styles-wrapper div, and that messes up the root font size.
+// This file mimics the contents of automatic.css in a way it can be safely enqueued with add_editor_style() in PHP.
+// It skips the root font size, which the block editor would mess up, and is fixed via JS.
+$output-root-font-size: false;
+
+// Breakpoints
+@import "../../dashboard/breakpoints";
+
+// Framework Options
+@import "../../dashboard/options";
+
+// Functions
+@import "../../helpers/calc-math";
+@import "../../helpers/functions";
+
+// Import Vars
+@import "../../dashboard/color-vars";
+@import "../../dashboard/box-shadow-vars";
+@import "../../dashboard/contextual-vars";
+@import "../../dashboard/additional-styles";
+@import "../../dashboard/spacing-vars";
+@import "../../dashboard/text-vars";
+@import "../../dashboard/col-vars";
+@import "../../dashboard/radius-vars";
+@import "../../dashboard/sticky-vars";
+@import "../../dashboard/button-vars";
+
+// Import Maps
+@import "../../maps/aspect-maps";
+@import "../../maps/breakout-maps";
+@import "../../maps/button-maps";
+@import "../../maps/col-maps";
+@import "../../maps/color-maps";
+@import "../../maps/contextual-maps";
+@import "../../modules/grid/grid-maps";
+@import "../../maps/height-maps";
+@import "../../maps/fallback-maps";
+@import "../../maps/flex-maps";
+@import "../../maps/radius-maps";
+@import "../../maps/size-maps";
+@import "../../maps/spacing-maps";
+@import "../../maps/position-maps";
+@import "../../maps/text-maps";
+@import "../../maps/width-maps";
+@import "../../maps/z-index-maps";
+
+// Mixins
+@import "../../helpers/mixins";
+
+// Modules
+
+@import "../../modules/buttons";
+
+// Framework
+
+@import "../../automatic.scss";
+
+// Builders
+
+@import "../generate/generate-editor";
+
+body p {
+  // This overrides the block editor's p, .wp-die { font-size: 13px; }
+  @include map-get-fluid-text(m);
+  line-height: $base-text-lh;
+  max-inline-size: $text-line-length;
+  width: 100%;
+
+  @if $option-paragraph-fix == on {
+    margin: 0 0 0 0;
+  }
+}
+
+// Fix the editor width
+.editor-styles-wrapper {
+  width: 100%;
+}
+
+// Fix Title Wrapper Width
+
+.edit-post-visual-editor__post-title-wrapper {
+  width: 100%;
+  max-inline-size: 840px;
+  margin-inline: auto;
+  margin-bottom: var(--container-gap) !important;
+}
+
+// Turn off focus styling in editor
+
+*:focus,
+  button:focus {
+    outline: none;
+  }
+
+  // Button Styling in Editor
+
+@if $option-buttons == on and $option-gutenberg-enable == off {
+  @each $buttonColor, $buttonProps in $buttons {
+    .btn--#{$buttonColor} {
+      background-color: map-get(
+        map-get($buttons, $buttonColor),
+        background-clr
+      );
+      color: map-get(map-get($buttons, $buttonColor), text-clr);
+      cursor: pointer;
+      border-style: solid;
+      border-color: map-get(map-get($buttons, $buttonColor), border-clr);
+      @include button;
+
+      @if $option-btn-text-size == on {
+        font-size: $text-m-pure;
+        font-size: fluidCalc($btn-text-min, $btn-text-max);
+        font-size: fluidClamp($btn-text-min, $btn-text-max);
+      } @else {
+        font-size: $text-m-pure;
+        font-size: fluidCalc($text-m-min, $text-m-max);
+        font-size: fluidClamp($text-m-min, $text-m-max);
+      }
+
+      &:hover {
+        background-color: map-get(
+          map-get($buttons, $buttonColor),
+          background-clr-hover
+        );
+        color: map-get(map-get($buttons, $buttonColor), text-clr-hover);
+        border-color: map-get(
+          map-get($buttons, $buttonColor),
+          border-clr-hover
+        );
+        cursor: pointer;
+      }
+    }
+
+    .btn--#{$buttonColor}.btn--outline {
+      background-color: transparent;
+      border-style: solid;
+      cursor: pointer;
+      color: map-get(map-get($buttons, $buttonColor), outline-text-clr);
+      border-color: map-get(
+        map-get($buttons, $buttonColor),
+        outline-border-clr
+      );
+      @include outline-btn-default;
+
+      &:hover {
+        background-color: map-get(
+          map-get($buttons, $buttonColor),
+          outline-background-clr-hover
+        );
+        color: map-get(map-get($buttons, $buttonColor), outline-text-clr-hover);
+      }
+    }
+  }
+
+  // Button Sizes
+
+  @each $size, $extension in $sizeExtensions {
+    .btn--#{$extension} {
+      @if $size == xs {
+        @include map-get-fluid-text(xs);
+      } @else if $size == s {
+        @include map-get-fluid-text(s);
+      } @else if $size == m {
+        @include map-get-fluid-text(m);
+      } @else if $size == l {
+        @include map-get-fluid-text(l);
+      } @else if $size == xl {
+        @include map-get-fluid-text(xl);
+      } @else if $size == xxl {
+        @include map-get-fluid-text(xxl);
+      }
+      @include button;
+      cursor: pointer;
+    }
+  }
+}
+@if $option-paragraph-fix == on {
+    p,h1,h2,h3,h4,h5,h6 {
+      margin: 0;
+    }
+    .is-root-container >,
+    .smart-spacing {
+      * + :is(h1, h2, h3, h4, h5, h6) {
+        margin-block-start: $default-heading-spacing;
+      }
+      * + p {
+        margin-block-start: $default-paragraph-spacing;
+      }
+      * + ul,
+      * + ol {
+        margin-block-start: $default-list-spacing;
+      }
+      * + li {
+        margin-block-start: $default-list-item-spacing;
+      }
+    }
+}

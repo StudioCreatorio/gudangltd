@@ -1,0 +1,248 @@
+// ACTION
+$option-action-clr: on !default;
+
+$action-hex: #e56c70 !default; // Used for main color output
+$action-r: 229 !default; // For potential future use
+$action-g: 108 !default; // For potential future use
+$action-b: 112 !default; // For potential future use
+$action-h: 358 !default; // Used for shade generation
+$action-s: 70% !default; // Used for shade generation
+$action-l: 66% !default; // Used for shade generation
+$action-hover-h: 358 !default;
+$action-hover-s: 70% !default;
+$action-hover-l: 1.15 !default;
+$action-ultra-light-h: 358 !default;
+$action-ultra-light-s: 70% !default;
+$action-ultra-light-l: 95% !default;
+$action-light-h: 358 !default;
+$action-light-s: 70% !default;
+$action-light-l: 85% !default;
+$action-medium-h: 358 !default;
+$action-medium-s: 70% !default;
+$action-medium-l: 50% !default;
+$action-dark-h: 358 !default;
+$action-dark-s: 70% !default;
+$action-dark-l: 25% !default;
+$action-ultra-dark-h: 358 !default;
+$action-ultra-dark-s: 70% !default;
+$action-ultra-dark-l: 10% !default;
+
+// PRIMARY
+$option-primary-clr: on !default;
+
+$primary-hex: #e56c70 !default; // Used for main color output
+$primary-r: 229 !default; // For potential future use
+$primary-g: 108 !default; // For potential future use
+$primary-b: 112 !default; // For potential future use
+$primary-h: 358 !default; // Used for shade generation
+$primary-s: 70% !default; // Used for shade generation
+$primary-l: 66% !default; // Used for shade generation
+$primary-h: 358 !default;
+$primary-s: 70% !default;
+$primary-l: 66% !default;
+$primary-hover-h: 358 !default;
+$primary-hover-s: 70% !default;
+$primary-hover-l: 1.15 !default;
+$primary-ultra-light-h: 358 !default;
+$primary-ultra-light-s: 70% !default;
+$primary-ultra-light-l: 95% !default;
+$primary-light-h: 358 !default;
+$primary-light-s: 70% !default;
+$primary-light-l: 85% !default;
+$primary-medium-h: 358 !default;
+$primary-medium-s: 70% !default;
+$primary-medium-l: 50% !default;
+$primary-dark-h: 358 !default;
+$primary-dark-s: 70% !default;
+$primary-dark-l: 25% !default;
+$primary-ultra-dark-h: 358 !default;
+$primary-ultra-dark-s: 70% !default;
+$primary-ultra-dark-l: 10% !default;
+
+// SECONDARY
+$option-secondary-clr: on !default;
+
+$secondary-hex: #6c5879 !default; // Used for main color output
+$secondary-r: 108 !default; // For potential future use
+$secondary-g: 88 !default; // For potential future use
+$secondary-b: 121 !default; // For potential future use
+$secondary-h: 276 !default; // Used for shade generation
+$secondary-s: 16% !default; // Used for shade generation
+$secondary-l: 41% !default; // Used for shade generation
+$secondary-hover-h: 276 !default;
+$secondary-hover-s: 16% !default;
+$secondary-hover-l: 1.15 !default;
+$secondary-ultra-light-h: 276 !default;
+$secondary-ultra-light-s: 16% !default;
+$secondary-ultra-light-l: 95% !default;
+$secondary-light-h: 276 !default;
+$secondary-light-s: 16% !default;
+$secondary-light-l: 85% !default;
+$secondary-medium-h: 276 !default;
+$secondary-medium-s: 16% !default;
+$secondary-medium-l: 50% !default;
+$secondary-dark-h: 276 !default;
+$secondary-dark-s: 16% !default;
+$secondary-dark-l: 25% !default;
+$secondary-ultra-dark-h: 276 !default;
+$secondary-ultra-dark-s: 16% !default;
+$secondary-ultra-dark-l: 10% !default;
+
+// ACCENT
+$option-accent-clr: on !default;
+
+$accent-hex: #eaac8b !default; // Used for main color output
+$accent-r: 234 !default; // For potential future use
+$accent-g: 172 !default; // For potential future use
+$accent-b: 139 !default; // For potential future use
+$accent-h: 21 !default; // Used for shade generation
+$accent-s: 69% !default; // Used for shade generation
+$accent-l: 73% !default; // Used for shade generation
+$accent-hover-h: 21 !default;
+$accent-hover-s: 69% !default;
+$accent-hover-l: 1.15 !default;
+$accent-ultra-light-h: 21 !default;
+$accent-ultra-light-s: 69% !default;
+$accent-ultra-light-l: 95% !default;
+$accent-light-h: 21 !default;
+$accent-light-s: 69% !default;
+$accent-light-l: 85% !default;
+$accent-medium-h: 21 !default;
+$accent-medium-s: 69% !default;
+$accent-medium-l: 50% !default;
+$accent-dark-h: 21 !default;
+$accent-dark-s: 69% !default;
+$accent-dark-l: 25% !default;
+$accent-ultra-dark-h: 21 !default;
+$accent-ultra-dark-s: 69% !default;
+$accent-ultra-dark-l: 10% !default;
+
+// BASE
+$option-base-clr: on !default;
+
+$base-hex: #344f6f !default; // Used for main color output
+$base-r: 52 !default; // For potential future use
+$base-g: 79 !default; // For potential future use
+$base-b: 111 !default; // For potential future use
+$base-h: 213 !default; // Used for shade generation
+$base-s: 36% !default; // Used for shade generation
+$base-l: 32% !default; // Used for shade generation
+$base-hover-h: 213 !default;
+$base-hover-s: 36% !default;
+$base-hover-l: 1.15 !default;
+$base-ultra-light-h: 213 !default;
+$base-ultra-light-s: 36% !default;
+$base-ultra-light-l: 95% !default;
+$base-light-h: 213 !default;
+$base-light-s: 36% !default;
+$base-light-l: 85% !default;
+$base-medium-h: 213 !default;
+$base-medium-s: 36% !default;
+$base-medium-l: 50% !default;
+$base-dark-h: 213 !default;
+$base-dark-s: 36% !default;
+$base-dark-l: 25% !default;
+$base-ultra-dark-h: 213 !default;
+$base-ultra-dark-s: 36% !default;
+$base-ultra-dark-l: 10% !default;
+
+// SHADE
+$option-shade-clr: on !default;
+
+$shade-hex: #000000 !default; // Used for main color output
+$shade-r: 0 !default; // For potential future use
+$shade-g: 0 !default; // For potential future use
+$shade-b: 0 !default; // For potential future use
+$shade-h: 0 !default; // Used for shade generation
+$shade-s: 0% !default; // Used for shade generation
+$shade-l: 0% !default; // Used for shade generation
+$shade-hover-h: 0 !default;
+$shade-hover-s: 0% !default;
+$shade-hover-l: 1.15 !default;
+$shade-ultra-light-h: 0 !default;
+$shade-ultra-light-s: 0% !default;
+$shade-ultra-light-l: 95% !default;
+$shade-light-h: 0 !default;
+$shade-light-s: 0% !default;
+$shade-light-l: 85% !default;
+$shade-medium-h: 0 !default;
+$shade-medium-s: 0% !default;
+$shade-medium-l: 50% !default;
+$shade-dark-h: 0 !default;
+$shade-dark-s: 0% !default;
+$shade-dark-l: 25% !default;
+$shade-ultra-dark-h: 0 !default;
+$shade-ultra-dark-s: 0% !default;
+$shade-ultra-dark-l: 10% !default;
+
+// Contextual
+
+$option-contextual-colors: on !default;
+
+$success-hex: #29A745 !default;
+$success-h: 133 !default;
+$success-s: 61% !default;
+$success-l: 41% !default;
+$success-light-h: 133 !default;
+$success-light-s: 61% !default;
+$success-light-l: 85% !default;
+$success-dark-h: 133 !default;
+$success-dark-s: 61% !default;
+$success-dark-l: 15% !default;
+$success-hover-h: 133 !default;
+$success-hover-s: 61% !default;
+$success-hover-l: 1.15 !default;
+$success-r: 41 !default;
+$success-g: 167 !default;
+$success-b: 69 !default;
+
+$danger-hex: #29A745 !default;
+$danger-h: 133 !default;
+$danger-s: 61% !default;
+$danger-l: 41% !default;
+$danger-light-h: 133 !default;
+$danger-light-s: 61% !default;
+$danger-light-l: 85% !default;
+$danger-dark-h: 133 !default;
+$danger-dark-s: 61% !default;
+$danger-dark-l: 15% !default;
+$danger-hover-h: 133 !default;
+$danger-hover-s: 61% !default;
+$danger-hover-l: 1.15 !default;
+$danger-r: 41 !default;
+$danger-g: 167 !default;
+$danger-b: 69 !default;
+
+$warning-hex: #29A745 !default;
+$warning-h: 133 !default;
+$warning-s: 61% !default;
+$warning-l: 41% !default;
+$warning-light-h: 133 !default;
+$warning-light-s: 61% !default;
+$warning-light-l: 85% !default;
+$warning-dark-h: 133 !default;
+$warning-dark-s: 61% !default;
+$warning-dark-l: 15% !default;
+$warning-hover-h: 133 !default;
+$warning-hover-s: 61% !default;
+$warning-hover-l: 1.15 !default;
+$warning-r: 41 !default;
+$warning-g: 167 !default;
+$warning-b: 69 !default;
+
+$info-hex: #29A745 !default;
+$info-h: 133 !default;
+$info-s: 61% !default;
+$info-l: 41% !default;
+$info-light-h: 133 !default;
+$info-light-s: 61% !default;
+$info-light-l: 85% !default;
+$info-dark-h: 133 !default;
+$info-dark-s: 61% !default;
+$info-dark-l: 15% !default;
+$info-hover-h: 133 !default;
+$info-hover-s: 61% !default;
+$info-hover-l: 1.15 !default;
+$info-r: 41 !default;
+$info-g: 167 !default;
+$info-b: 69 !default;

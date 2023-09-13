@@ -1,0 +1,93 @@
+body {
+  @include map-get-fluid-text(m);
+  line-height: $base-text-lh;
+  background-color: $body-bg-color;
+}
+
+h1 {
+  @include map-get-fluid-heading(h1);
+  line-height: $h1-lh;
+}
+h2 {
+  @include map-get-fluid-heading(h2);
+  line-height: $h2-lh;
+}
+h3 {
+  @include map-get-fluid-heading(h3);
+  line-height: $h3-lh;
+}
+h4 {
+  @include map-get-fluid-heading(h4);
+  line-height: $h4-lh;
+}
+h5 {
+  @include map-get-fluid-heading(h5);
+  line-height: $h5-lh;
+}
+h6 {
+  @include map-get-fluid-heading(h6);
+  line-height: $h6-lh;
+}
+
+// // Overrides for heading line lenghts
+// // Bricks sets everything to max-width 100% by default
+// // so we have to set actual width instead.
+
+// h1,
+// .h--1.brxe-heading {
+//   max-inline-size: $heading-line-length;
+// }
+
+// h2,
+// .h--2.brxe-heading {
+//   max-inline-size: $h2-line-length;
+// }
+// h3,
+// .h--3.brxe-heading {
+//   max-inline-size: $h3-line-length;
+// }
+// h4,
+// .h--4.brxe-heading {
+//   max-inline-size: $h4-line-length;
+// }
+// h5,
+// .h--5.brxe-heading {
+//   max-inline-size: $h5-line-length;
+// }
+// h6,
+// .h--6.brxe-heading {
+//   max-inline-size: $h6-line-length;
+// }
+
+// // Overrides for text line lenghts
+
+// @each $size, $extension in $textExtensions {
+//   .text--#{$extension} {
+
+//     // Make sure we don't apply these changes if
+//     // these classes are used on containers.
+
+//     &:not(
+//       .brxe-section, 
+//       .brxe-container, 
+//       .brxe-block, 
+//       .brxe-div, 
+//       header, 
+//       footer
+//       ) {
+//         @if $size == xs {
+//           max-inline-size: $text-xs-length;
+//         } @else if $size == s {
+//           max-inline-size: $text-s-length;
+//         } @else if $size == m {
+//           max-inline-size: $text-line-length;
+//         } @else if $size == l {
+//           max-inline-size: $text-l-length;
+//         } @else if $size == xl {
+//           max-inline-size: $text-xl-length;
+//         } @else if $size == xxl {
+//           max-inline-size: $text-xxl-length;
+//         }
+//     }
+//   }
+// }

@@ -1,0 +1,110 @@
+:root {
+	--fr-accordion-icon-transformation: rotate(180deg) translateY(10%);
+}
+
+.fr-accordion__body {
+	overflow: hidden;
+	height: 0;
+	transition: all 0.3s ease-out;
+}
+
+/* transition for header and for title in header */
+
+.fr-accordion__header {
+	transition: all 0.3s ease-out;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 100%;
+	background-color: var(--shade-light);
+	color: var(--fr-text-dark);
+	padding: var(--space-s) var(--space-xs);
+}
+
+.iframe.mounted .fr-accordion__header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+
+.fr-accordion__icon-wrapper, .iframe.mounted .fr-accordion__icon-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 3em;
+}
+
+/* .fr-accordion__icon {
+	font-size: var(--text-xl);
+}
+
+.fr-accordion__content-wrapper {
+	padding: var(--space-s);
+} */
+
+.fr-accordion__title {
+	transition: all 0.3s ease-out;
+}
+
+
+/* clear ul,ol styles for ul.fr-accordion and ol.fr-accordion */
+
+ul.fr-accordion,
+ol.fr-accordion {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+.fr-accordion {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.fr-accordion__icon-wrapper {
+	aspect-ratio: 1/1;
+	line-height: 1;
+}
+
+.fr-accordion__icon {
+	line-height: 1;
+	transform: translateY(10%);
+}
+
+.fr-accordion__alert {
+	background-color: rgb(148, 42, 42);
+	color: white;
+	padding: 1rem;
+	margin: 0;
+	border-radius: .25rem;
+}
+/* :class="{ 'fr-accordion--toggle-all': settings.toggleAllInBuilder, 'fr-accordion--first-item-opened': settings.firstItemOpened }" */
+
+.fr-accordion--toggle-all > * > :nth-child(2) {
+	height: auto !important;
+}
+
+.fr-accordion--first-item-opened > *:first-child > :nth-child(2) {
+	height: auto !important;
+}
+
+.fr-accordion__icon {
+	transition: all 0.3s ease-out;
+}
+
+.fr-accordion__icon--flipped {
+	/* transform: var(--fr-accordion-icon-transformation); */
+}
+
+.fr-accordion > * > :nth-child(1) {
+	cursor: pointer;
+}

@@ -1,0 +1,96 @@
+// Primary Buttons
+.woocommerce button[type="submit"],
+.woocommerce ul.products li.product .button,
+.woocommerce .button,
+.woocommerce a.button {
+    @if $woo-use-default-btn == on {
+        @include btn-primary;
+
+        &:hover {
+            @include btn-primary-hover;
+        }
+    }
+    @else {
+        background-color: $woo-btn-bg;
+        color: $woo-btn-text;
+        padding: $woo-btn-pad-y $woo-btn-pad-x;
+        border-width: $woo-btn-border-size;
+        border-color: $woo-btn-border-color;
+        border-radius: $woo-btn-radius;
+        text-transform: $woo-btn-text-transform;
+        letter-spacing: $woo-btn-letter-spacing;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($woo-btn-text-min, $woo-btn-text-max);
+        font-size: fluidClamp($woo-btn-text-min, $woo-btn-text-max);
+        font-weight: $woo-btn-weight;
+
+        &:hover {
+            background-color: $woo-btn-hover;
+            color: $woo-btn-hover-text;
+            border-width: $woo-btn-border-size;
+            border-color: $woo-btn-hover-border-color;
+        }
+    }
+}
+
+// Alt Buttons
+.woocommerce button.button:disabled, 
+.woocommerce button.button:disabled[disabled],
+.woocommerce .cart .button,
+.woocommerce a.button.alt {
+    @if $woo-use-default-btn == on {
+        @include btn-primary;
+
+        &:hover {
+            @include btn-primary-hover;
+        }
+    }
+    @else {
+        background-color: $woo-btn-alt-bg;
+        color: $woo-btn-alt-text;
+        padding: $woo-btn-pad-y $woo-btn-pad-x;
+        border-width: $woo-btn-border-size;
+        border-color: $woo-btn-alt-border-color;
+        border-radius: $woo-btn-radius;
+        text-transform: $woo-btn-text-transform;
+        letter-spacing: $woo-btn-letter-spacing;
+        font-size: $text-m-pure;
+        font-size: fluidCalc($woo-btn-text-min, $woo-btn-text-max);
+        font-size: fluidClamp($woo-btn-text-min, $woo-btn-text-max);
+        font-weight: $woo-btn-weight;
+
+        &:hover {
+            background-color: $woo-btn-alt-hover;
+            color: $woo-btn-alt-hover-text;
+            border-width: $woo-btn-border-size;
+            border-color: $woo-btn-alt-hover-border-color;
+        }
+    }
+}
+
+// Other Buttons
+
+.woocommerce a.added_to_cart {
+    text-align: center;
+    text-transform: $woo-btn-text-transform;
+    letter-spacing: $woo-btn-letter-spacing;
+    font-weight: $woo-btn-weight;
+    font-size: $text-m-pure;
+    font-size: fluidCalc($woo-btn-text-min, $woo-btn-text-max);
+    font-size: fluidClamp($woo-btn-text-min, $woo-btn-text-max);
+    background: transparent;
+    border: $woo-btn-border-size solid $woo-btn-border-color;
+    color: $woo-btn-border-color;
+    padding: $woo-btn-pad-y $woo-btn-pad-x;
+    outline: none;
+    font-family: inherit;
+    border-radius: $woo-btn-radius;
+    text-transform: $woo-btn-text-transform;
+    letter-spacing: $woo-btn-letter-spacing;
+
+    &:hover {
+        background: $woo-btn-bg;
+        color: $woo-btn-hover-text;
+        border: $woo-btn-border-size solid $woo-btn-hover-border-color;
+    }
+}

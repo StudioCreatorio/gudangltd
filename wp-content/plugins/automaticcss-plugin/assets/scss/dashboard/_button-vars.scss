@@ -1,0 +1,118 @@
+@import "text-vars";
+
+// Global
+$btn-border-size: 0.25rem !default;
+$outline-btn-border-size: 0.25rem !default;
+$btn-pad-y: 1em !default;
+$btn-pad-x: 1.5em !default;
+$btn-radius: 0.5em !default;
+$btn-text-transform: none !default;
+$btn-text-style: normal !default;
+$option-btn-text-size: off !default;
+$btn-text-min: $text-m-min !default;
+$btn-text-max: $text-m-max !default;
+$btn-letter-spacing: 0 !default;
+$btn-line-height: 1.2 !default;
+$btn-text-decoration: none !default;
+$btn-weight: 400 !default;
+$btn-width: 20 !default;
+
+// Action Defaults
+$option-action-btn: on !default;
+
+$btn-action-bg: var(--action) !default;
+$btn-action-hover: var(--action-hover) !default;
+$btn-action-text: var(--action-ultra-light) !default;
+$btn-action-hover-text: var(--action-ultra-light) !default;
+$btn-action-border-color: var(--action) !default;
+$btn-action-hover-border-color: var(--action-hover) !default;
+$action-outline-btn-text: var(--action) !default;
+$action-outline-hover-text: var(--action-ultra-light) !default;
+
+// Primary Defaults
+$option-primary-btn: on !default;
+
+$btn-primary-bg: var(--primary) !default;
+$btn-primary-hover: var(--primary-hover) !default;
+$btn-primary-text: var(--primary-ultra-light) !default;
+$btn-primary-hover-text: var(--primary-ultra-light) !default;
+$btn-primary-border-color: var(--primary) !default;
+$btn-primary-hover-border-color: var(--primary-hover) !default;
+$primary-outline-btn-text: var(--primary) !default;
+$primary-outline-hover-text: var(--primary-ultra-light) !default;
+
+// Secondary Defaults
+$option-secondary-btn: on !default;
+
+$btn-secondary-bg: var(--secondary) !default;
+$btn-secondary-hover: var(--secondary-hover) !default;
+$btn-secondary-text: var(--secondary-ultra-light) !default;
+$btn-secondary-hover-text: var(--secondary-ultra-light) !default;
+$btn-secondary-border-color: var(--secondary) !default;
+$btn-secondary-hover-border-color: var(--secondary-hover) !default;
+$secondary-outline-btn-text: var(--secondary) !default;
+$secondary-outline-hover-text: var(--secondary-ultra-light) !default;
+
+//Accent Defaults
+$option-accent-btn: on !default;
+
+$btn-accent-bg: var(--accent) !default;
+$btn-accent-hover: var(--accent-hover) !default;
+$btn-accent-text: var(--accent-ultra-light) !default;
+$btn-accent-hover-text: var(--accent-ultra-light) !default;
+$btn-accent-border-color: var(--accent) !default;
+$btn-accent-hover-border-color: var(--accent-hover) !default;
+$accent-outline-btn-text: var(--accent) !default;
+$accent-outline-hover-text: var(--accent-ultra-light) !default;
+
+// Base Defaults
+$option-base-btn: on !default;
+
+$btn-base-bg: var(--base) !default;
+$btn-base-hover: var(--base-hover) !default;
+$btn-base-text: var(--base-ultra-light) !default;
+$btn-base-hover-text: var(--base-ultra-light) !default;
+$btn-base-border-color: var(--base) !default;
+$btn-base-hover-border-color: var(--base-hover) !default;
+$base-outline-btn-text: var(--base) !default;
+$base-outline-hover-text: var(--base-ultra-light) !default;
+
+// // Shade Defaults
+// $option-shade-btn: on !default;
+
+// $btn-shade-bg: var(--base) !default;
+// $btn-shade-hover: var(--base-hover) !default;
+// $btn-shade-text: var(--base-ultra-light) !default;
+// $btn-shade-hover-text: var(--base-ultra-light) !default;
+// $btn-shade-border-color: var(--base) !default;
+// $btn-shade-hover-border-color: var(--base-hover) !default;
+// $shade-outline-btn-text: var(--base) !default;
+// $shade-outline-hover-text: var(--base-ultra-light) !default;
+
+// Black Defaults
+$option-black-btn: on !default;
+
+$btn-black-bg: var(--shade-black) !default;
+$btn-black-hover: var(--primary-hover) !default;
+$btn-black-text: var(--shade-white) !default;
+$btn-black-hover-text: var(--shade-white) !default;
+$btn-black-border-color: var(--shade-black) !default;
+$btn-black-hover-border-color: var(--primary-hover) !default;
+$black-outline-btn-text: var(--shade-black) !default;
+$black-outline-hover-text: var(--primary-ultra-light) !default;
+
+// White Defaults
+$option-white-btn: on !default;
+
+$btn-white-bg: var(--shade-white) !default;
+$btn-white-hover: var(--primary-hover) !default;
+$btn-white-text: var(--shade-black) !default;
+$btn-white-hover-text: var(--shade-white) !default;
+$btn-white-border-color: var(--shade-white) !default;
+$btn-white-hover-border-color: var(--primary-hover) !default;
+$white-outline-btn-text: var(--shade-white) !default;
+$white-outline-hover-text: var(--primary-ultra-light) !default;
+
+// Link Style Defaults
+$link-color: var(--primary) !default;
+$link-color-hover: var(--primary-hover) !default;

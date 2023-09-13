@@ -1,0 +1,43 @@
+// Background Styling
+$fr-bg-light: var(--shade-ultra-light) !default;
+$fr-bg-dark: var(--shade-ultra-dark) !default;
+
+// Text Styling
+$fr-text-light: var(--shade-ultra-light) !default;
+$fr-text-dark: var(--shade-ultra-dark) !default;
+
+// Content
+$fr-lede-width: 60ch !default;
+$fr-hero-padding: var(--section-space-xl) !default;
+
+// Post Content
+$fr-post-content-gap: var(--space-m);
+
+// Card Styling
+$fr-card-padding: var(--space-m) !default;
+$fr-card-gap: var(--space-xs) !default;
+$fr-card-border-size: 0.15rem !default;
+$fr-card-border-color: var(--shade-light) !default;
+$fr-card-border-style: solid !default;
+$fr-card-radius: var(--radius-xs) !default;
+$fr-card-avatar-radius: 50% !default;
+
+// Variables
+
+:root {
+  --fr-bg-light: #{$fr-bg-light};
+  --fr-bg-dark: #{$fr-bg-dark};
+  --fr-text-light: #{$fr-text-light};
+  --fr-text-dark: #{$fr-text-dark};
+  --fr-card-padding: #{$fr-card-padding};
+  --fr-card-gap: #{$fr-card-gap};
+  --fr-card-border-size: #{$fr-card-border-size};
+  --fr-card-border-color: #{$fr-card-border-color};
+  --fr-card-border-style: #{$fr-card-border-style};
+  --fr-card-radius: #{$fr-card-radius};
+  --fr-card-avatar-radius: #{$fr-card-avatar-radius};
+  --fr-lede-width: #{$fr-lede-width};
+  --fr-list-pad-y: 0.75em;
+  --fr-list-pad-x: 1.25em;
+  --fr-hero-padding: #{$fr-hero-padding};
+}

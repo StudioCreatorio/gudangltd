@@ -1,0 +1,19 @@
+@import "../../dashboard/color-vars";
+@import "../../dashboard/options";
+@import "../../maps/color-maps";
+
+@each $color, $color-sets in $all-colors {
+  @each $color-set, $color-names in $color-sets {
+    @each $color-name, $color-value in $color-names {
+      .has-#{$color-name}-color {
+        color: var(--#{$color-name});
+      }
+      .has-#{$color-name}-background-color {
+        background-color: var(--#{$color-name});
+      }
+      .has-#{$color-name}-border-color {
+        border-color: var(--#{$color-name});
+      }
+    }
+  }
+}

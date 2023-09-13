@@ -1,0 +1,9 @@
+.width--vp-max {
+  inline-size: 100%;
+  max-inline-size: calc((#{$vp-max} - #{$base-space} * 2) * 1rem);
+  margin-inline: auto;
+}
+
+:root {
+  --vp-max: calc((#{$vp-max} - #{$base-space} * 2) * 1rem);
+}

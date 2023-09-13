@@ -1,0 +1,200 @@
+@import "../maps/contextual-maps";
+
+:root {
+  // COLOR VARIABLES
+  // Create color variables in root
+  @each $color, $color-cats in $colors {
+    @each $color-cat, $color-names in $color-cats {
+        @each $color-name, $color-value in $color-names {
+            --#{$color-name}: #{$color-value};
+        }
+    }
+  }
+  --shade-white: #fff;
+  --shade-black: #000;
+  --white: #fff;
+  --black: #000;
+
+  // CONTEXTUAL COLORS
+
+  @each $colorName, $colorSet in $contextualColors {
+    @each $colorName, $colorValue in $colorSet {
+      --#{$colorName}: #{$colorValue};
+    }
+  }
+
+  // TEXT SIZE VARIABLES
+  @each $variable, $value in $textVariables {
+    --#{$variable}: #{$value};
+  }
+    --root-font-size: #{$root-font-size};
+  // HEADING SIZE VARIABLES
+  @each $variable, $value in $headingVariables {
+    --#{$variable}: #{$value};
+  }
+  // SPACING VARIABLES
+  @each $variable, $value in $spacingVariables {
+    --#{$variable}: #{$value};
+  }
+  // SECTION SPACING VARIABLES
+  @each $variable, $value in $sectionSpacingVariables {
+    --#{$variable}: #{$value};
+  }
+  // WIDTH VARIABLES
+  @each $width, $value in $widths {
+    --width-#{$width}: #{$value};
+  }
+  --content-width: var(--width-content);
+  --content-width-safe: min(var(--width-content), calc(100% - var(--section-padding-x) * 2));
+  // RADIUS VARIABLES
+  @each $radius, $value in $radius {
+    --radius-#{$radius}: #{$value};
+  }
+  // GRID VARIABLES
+  @each $grid-type, $col-set in $grids {
+    @each $col-count, $value in $col-set {
+      @if $col-count !=
+        auto-1-2 and
+        $col-count !=
+        auto-1-3 and
+        $col-count !=
+        auto-2-1 and
+        $col-count !=
+        auto-2-3 and
+        $col-count !=
+        auto-3-1 and
+        $col-count !=
+        auto-3-2
+      {
+        --grid-#{$col-count}: #{$value};
+      }
+    }
+  }
+  // CONTEXTUAL VARIABLES
+  @each $item, $value in $contextuals {
+    --#{$item}: #{$value};
+    --fr-#{$item}: #{$value};
+  }
+  // Dashboard Variables
+  --section-padding-x: #{$section-padding-x-rem};
+  --section-gutter: #{$section-padding-x-rem};
+  //Button Variables
+  --btn-border-size: #{$btn-border-size};
+  --outline-btn-border-size: #{$outline-btn-border-size};
+  --btn-pad-y: #{$btn-pad-y};
+  --btn-pad-x: #{$btn-pad-x};
+  --btn-radius: #{$btn-radius};
+  --btn-text-transform: #{$btn-text-transform};
+  --btn-text-style: #{$btn-text-style};
+  --btn-letter-spacing: #{$btn-letter-spacing};
+  --btn-line-height: #{$btn-line-height};
+  --btn-text-decoration: #{$btn-text-decoration};
+  --btn-text-color: #{$btn-action-text};
+  --btn-hover-text-color: #{$btn-action-hover-text};
+  --btn-weight: #{$btn-weight};
+  --btn-width: #{$btn-width}rem;
+  ///// Color Variable Partials
+  // Success
+  --success-hex: #{$success-hex};
+  --success-rgb: #{$success-r} #{$success-g} #{$success-b};
+  --success-hsl: #{$success-h} #{$success-s} #{$success-l};
+  --success-h: #{$success-h};
+  --success-s: #{$success-s};
+  --success-l: #{$success-l};
+  --success-r: #{$success-r};
+  --success-g: #{$success-g};
+  --success-b: #{$success-b};
+  // Danger
+  --danger-hex: #{$danger-hex};
+  --danger-rgb: #{$danger-r} #{$danger-g} #{$danger-b};
+  --danger-hsl: #{$danger-h} #{$danger-s} #{$danger-l};
+  --danger-h: #{$danger-h};
+  --danger-s: #{$danger-s};
+  --danger-l: #{$danger-l};
+  --danger-r: #{$danger-r};
+  --danger-g: #{$danger-g};
+  --danger-b: #{$danger-b};
+  // Warning
+  --warning-hex: #{$warning-hex};
+  --warning-rgb: #{$warning-r} #{$warning-g} #{$warning-b};
+  --warning-hsl: #{$warning-h} #{$warning-s} #{$warning-l};
+  --warning-h: #{$warning-h};
+  --warning-s: #{$warning-s};
+  --warning-l: #{$warning-l};
+  --warning-r: #{$warning-r};
+  --warning-g: #{$warning-g};
+  --warning-b: #{$warning-b};
+  // Info
+  --info-hex: #{$info-hex};
+  --info-rgb: #{$info-r} #{$info-g} #{$info-b};
+  --info-hsl: #{$info-h} #{$info-s} #{$info-l};
+  --info-h: #{$info-h};
+  --info-s: #{$info-s};
+  --info-l: #{$info-l};
+  --info-r: #{$info-r};
+  --info-g: #{$info-g};
+  --info-b: #{$info-b};
+  // Other Variables
+  --header-height: #{$header-height};
+  --offset: #{$offset};
+  --paragraph-spacing: #{$default-paragraph-spacing};
+  --heading-spacing: #{$default-heading-spacing};
+  // Focus Variables
+  --focus-color: #{$focus-color};
+  --focus-width: #{$focus-width};
+  --focus-offset: #{$focus-offset};
+  // Line Height & Line Length Variables
+  --h1-lh: #{$h1-lh};
+  --h2-lh: #{$h2-lh};
+  --h3-lh: #{$h3-lh};
+  --h4-lh: #{$h4-lh};
+  --h5-lh: #{$h5-lh};
+  --h6-lh: #{$h6-lh};
+  --h1-length: #{$heading-line-length};
+  --h2-length: #{$h2-line-length};
+  --h3-length: #{$h3-line-length};
+  --h4-length: #{$h4-line-length};
+  --h5-length: #{$h5-line-length};
+  --h6-length: #{$h6-line-length};
+  --text-xxl-lh: #{$text-xxl-lh};
+  --text-xl-lh: #{$text-xl-lh};
+  --text-l-lh: #{$text-l-lh};
+  --text-m-lh: #{$base-text-lh};
+  --text-s-lh: #{$text-s-lh};
+  --text-xs-lh: #{$text-xs-lh};
+  --text-xxl-length: #{$text-xxl-length};
+  --text-xl-length: #{$text-xl-length};
+  --text-l-length: #{$text-l-length};
+  --text-m-length: #{$text-line-length};
+  --text-s-length: #{$text-s-length};
+  --text-xs-length: #{$text-xs-length};
+  // Box Shadows
+  --box-shadow-#{$box-shadow-1-name}: #{$box-shadow-1-value};
+  --box-shadow-#{$box-shadow-2-name}: #{$box-shadow-2-value};
+  --box-shadow-#{$box-shadow-3-name}: #{$box-shadow-3-value};
+  --admin-bar-height: var(--wp-admin--admin-bar--height, 0px);
+}
+
+@include breakpoint(l) {
+  :root {
+    --header-height: #{$header-height-l};
+    --header-height-l: #{$header-height-l};
+    --offset-l: #{$offset-l};
+  }
+}
+
+@include breakpoint(m) {
+  :root {
+    --header-height: #{$header-height-m};
+    --header-height-m: #{$header-height-m};
+    --offset-m: #{$offset-m};
+  }
+}
+
+@include breakpoint(s) {
+  :root {
+    --header-height: #{$header-height-s};
+    --header-height-s: #{$header-height-s};
+    --offset-s: #{$offset-s};
+  }
+}

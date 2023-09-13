@@ -1,0 +1,135 @@
+@if $option-generate-blocks == on {
+/* Styles for GenerateBlocks */
+  // Establish content width for section inner wrappers
+
+  section > div {
+    inline-size: 100%;
+    max-inline-size: var(--width-vp-max);
+    margin-inline: auto;
+  }
+
+  // Set Generate Containers to Flex By Default
+
+  :where(
+    section > [class*="gb-container-"]:not(
+        // Exclude tabs elements
+        .gb-tabs,
+        // Exclude grid element
+        .gb-grid-wrapper,
+        // Exclude grids
+        [class*="grid--"],
+        )) 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            inline-size: 100%;
+            // Support for auto contextual spacing
+            @if $option-content-gap == on {
+                gap: var(--content-gap);
+            }
+  }
+
+  // Set certain elements to 100% width by default so they don't shrink
+  // when they're the child of a flex item.
+  :where(
+    .gb-grid-wrapper,
+    .gb-accordion
+    ) {
+    inline-size: 100%;
+  }
+
+  // The grid wrapper has no flex direction set by default, so we set one.
+  section > .gb-grid-wrapper {
+    flex-direction: row;
+  }
+
+  // Button Overrides
+
+  @if $option-buttons == on and $option-generate-blocks == on {
+    @each $buttonColor, $buttonProps in $buttons {
+      .btn--#{$buttonColor}:not(.wp-block-button),
+      .wp-block-button.btn--#{$buttonColor} > .wp-block-button__link,
+      .wp-block-button.btn--#{$buttonColor} > a {
+        background-color: map-get(
+          map-get($buttons, $buttonColor),
+          background-clr
+        );
+        color: map-get(map-get($buttons, $buttonColor), text-clr);
+        border-style: solid;
+        border-color: map-get(map-get($buttons, $buttonColor), border-clr);
+        @include button;
+
+        &:hover {
+          background-color: map-get(
+            map-get($buttons, $buttonColor),
+            background-clr-hover
+          );
+          color: map-get(map-get($buttons, $buttonColor), text-clr-hover);
+          border-color: map-get(
+            map-get($buttons, $buttonColor),
+            border-clr-hover
+          );
+          cursor: pointer;
+        }
+      }
+
+      .btn--#{$buttonColor}:not(.wp-block-button).btn--outline,
+      .wp-block-button.btn--#{$buttonColor}.btn--outline > a,
+      .wp-block-button.btn--#{$buttonColor}.btn--outline > .wp-block-button__link {
+        background-color: transparent;
+        border-style: solid;
+        color: map-get(map-get($buttons, $buttonColor), outline-text-clr);
+        border-color: map-get(
+          map-get($buttons, $buttonColor),
+          outline-border-clr
+        );
+        @include outline-btn-default;
+
+        &:hover {
+          background-color: map-get(
+            map-get($buttons, $buttonColor),
+            outline-background-clr-hover
+          );
+          cursor: pointer;
+          color: map-get(
+            map-get($buttons, $buttonColor),
+            outline-text-clr-hover
+          );
+        }
+      }
+    }
+
+    // GENERATE BUTTON SIZES
+    @each $size, $extension in $sizeExtensions {
+      .btn--#{$extension}:not(.wp-block-button),
+      .wp-block-button.btn--#{$extension} > a,
+      .wp-block-button.btn--#{$extension} > .wp-block-button__link {
+        @include button;
+        @if $size == xs {
+          @include map-get-fluid-text(xs);
+        } @else if $size == s {
+          @include map-get-fluid-text(s);
+        } @else if $size == m {
+          @include map-get-fluid-text(m);
+        } @else if $size == l {
+          @include map-get-fluid-text(l);
+        } @else if $size == xl {
+          @include map-get-fluid-text(xl);
+        } @else if $size == xxl {
+          @include map-get-fluid-text(xxl);
+        }
+        cursor: pointer;
+      }
+    }
+
+    a[class*="btn--"] {
+      display: inline-flex;
+    }
+
+    .btn--clear {
+      background: none;
+      border: none;
+    }
+  }
+} // End Generate Blocks Check

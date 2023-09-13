@@ -1,0 +1,26 @@
+// Default Text
+body {
+  @include fluid-text($text-m-pure, $text-m-min, $text-m-max);
+  line-height: $base-text-lh;
+  color: $body-color;
+
+  @if $option-boxed-layout == on {
+    margin-inline: auto;
+  }
+
+}
+
+// Default Section Padding
+.ct-section-inner-wrap {
+  @include fluid-section-padding(
+    $section-space-m-pure,
+    $section-m-min,
+    $section-m-max
+  );
+}
+
+// Default Header Padding
+
+.oxy-header-container {
+  padding-inline: fluidClamp($section-padding-x-min, $section-padding-x-max);
+}

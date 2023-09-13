@@ -1,0 +1,34 @@
+@import "options";
+
+$vp-min: 32 !default;
+$vp-max: 128 !default;
+$breakpoint-xs: 360px !default;
+$breakpoint-s: 480px !default;
+$breakpoint-m: 768px !default;
+$breakpoint-l: 992px !default;
+$breakpoint-xl: 1280px !default;
+$breakpoint-xxl: 1440px !default;
+
+$breakpoint-xs-val: $breakpoint-xs - 1px;
+$breakpoint-s-val: $breakpoint-s - 1px;
+$breakpoint-m-val: $breakpoint-m - 1px;
+$breakpoint-l-val: $breakpoint-l - 1px;
+$breakpoint-xl-val: $breakpoint-xl - 1px;
+$breakpoint-xxl-val: $breakpoint-xxl - 1px;
+
+$breakpoints: (
+  xxl: $breakpoint-xxl-val,
+  xl: $breakpoint-xl-val,
+  l: $breakpoint-l-val,
+  m: $breakpoint-m-val,
+  s: $breakpoint-s-val,
+  xs: $breakpoint-xs-val,
+);
+
+@if $option-breakpoint-xxl == off {
+  $breakpoints: map-remove($breakpoints, xxl);
+}
+
+@if $option-breakpoint-xs == off {
+  $breakpoints: map-remove($breakpoints, xs);
+}

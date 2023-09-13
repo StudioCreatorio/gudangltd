@@ -1,0 +1,12 @@
+$widths: (
+  xs: calc((#{$vp-max} * 0.1) * 1rem),
+  s: calc((#{$vp-max} * 0.2) * 1rem),
+  m: calc((#{$vp-max} * 0.4) * 1rem),
+  l: calc((#{$vp-max} * 0.6) * 1rem),
+  xl: calc((#{$vp-max} * 0.8) * 1rem),
+  xxl: calc((#{$vp-max} * 0.9) * 1rem),
+  vp-max: #{$vp-max}rem,
+  content: #{$vp-max}rem,
+  50: calc((#{$vp-max} / 2) * 1rem),
+  full: 100%,
+);

@@ -1,0 +1,52 @@
+@if $option-object-fit == on {
+  img.object-fit--cover,
+  .object-fit--cover img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  img.object-fit--contain,
+  .object-fit--contain img {
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+  img.object-fit--top-left,
+  .object-fit--top-left img {
+    -o-object-position: 10% 10%;
+    object-position: 10% 10%;
+  }
+  img.object-fit--top-center,
+  .object-fit--top-center img {
+    -o-object-position: 50% 10%;
+    object-position: 50% 10%;
+  }
+  img.object-fit--top-right,
+  .object-fit--top-right img {
+    -o-object-position: 90% 10%;
+    object-position: 90% 10%;
+  }
+  img.object-fit--center-left,
+  .object-fit--center-left img {
+    -o-object-position: 10% 50%;
+    object-position: 10% 50%;
+  }
+  img.object-fit--center-right,
+  .object-fit--center-right img {
+    -o-object-position: 90% 50%;
+    object-position: 90% 50%;
+  }
+  img.object-fit--bottom-left,
+  .object-fit--bottom-left img {
+    -o-object-position: 10% 90%;
+    object-position: 10% 90%;
+  }
+  img.object-fit--bottom-center,
+  .object-fit--bottom-center img {
+    -o-object-position: 50% 90%;
+    object-position: 50% 90%;
+  }
+  img.object-fit--bottom-right,
+  .object-fit--bottom-right img {
+    -o-object-position: 90% 90%;
+    object-position: 90% 90%;
+  }
+}

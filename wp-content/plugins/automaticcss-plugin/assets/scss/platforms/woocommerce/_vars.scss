@@ -1,0 +1,29 @@
+$woo-accent-clr: var(--primary) !default;
+
+//// Buttons
+$woo-use-default-btn: off !default;
+
+// Primary Button
+$woo-btn-border-size: 0.25rem !default;
+$woo-btn-pad-y: 1em !default;
+$woo-btn-pad-x: 1.5em !default;
+$woo-btn-radius: 0.5em !default;
+$woo-btn-text-transform: none !default;
+$woo-btn-text-min: $text-m-min !default;
+$woo-btn-text-max: $text-m-max !default;
+$woo-btn-letter-spacing: 0 !default;
+$woo-btn-weight: 400 !default;
+$woo-btn-bg: var(--primary) !default;
+$woo-btn-hover: var(--primary-hover) !default;
+$woo-btn-text: var(--primary-ultra-light) !default;
+$woo-btn-hover-text: var(--primary-ultra-light) !default;
+$woo-btn-border-color: var(--primary) !default;
+$woo-btn-hover-border-color: var(--primary-hover) !default;
+
+// Alt Button
+$woo-btn-alt-bg: transparent !default;
+$woo-btn-alt-hover: var(--primary-hover) !default;
+$woo-btn-alt-text: var(--primary) !default;
+$woo-btn-alt-hover-text: var(--primary-ultra-light) !default;
+$woo-btn-alt-border-color: var(--primary) !default;
+$woo-btn-alt-hover-border-color: var(--primary-hover) !default;

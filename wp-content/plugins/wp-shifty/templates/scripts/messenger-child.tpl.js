@@ -1,0 +1,1 @@
+(function(){var a={observer:SWO_OBSERVER_PLACEHOLDER};parent.postMessage({observer:a.observer});if(!document.location.href.match(/(\?|&)wpshifty-preview=(\d*)/,"")){window.history.pushState({},"",document.location.href+(document.location.href.match(/\?/)?"&":"?")+"wpshifty-preview=SWO_OBSERVER_PREVIEW_ID")}})();

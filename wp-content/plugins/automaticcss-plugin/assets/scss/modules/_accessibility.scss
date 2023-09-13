@@ -1,0 +1,112 @@
+// Remove all animations, transitions and smooth scroll for people that prefer not to see them
+@if $option-reduce-motion == on {
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      -webkit-animation-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+// Focus Styling
+// ALSO NEEDED IN PLATFORM OVERRIDES
+@include if-builders-off {
+  @include focus-styles;
+}
+
+// Hide text for everyone except for screen readers
+// HAS CORRESPONDING FEATURE STYLING IN BUILDERS!
+
+.hidden-accessible {
+  position: absolute !important;
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+@include if-builders-off {
+  .link--skip {
+    position: absolute;
+    inset-block-start: 1rem;
+    inset-inline-start: 1rem;
+    transform: translateY(-250%);
+    @include button;
+    background: $btn-action-bg;
+    color: $btn-action-text;
+  }
+
+  .link--skip:focus {
+    transform: translateY(0);
+  }
+}
+
+// Make entire cards clickable
+// Some builders require separate instructions
+// to remove the effect from the builder canvas
+
+@if $option-oxygen == off and $option-bricks == off {
+    .clickable-parent:not(a) {
+      position: static;
+
+      a {
+        position: static;
+      }
+
+      > a::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer !important;
+        display: flex;
+      }
+    }
+
+    a.clickable-parent {
+      position: static;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer !important;
+        display: flex;
+      }
+    }
+} // End builder check
+
+// Focus Parent
+
+.focus-parent--shadow {
+  &:focus-within {
+    box-shadow: 0 0 0 var(--focus-width) var(--focus-color);
+  }
+  & :focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+.focus-parent--outline {
+  &:focus-within {
+    outline: var(--focus-width) solid var(--focus-color);
+    outline-offset: var(--focus-offset);
+  }
+  & :focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
